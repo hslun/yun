@@ -1,0 +1,216 @@
+{template "content","header"}
+<div class="breadcrumb-container">
+    <div class="container">
+        <div class="relative">
+            <ul class="bc push-up unstyled clearfix nr_mt">
+                <li><a href="{APP_PATH}">首页</a></li>
+                <li class="active"><a>搜索结果</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+		<!-- SITE MAIN CONTENT -->
+		<main id="main-content" role="main">
+			<div class="container">
+				<div class="row">
+					
+					<div class="  clearfix">
+						
+						<section class="col-xs-12 col-sm-8 col-md-9">
+							
+							<section class="products-wrapper">
+								<!-- DISPLAY MODE - NUMBER OF ITEMS TO BE DISPLAY - PAGINATION -->
+								<header class="products-header">
+									<div class="row">
+										<div class="col-xs-12 col-sm-12 col-md-6 center-xs">
+										</div>
+										
+									</div>
+								</header>
+								<!-- // DISPLAY MODE - NUMBER OF ITEMS TO BE DISPLAY - PAGINATION -->
+								
+								<!-- PRODUCT LAYOUT -->
+								<div style="position: relative; overflow: hidden; min-height:1000px; height:auto !important; height:1000px;" class="products-layout   add-cart isotope list" data-product=".product" data-thumbnail=".entry-media .thumb" data-title=".entry-title > a" data-url=".entry-title > a" data-price=".entry-price > .price">
+									<div class="hzjt">
+                                        <div class="clearfix"></div>
+                                     </div>
+                                    
+                                    <!-- BREADCRUMB -->
+		<div class="breadcrumb-container">
+			<div class="container">
+				<div class="relative">
+					<ul class="bc push-up unstyled clearfix">
+						<li><a><h1>搜索结果</h1></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- // BREADCRUMB -->
+               {pc:get sql="select distinct title,thumb,url,description,inputtime,author from kf_kf_zixun where title like '%$ss%'" num="11"
+			   return="data" page="$page"}
+				 {loop $data $v}
+									<div class="mix-item isotope-item"><div style="visibility: visible; opacity: 1;" class="product" >
+                                    <h2>{$CATEGORYS[$v[catid]]['catname']}</h2>
+										<div class="entry-media mgt">
+                                        <a href="{$v[url]}" title="{$v[title]"><img src="{thumb($v[thumb],181,120)}"  class="lazyLoad thumb" alt="{$v[title]"></a> 
+										</div>
+										<div class="entry-main">
+											<h5 class="entry-title">
+												<a href="{$v[url]}">{$v[title]}</a>
+											</h5>
+											<div class="entry-description visible-list">
+												<p>{$v[description]}...</p>
+											</div>
+											
+											<div class="entry-links clearfix" style="float:right;">
+												<span class="pull-left m-r">{$v[author]}　|</span>
+												<span class="pull-right">{date("Y-m-d",$v[inputtime])}</span>
+											</div>
+										</div>
+									</div></div>
+				{/loop}				
+				{/pc}
+                                    
+                                    <div class="col-xs-12 col-sm-12 col-md-6 center-xs pgmg">
+											<ul class="paginator li-m-r-l">
+                                            {$pages}
+											</ul>
+										</div>
+									
+								</div>
+								<!-- // PRODUCT LAYOUT -->
+							</section>
+							
+						</section>
+                        <!-- SIDEBAR -->
+						<aside class="col-xs-12 col-sm-4 col-md-3">
+                       
+                        <!-- PROMO -->
+                                <!-- PROMO -->
+	{pc:content action="lists" catid="54"   moreinfo="1"}
+	 {loop $data $v}
+								<div class="promo inverse-background" style="background: url('{$v[thumb]}') no-repeat; background-size:100% 100%;">
+									<div class="inner text-center np">
+
+									</div>
+								</div>
+	{/loop}
+	{/pc}		  
+								<!-- // PROMO -->
+							<section class="sidebar push-up">
+
+
+	
+								<!-- BEST SELLERS -->
+								<section class="side-section bg-white">
+									<header class="side-section-header">
+										<h3 class="side-section-title">热门文章</h3>
+									</header>
+									<div class="side-section-content">
+										<ul class="product-medialist li-m-t unstyled clearfix">
+				{pc:content action="lists" catid="73" order="updatetime desc"  return="data" moreinfo="1" num="5"}
+					   {loop $data $v}
+											<li>
+												<div class="item clearfix bd2">
+													<a href="{$v[url]}" title="{$v[title]}" data-toggle="lightbox" class="entry-thumbnail">
+														<img src="{thumb($v[thumb],60,60)}" alt="{$v[title]}">
+													</a>
+													<h5 class="entry-title"><a href="{$v[url]}">{$v[title]}</a></h5>
+                                                    <p>{$v[author]} | {date("Y-m-d",$v[inputtime])}</p>												
+												</div>
+											</li>
+						{/loop}
+					{/pc}
+										</ul>
+									</div>
+                                    
+								</section>
+								<!-- // BEST SELLERS -->
+								
+								
+								
+							</section>
+                            
+                            <section class="sidebar push-up">
+
+
+	
+								<!-- BEST SELLERS -->
+								<section class="side-section bg-white">
+									<header class="side-section-header">
+										<h3 class="side-section-title">热点航空事件</h3>
+									</header>
+									<div class="widget-content">
+									<ul class="menu iconed-menu unstyled">
+						 {pc:content action="lists" catid="99" order="listorder DESC" num="10"} 
+							{loop $data $r}
+										<li><a href="{$r[url]}"><i class="iconfont-circle-blank menu-icon"></i>{$r[title]}</a></li>
+                            {/loop}
+                         {/pc}
+								
+									</ul>
+								</div>
+                                    
+								</section>
+								<!-- // BEST SELLERS -->
+								
+								
+								
+							</section>
+                            
+                            <section class="sidebar push-up">
+
+
+	
+								<!-- BEST SELLERS -->
+								<section class="side-section bg-white">
+									<header class="side-section-header">
+										<h3 class="side-section-title">网友正在热搜</h3>
+									</header>
+									<div class="widget-content">
+									<ul class="menu iconed-menu unstyled">
+						 {pc:content action="lists" catid="100" order="listorder DESC" num="10"} 
+							{loop $data $r}
+										<li><a href="{$r[url]}"><i class="iconfont-circle-blank menu-icon"></i>{$r[title]}</a></li>
+                            {/loop}
+                         {/pc}
+								
+									</ul>
+								</div>
+                                    
+								</section>
+								<!-- // BEST SELLERS -->
+								
+								<!-- BEST SELLERS -->
+								<section class="side-section bg-white">
+                                <div class="wxinsm">
+                	<p>微信公众平台搜索"快飞"</p>
+                    <p>或扫描下面的二维码：</p>
+                    <img src="http://www.177fly.com/statics/images/kuaifei_images/wx.jpg">
+                    <div class="weixin121">
+                        <div data-bd-bind="1448900052915" class="bdsharebuttonbox bdshare-button-style0-32">
+<a href="#" class="bds_tsina" data-cmd="tsina" style="background:url(http://www.177fly.com/statics/images/kuaifei_images/g1.png) no-repeat center" title="分享到新浪微博"></a>
+<a href="#" class="bds_tqq" style="background:url(http://www.177fly.com/statics/images/kuaifei_images/g2.png) no-repeat center" data-cmd="tqq" title="分享到腾讯微博"></a>
+<a href="#" class="bds_weixin" style="background:url(http://www.177fly.com/statics/images/kuaifei_images/g3.png) no-repeat center" data-cmd="weixin" title="分享到微信"></a>
+<a href="#" class="bds_more" style="background:url(http://www.177fly.com/statics/images/kuaifei_images/g4.png) no-repeat center" data-cmd="more"></a>
+</div>
+                    </div>
+              
+                </div>
+									
+                                    
+								</section>
+								<!-- // BEST SELLERS -->
+								
+								
+							</section>
+						</aside>
+						<!-- // SIDEBAR -->
+					</div>
+				
+				</div>
+			</div>
+		</main>
+		<!-- // SITE MAIN CONTENT -->
+		
+{template "content","footer"}

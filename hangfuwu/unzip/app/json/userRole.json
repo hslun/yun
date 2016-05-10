@@ -1,0 +1,21 @@
+{
+	"test":
+	{
+		"role":"个人用户",
+		"scale":"1",
+		"permissionList":[
+		"查询"
+		]
+	},
+	"hfga":
+	{
+		"role":"企业用户",
+		"scale":"2",
+		"permissionList":[
+		"增加",
+		"删除",
+		"修改",
+		"查询"
+		]
+	}
+}

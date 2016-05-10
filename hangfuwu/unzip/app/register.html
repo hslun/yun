@@ -1,0 +1,34 @@
+<div class="loginBody" ng-controller="RegistCtrl">
+	<div class="login_content">
+		<span class="login_logo"></span>
+		<div class="fm_field">	
+			<form class="fm_login">
+				<table class="fm_table" cellspacing="15">
+					<tbody>
+						<tr>
+							<td>
+								<span class="user_login">
+									<span class="user_icon"></span>
+									<input type="text" class="user_input" id="username" name="username" required="required"  placeholder="用户名" ng-model="regist.username">
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="user_login">
+									<span class="pwd_icon"></span>
+									<input type="password" class="pwd_input" id="passwd" name="passwd" required="required"  placeholder="密码" ng-model="regist.passwd">
+								</span>				
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="submit" class="btn_login" value="" ng-click="submit()" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>

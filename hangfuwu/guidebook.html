@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>航服务</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../styles/guidebook/guidebook.css">
+</head>
+<body ng-app="gbApp" ng-controller="gbCtrl">
+	<div class="gbtopbar animated" scrolldiv>
+		<div class="hfwlogo"></div>
+		<nav>
+			<ul>
+				<li navhover><a href="#/">情报信息</a></li>
+				<li navhover><a href="#/publicinfo">公共信息</a></li>
+				<li navhover><a href="#/systeminfo">系统服务</a></li>
+			</ul>
+		</nav>
+		<div type="text" class="gbsearch {{loginshow}}">
+			<input type="text">
+			<a href=""></a>
+		</div>
+		<div class="user-head {{loginshow}}">刘国伟</div>
+		<a class="hfwlogin" ng-href="#/login" ng-show="loginbtn" ng-click="toLogin()"></a>
+	</div>
+	<div ng-view="" class="view-container"></div>
+	<div class="gbcontainer">
+		<div class="footer-nav">
+			<ul class="nav-group">
+				<h4>关于我们</h4>
+				<li><a href="">加入我们</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+			<ul class="nav-group">
+				<h4>关注我们</h4>
+				<li><img src="images/guidebook/kfwxsm.png" alt="暂无二维码"></li>
+			</ul>
+			<ul class="nav-group">
+				<h4>合作伙伴：</h4>
+				<li><a href="">AOPA航空协会首都通航研究院</a></li>
+				<li><a href="">华彬天星中瑞通航海丰通航</a></li>
+			</ul>
+			<ul class="nav-group">
+				<h4>合作媒体</h4>
+				<li><a href="">飞友邦飞行者联盟</a></li>
+				<li><a href="">中国直升机网</a></li>
+				<li><a href="">中国航空经济网</a></li>
+				<li><a href="">飞行总动员航空网</a></li>
+				<li><a href="">极飞网</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="gbfooter">
+		<div class="copyright">Copyright&copy2013-2014&nbsp海丰通航</div>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/tools/hmac-sha256.js"></script>
+    <script src="scripts/guidebook/gbapp.js"></script>
+    <script src="scripts/guidebook/gbControllers.js"></script>
+    <script src="scripts/guidebook/gbdirectives.js"></script>
+    <script src="scripts/guidebook/gbservices.js"></script>
+</body>
+</html>

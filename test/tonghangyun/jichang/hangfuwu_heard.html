@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script>	
+	$(document).ready(function(){
+				if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+				)
+				{
+					$("body").addClass("min");
+				}
+	})
+</script>
+<script type="text/javascript" src="../js/api"></script>
+
+</head>
+
+<body>
+<img src="../img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="../img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="./luru.html">机场录入</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="../geren/geren.html">M18211121338用户</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="../geren/login.html">退出</a>
+        </div>
+    
+    </div>
+</div>
+    <div class="menu">
+    	<a href="http://www.177fly.com/tonghangyun/web/"><h1 class="logo">通航云</h1></a>
+            <div class="citywrapper">
+                <div class="selCity">
+                    <p class="cityName">北京</p>
+                    <a class="changeBtn" ng-click="changeCity()">[切换城市]</a>
+                </div>
+                <div class="jc_search">
+                    <select class="condition" ng-model="myCondition"ng-options="value.name as value.name for value in selectOPts">
+                    <option value="">  机场  </option>
+                    <option value="">  机场  </option>
+                    <option value="">  机场  </option>
+                    </select>
+                    <input type="text" class="key" ng-model="keywords" ng-keypress="enterSearch($event)">
+                    <a  class="btnSearch"  ng-click="searchairport()"><img src="../img/seach_bt.png" width="91" height="37" alt=""/></a>
+                </div>
+            </div>
+    </div>
+<div id="main">
+
+<img src="../img/jichang_map.png" width="100%" alt=""/>
+</div>
+
+</body></html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$catname}首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}thy_css/common.css">
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}thy_css/slide.css"/>
+
+<script type="text/javascript" src="{JS_PATH}thy_js/jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}thy_js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script type="text/javascript" src="./js/api"></script>
+{php session_start();}
+{php $_SESSION['diquyun'] = $catid;}
+{php $diquyun = $_SESSION['diquyun'];}
+</head>
+
+<body>
+
+<img src="img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<!--<div class="diqu">
+        	{$catname}<a href="{APP_PATH}">[切换管理局]</a>
+        </div>-->
+        <div class="tianqi">
+
+        </div>
+        <div class="index_login">
+{if $_userid}
+ <a href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">{get_nickname()}</a>
+ <a href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">退出</a>&nbsp;&nbsp;
+ {else} 
+            <a href="{APP_PATH}index.php?m=member&c=index&a=login&diquyun={$diquyun}">登录</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="{APP_PATH}index.php?m=member&c=index&a=register&diquyun={$diquyun}">注册</a>
+{/if}
+        </div>
+    
+    </div>
+</div>
+    <div class="menu">
+    	<a href="{if $_userid}{$CATEGORYS[$diquyun][url]}{elsr}{APP_PATH}{/if}"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="{if $_userid}{$CATEGORYS[$diquyun][url]}{elsr}{APP_PATH}{/if}">首页</a></li>
+           <!----------- <li><a href="{APP_PATH}hangfuwu/#/">机场检索</a></li>-------------->
+            <li><a href="#">随e飞</a></li>
+            <li><a href="http://www.weixiuke.com.cn/" target="_blank">维修客</a></li>
+            <li><a href="#">运行控制</a></li>     
+             <li><a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=9">通航供需平台</a></li>   	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+            {if $catid==30}
+            	{php $i=46}
+            	{php $city="3385"}
+            {/if}
+            {if $catid==31}
+            	{php $i=47}
+            	{php $city="3392,3389,3390,3391,3393"}
+            {/if}
+            {if $catid==32}
+            	{php $i=48}
+            	{php $city="3379,3380,3381,3382,3383"}
+            {/if}
+            {if $catid==33}
+            	{php $i=49}
+            	{php $city="3384,3386,3388,3387"}
+            {/if}
+            {if $catid==34}
+            	{php $i=50}
+            	{php $city="3394,3395,3396"}
+            {/if}
+            {if $catid==35}
+            	{php $i=51}
+            	{php $city="3372,3374,3375,3376,3377,3398,3399"}
+            {/if}
+            {if $catid==36}
+            	{php $i=52}
+            	{php $city="3366,3368,3369,3370,3371,3378,397"}
+            {/if}
+    
+{pc:content action="lists" catid="$i" num="20" order="id ASC" return="info"}
+{if $info}    
+	<div id="header">
+      <div class="slides">
+            <div class="slideInner">
+{loop $info $r}
+                 <a href="#" style="background:url({$r[thumb]}) center center no-repeat rgb(16, 82, 179);">
+
+                </a>
+{/loop}  
+            </div>
+            <div class="nav">
+                <a class="prev" href="javascript:;"></a>
+                <a class="next" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+{/pc}   
+{/if}
+<div class="index_jianjie">
+    	<div class="jianjie_ditu">
+        	<img src="img/ditu.png" width="429" height="353" alt="全国地图"/>
+        </div>
+        <div class="jianjie_font">
+        	<img src="img/2.png" width="151" height="36" alt=""/>
+        	<p>国内第一家服务于通用航空的公有云计算平台，旨在为通航管理者、通航运营人、私人飞机拥有者、航空器材销售代理商、飞行爱好者等通用航空产业链相关人员提供一体化的通航资源、信息、应用等服务，搭建具有信息资源共享、产业资源共享、服务资源共享及行业产品资源共享的公共服务平台。</p>
+            <!--<ul>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+            </ul>-->
+            
+        </div>
+    </div>
+    
+<div class="main">
+    	 <!--<div class="main_1">
+        	<h2>供需信息</h2>
+            <dl class="dl">
+            	<dt><a href="{$CATEGORYS[11][url]}" class="dt_tt">包机飞行</a><a href="{$CATEGORYS[11][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_house_new where status<>0 and zone in ($city) order by inputtime desc"  num="16"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl">
+            	<dt><a href="{$CATEGORYS[18][url]}" class="dt_tt">飞行器托管</a><a href="{$CATEGORYS[18][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_tuoguan where status<>0 and zone in ($city) order by inputtime desc"  num="16"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="{$CATEGORYS[19][url]}" class="dt_tt">航油</a><a href="{$CATEGORYS[19][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_hangyou where status<>0 and zone in ($city) order by inputtime desc"  num="8"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+    	<div class="main_1">
+        	<h2>供需信息</h2>
+            <dl class="dl">
+            	<dt><a href="{$CATEGORYS[17][url]}" class="dt_tt">飞行器租赁</a><a href="{$CATEGORYS[17][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_zulin where status<>0 and zone in ($city) order by inputtime desc"  num="16"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl">
+            	<dt><a href="{$CATEGORYS[21][url]}" class="dt_tt">飞行执照</a><a href="{$CATEGORYS[21][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_zhizhao where status<>0 and zone in ($city) order by inputtime desc"  num="16"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="{$CATEGORYS[20][url]}" class="dt_tt">航材</a><a href="{$CATEGORYS[20][url]}" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{pc:get sql="SELECT catid,title,zone,inputtime,url,status FROM thy_hangcai where status<>0 and zone in ($city) order by inputtime desc"  num="8"}
+			{loop $data $r}
+                    <li><a href="{$r[url]}">{str_cut($r[title],40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+   	 <div class="main_2">
+        	<h2>会员专区</h2>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">最新加入的通航机场企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">金牌VIP通航企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+        </div>-->
+		<!----main3--->
+    </div>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+{pc:content action="lists" catid="28" num="20" order="id ASC" return="info"}
+{loop $info $r}
+            <li><a href="{$r[url]}">{str_cut($r[title],36,'')}</a></li>
+{/loop}  
+{/pc}   
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+</body>
+</html>

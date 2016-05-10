@@ -1,0 +1,1006 @@
+{
+    "items": [
+        {
+            "airport_name": "\u9ec4\u5c71\u5c6f\u6eaa\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.1533", 
+            "longitude": "119.425"
+        }, 
+        {
+            "airport_name": "\u6c60\u5dde\u4e5d\u534e\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.7403", 
+            "longitude": "117.6875"
+        }, 
+        {
+            "airport_name": "\u5408\u80a5\u65b0\u6865\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.9911", 
+            "longitude": "116.9892"
+        }, 
+        {
+            "airport_name": "\u5b89\u5e86\u5929\u67f1\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.5836", 
+            "longitude": "117.0491"
+        }, 
+        {
+            "airport_name": "\u868c\u57e0\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.5823", 
+            "longitude": "117.3226"
+        }, 
+        {
+            "airport_name": "\u961c\u9633\u897f\u5173\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.8819", 
+            "longitude": "115.7344"
+        }, 
+        {
+            "airport_name": "\u6fb3\u95e8\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "22.1494", 
+            "longitude": "113.5917"
+        }, 
+        {
+            "airport_name": "\u5357\u82d1\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.7811", 
+            "longitude": "116.3867"
+        }, 
+        {
+            "airport_name": "\u9996\u90fd\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.08", 
+            "longitude": "116.5844"
+        }, 
+        {
+            "airport_name": "\u826f\u4e61\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "39.7566", 
+            "longitude": "116.1261"
+        }, 
+        {
+            "airport_name": "\u516b\u8fbe\u5cad\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "40.3769", 
+            "longitude": "115.9398"
+        }, 
+        {
+            "airport_name": "\u5927\u6eb6\u6d1e\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "40.2159", 
+            "longitude": "117.2597"
+        }, 
+        {
+            "airport_name": "\u5b9a\u9675\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "40.2848", 
+            "longitude": "116.2331"
+        }, 
+        {
+            "airport_name": "\u5317\u4eac\u5bc6\u4e91\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "40.4028", 
+            "longitude": "116.8811"
+        }, 
+        {
+            "airport_name": "\u6cc9\u5dde\u664b\u6c5f\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "24.7999", 
+            "longitude": "118.5926"
+        }, 
+        {
+            "airport_name": "\u6b66\u5937\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.7019", 
+            "longitude": "118.0014"
+        }, 
+        {
+            "airport_name": "\u798f\u5dde\u957f\u4e50\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "25.935", 
+            "longitude": "119.6631"
+        }, 
+        {
+            "airport_name": "\u9f99\u5ca9\u51a0\u8c78\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "25.6742", 
+            "longitude": "116.7464"
+        }, 
+        {
+            "airport_name": "\u53a6\u95e8\u9ad8\u5d0e\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "24.5439", 
+            "longitude": "118.1275"
+        }, 
+        {
+            "airport_name": "\u5609\u5cea\u5173\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.8597", 
+            "longitude": "98.3383"
+        }, 
+        {
+            "airport_name": "\u91d1\u660c\u91d1\u5ddd\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.5094", 
+            "longitude": "102.3389"
+        }, 
+        {
+            "airport_name": "\u5e86\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "35.8009", 
+            "longitude": "107.6106"
+        }, 
+        {
+            "airport_name": "\u5929\u6c34\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.5585", 
+            "longitude": "105.8611"
+        }, 
+        {
+            "airport_name": "\u7518\u5357\u590f\u6cb3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.8192", 
+            "longitude": "102.6219"
+        }, 
+        {
+            "airport_name": "\u5f20\u6396\u7518\u5dde\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.8019", 
+            "longitude": "100.175"
+        }, 
+        {
+            "airport_name": "\u5170\u5dde\u4e2d\u5ddd\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.5075", 
+            "longitude": "103.6194"
+        }, 
+        {
+            "airport_name": "\u6566\u714c\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.166", 
+            "longitude": "94.805"
+        }, 
+        {
+            "airport_name": "\u97f6\u5173\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "24.7983", 
+            "longitude": "113.6461"
+        }, 
+        {
+            "airport_name": "\u6885\u5dde\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "24.2631", 
+            "longitude": "116.1097"
+        }, 
+        {
+            "airport_name": "\u73e0\u6d77\u91d1\u6e7e\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "22.0025", 
+            "longitude": "113.2234"
+        }, 
+        {
+            "airport_name": "\u6c55\u5934\u5916\u7802\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "23.4257", 
+            "longitude": "116.766"
+        }, 
+        {
+            "airport_name": "\u6e5b\u6c5f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "21.32", 
+            "longitude": "110.2132"
+        }, 
+        {
+            "airport_name": "\u767d\u4e91\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "23.2333", 
+            "longitude": "113.1756"
+        }, 
+        {
+            "airport_name": "\u5b9d\u5b89\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "22.3822", 
+            "longitude": "113.4839"
+        }, 
+        {
+            "airport_name": "\u7f57\u5b9a\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "22.7152", 
+            "longitude": "111.6148"
+        }, 
+        {
+            "airport_name": "\u5408\u5c71\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "21.9606", 
+            "longitude": "112.1027"
+        }, 
+        {
+            "airport_name": "\u4e2d\u4fe1\u5761\u5934\u76f4\u5347\u673a\u573a", 
+            "airport_type": "\u76f4\u5347\u673a\u573a", 
+            "latitude": "21.2428", 
+            "longitude": "110.4807"
+        }, 
+        {
+            "airport_name": "\u4e5d\u5dde\u673a\u573a", 
+            "airport_type": "\u76f4\u5347\u673a\u573a", 
+            "latitude": "22.254", 
+            "longitude": "113.6002"
+        }, 
+        {
+            "airport_name": "\u68a7\u5dde\u957f\u6d32\u5c9b", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "23.4554", 
+            "longitude": "111.248"
+        }, 
+        {
+            "airport_name": "\u767e\u8272\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "23.431", 
+            "longitude": "106.5733"
+        }, 
+        {
+            "airport_name": "\u5317\u6d77\u798f\u6210\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "21.5404", 
+            "longitude": "109.2937"
+        }, 
+        {
+            "airport_name": "\u6842\u6797\u4e24\u6c5f\u56fd\u9645", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "25.135", 
+            "longitude": "110.221"
+        }, 
+        {
+            "airport_name": "\u6cb3\u6c60\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "24.7162", 
+            "longitude": "108.083"
+        }, 
+        {
+            "airport_name": "\u9ec4\u679c\u6811\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.2598", 
+            "longitude": "105.8726"
+        }, 
+        {
+            "airport_name": "\u9ec4\u5e73\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.9955", 
+            "longitude": "107.7595"
+        }, 
+        {
+            "airport_name": "\u9ece\u5e73\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.3191", 
+            "longitude": "109.1552"
+        }, 
+        {
+            "airport_name": "\u9f99\u6d1e\u5821\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.3219", 
+            "longitude": "106.4803"
+        }, 
+        {
+            "airport_name": "\u94dc\u4ec1\u51e4\u51f0\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.8812", 
+            "longitude": "109.311"
+        }, 
+        {
+            "airport_name": "\u5174\u4e49\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "25.0797", 
+            "longitude": "104.9589"
+        }, 
+        {
+            "airport_name": "\u9075\u4e49\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.7412", 
+            "longitude": "106.921"
+        }, 
+        {
+            "airport_name": "\u6bd5\u8282\u98de\u96c4\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.2895", 
+            "longitude": "105.2979"
+        }, 
+        {
+            "airport_name": "\u8d35\u9633\u9f99\u6d1e\u5821\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.5394", 
+            "longitude": "106.801"
+        }, 
+        {
+            "airport_name": "\u8354\u6ce2\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "25.4525", 
+            "longitude": "107.9617"
+        }, 
+        {
+            "airport_name": "\u7f8e\u5170\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "19.938", 
+            "longitude": "110.4607"
+        }, 
+        {
+            "airport_name": "\u743c\u6d77\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "19.2602", 
+            "longitude": "110.4755"
+        }, 
+        {
+            "airport_name": "\u4e94\u6307\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "18.7694", 
+            "longitude": "109.5241"
+        }, 
+        {
+            "airport_name": "\u4e9a\u592a\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "18.2986", 
+            "longitude": "109.3639"
+        }, 
+        {
+            "airport_name": "\u51e4\u51f0\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "18.3087", 
+            "longitude": "109.4063"
+        }, 
+        {
+            "airport_name": "\u9ec4\u9a85\u6cbb\u8757\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.3714", 
+            "longitude": "117.33"
+        }, 
+        {
+            "airport_name": "\u79e6\u7687\u5c9b\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.9665", 
+            "longitude": "119.7233"
+        }, 
+        {
+            "airport_name": "\u5c71\u6d77\u5173\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.967", 
+            "longitude": "119.7234"
+        }, 
+        {
+            "airport_name": "\u5f20\u5bb6\u53e3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.7452", 
+            "longitude": "114.9129"
+        }, 
+        {
+            "airport_name": "\u6b63\u5b9a\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.277", 
+            "longitude": "114.6932"
+        }, 
+        {
+            "airport_name": "\u660c\u9ece\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.692", 
+            "longitude": "119.3201"
+        }, 
+        {
+            "airport_name": "\u627f\u5fb7\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.9518", 
+            "longitude": "117.967"
+        }, 
+        {
+            "airport_name": "\u90af\u90f8\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.3126", 
+            "longitude": "114.2548"
+        }, 
+        {
+            "airport_name": "\u6d1b\u9633\u5317\u90ca\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.4428", 
+            "longitude": "112.2316"
+        }, 
+        {
+            "airport_name": "\u5357\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.9805", 
+            "longitude": "112.6216"
+        }, 
+        {
+            "airport_name": "\u5546\u4e18\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.4041", 
+            "longitude": "115.6684"
+        }, 
+        {
+            "airport_name": "\u65b0\u90d1\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.3111", 
+            "longitude": "113.5027"
+        }, 
+        {
+            "airport_name": "\u4fe1\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.2151", 
+            "longitude": "115.6708"
+        }, 
+        {
+            "airport_name": "\u4e0a\u8857\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.8381", 
+            "longitude": "113.2697"
+        }, 
+        {
+            "airport_name": "\u5b89\u9633\u5317\u90ca\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "36.1042", 
+            "longitude": "114.3503"
+        }, 
+        {
+            "airport_name": "\u5b89\u9633\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "36.1335", 
+            "longitude": "114.34"
+        }, 
+        {
+            "airport_name": "\u6f20\u6cb3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "52.5501", 
+            "longitude": "122.2523"
+        }, 
+        {
+            "airport_name": "\u7261\u4e39\u6c5f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "44.3126", 
+            "longitude": "129.3408"
+        }, 
+        {
+            "airport_name": "\u9f50\u9f50\u54c8\u5c14\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "47.1422", 
+            "longitude": "123.5505"
+        }, 
+        {
+            "airport_name": "\u592a\u5e73\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "45.3724", 
+            "longitude": "126.1501"
+        }, 
+        {
+            "airport_name": "\u4f0a\u6625\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "47.4505", 
+            "longitude": "129.0196"
+        }, 
+        {
+            "airport_name": "\u5927\u5e86\u8428\u5c14\u56fe\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "46.5862", 
+            "longitude": "125.2297"
+        }, 
+        {
+            "airport_name": "\u629a\u8fdc\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "48.1995", 
+            "longitude": "134.3664"
+        }, 
+        {
+            "airport_name": "\u9ed1\u6cb3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "50.1719", 
+            "longitude": "127.3092"
+        }, 
+        {
+            "airport_name": "\u795e\u519c\u67b6\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.6261", 
+            "longitude": "110.34"
+        }, 
+        {
+            "airport_name": "\u6b66\u6c49\u5929\u6cb3\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.7836", 
+            "longitude": "114.2081"
+        }, 
+        {
+            "airport_name": "\u8944\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.1522", 
+            "longitude": "112.2917"
+        }, 
+        {
+            "airport_name": "\u5b9c\u660c\u4e09\u5ce1\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.5469", 
+            "longitude": "111.4857"
+        }, 
+        {
+            "airport_name": "\u6069\u65bd\u8bb8\u5bb6\u5e73\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.3181", 
+            "longitude": "109.4913"
+        }, 
+        {
+            "airport_name": "\u6c99\u5e02\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "30.3233", 
+            "longitude": "112.2791"
+        }, 
+        {
+            "airport_name": "\u8346\u95e8\u6f33\u6cb3\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "30.9515", 
+            "longitude": "112.0818"
+        }, 
+        {
+            "airport_name": "\u90b5\u4e1c\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.2582", 
+            "longitude": "111.7573"
+        }, 
+        {
+            "airport_name": "\u6c38\u5dde\u96f6\u9675\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.3456", 
+            "longitude": "111.6122"
+        }, 
+        {
+            "airport_name": "\u8861\u9633\u5357\u5cb3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.8679", 
+            "longitude": "112.5617"
+        }, 
+        {
+            "airport_name": "\u6000\u5316\u82b7\u6c5f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "27.4402", 
+            "longitude": "109.7051"
+        }, 
+        {
+            "airport_name": "\u957f\u6c99\u9ec4\u82b1\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "28.1967", 
+            "longitude": "113.2208"
+        }, 
+        {
+            "airport_name": "\u6b66\u5188\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.7233", 
+            "longitude": "110.6283"
+        }, 
+        {
+            "airport_name": "\u5f20\u5bb6\u754c\u8377\u82b1\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "29.1028", 
+            "longitude": "110.4516"
+        }, 
+        {
+            "airport_name": "\u5e38\u5fb7\u6843\u82b1\u6e90\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "28.9207", 
+            "longitude": "111.6442"
+        }, 
+        {
+            "airport_name": "\u9f99\u5609\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "43.996", 
+            "longitude": "125.6852"
+        }, 
+        {
+            "airport_name": "\u901a\u5316\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.7485", 
+            "longitude": "125.9505"
+        }, 
+        {
+            "airport_name": "\u767d\u57ce\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "45.5135", 
+            "longitude": "123.0418"
+        }, 
+        {
+            "airport_name": "\u957f\u767d\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.9975", 
+            "longitude": "128.142"
+        }, 
+        {
+            "airport_name": "\u7984\u53e3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.7389", 
+            "longitude": "118.868"
+        }, 
+        {
+            "airport_name": "\u7855\u653e\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.5024", 
+            "longitude": "120.4324"
+        }, 
+        {
+            "airport_name": "\u6dee\u5b89\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "33.7772", 
+            "longitude": "119.1478"
+        }, 
+        {
+            "airport_name": "\u8fde\u4e91\u6e2f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.5647", 
+            "longitude": "118.8816"
+        }, 
+        {
+            "airport_name": "\u5357\u901a\u5174\u4e1c\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.0703", 
+            "longitude": "120.9832"
+        }, 
+        {
+            "airport_name": "\u5f90\u5dde\u89c2\u97f3\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.0537", 
+            "longitude": "117.5616"
+        }, 
+        {
+            "airport_name": "\u5954\u725b\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.7933", 
+            "longitude": "119.9075"
+        }, 
+        {
+            "airport_name": "\u76d0\u57ce\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "33.4296", 
+            "longitude": "120.21"
+        }, 
+        {
+            "airport_name": "\u5e38\u5dde\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "31.9127", 
+            "longitude": "119.7865"
+        }, 
+        {
+            "airport_name": "\u8001\u5c71\u76f4\u5347\u673a\u573a", 
+            "airport_type": "\u76f4\u5347\u673a\u573a", 
+            "latitude": "32.0372", 
+            "longitude": "118.7655"
+        }, 
+        {
+            "airport_name": "\u660c\u5317\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "28.8604", 
+            "longitude": "115.9029"
+        }, 
+        {
+            "airport_name": "\u4e95\u5188\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "26.8502", 
+            "longitude": "114.7495"
+        }, 
+        {
+            "airport_name": "\u666f\u5fb7\u9547\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "29.3327", 
+            "longitude": "117.1853"
+        }, 
+        {
+            "airport_name": "\u5b9c\u6625\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "28.4151", 
+            "longitude": "115.9276"
+        }, 
+        {
+            "airport_name": "\u4e5d\u6c5f\u5e90\u5c71", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "29.4809", 
+            "longitude": "115.8103"
+        }, 
+        {
+            "airport_name": "\u9752\u4e91\u8c31\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "28.6345", 
+            "longitude": "115.9285"
+        }, 
+        {
+            "airport_name": "\u9526\u5dde\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.096", 
+            "longitude": "121.0719"
+        }, 
+        {
+            "airport_name": "\u6843\u4ed9\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.6375", 
+            "longitude": "123.4871"
+        }, 
+        {
+            "airport_name": "\u671d\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.5469", 
+            "longitude": "120.4418"
+        }, 
+        {
+            "airport_name": "\u671d\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "41.5469", 
+            "longitude": "120.4418"
+        }, 
+        {
+            "airport_name": "\u957f\u6d77\u5927\u957f\u5c71\u5c9b\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "39.269", 
+            "longitude": "122.6698"
+        }, 
+        {
+            "airport_name": "\u6ee1\u6d32\u91cc\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "49.5727", 
+            "longitude": "117.3413"
+        }, 
+        {
+            "airport_name": "\u901a\u8fbd\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "43.5567", 
+            "longitude": "122.1989"
+        }, 
+        {
+            "airport_name": "\u4e4c\u6d77\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.792", 
+            "longitude": "106.8033"
+        }, 
+        {
+            "airport_name": "\u4e4c\u5170\u6d69\u7279\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "46.1953", 
+            "longitude": "122.0085"
+        }, 
+        {
+            "airport_name": "\u9521\u6797\u6d69\u7279\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "43.9196", 
+            "longitude": "115.9672"
+        }, 
+        {
+            "airport_name": "\u5df4\u5f66\u6dd6\u5c14\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.9269", 
+            "longitude": "107.7394"
+        }, 
+        {
+            "airport_name": "\u547c\u548c\u6d69\u7279\u767d\u5854\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.8555", 
+            "longitude": "111.825"
+        }, 
+        {
+            "airport_name": "\u5305\u5934\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.5597", 
+            "longitude": "109.9967"
+        }, 
+        {
+            "airport_name": "\u8d64\u5cf0\u7389\u9f99\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "42.1597", 
+            "longitude": "118.8408"
+        }, 
+        {
+            "airport_name": "\u963f\u5c14\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "47.3097", 
+            "longitude": "119.9099"
+        }, 
+        {
+            "airport_name": "\u9102\u5c14\u591a\u65af\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.4952", 
+            "longitude": "109.8721"
+        }, 
+        {
+            "airport_name": "\u4e8c\u91cc\u534a\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "40.5618", 
+            "longitude": "109.9998"
+        }, 
+        {
+            "airport_name": "\u4e8c\u8fde\u6d69\u7279\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "43.4267", 
+            "longitude": "112.0984"
+        }, 
+        {
+            "airport_name": "\u6d77\u62c9\u5c14\u4e1c\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "49.0649", 
+            "longitude": "119.3212"
+        }, 
+        {
+            "airport_name": "\u94f6\u5ddd\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.1918", 
+            "longitude": "106.2333"
+        }, 
+        {
+            "airport_name": "\u4e2d\u536b\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.5705", 
+            "longitude": "105.156"
+        }, 
+        {
+            "airport_name": "\u56fa\u539f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.0159", 
+            "longitude": "106.2426"
+        }, 
+        {
+            "airport_name": "\u6cb3\u4e1c\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.1918", 
+            "longitude": "106.2333"
+        }, 
+        {
+            "airport_name": "\u683c\u5c14\u6728\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.4036", 
+            "longitude": "94.7905"
+        }, 
+        {
+            "airport_name": "\u7389\u6811\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "32.8356", 
+            "longitude": "97.0363"
+        }, 
+        {
+            "airport_name": "\u66f9\u5bb6\u5821\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.5251", 
+            "longitude": "102.0393"
+        }, 
+        {
+            "airport_name": "\u5fb7\u4ee4\u54c8\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.368", 
+            "longitude": "97.3458"
+        }, 
+        {
+            "airport_name": "\u82b1\u571f\u6c9f\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "38.269", 
+            "longitude": "90.8673"
+        }, 
+        {
+            "airport_name": "\u6d4e\u5b81\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "35.4167", 
+            "longitude": "116.5333"
+        }, 
+        {
+            "airport_name": "\u83b1\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.5114", 
+            "longitude": "121.4453"
+        }, 
+        {
+            "airport_name": "\u6d41\u4ead\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.2651", 
+            "longitude": "120.376"
+        }, 
+        {
+            "airport_name": "\u9065\u5899\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.8578", 
+            "longitude": "117.2078"
+        }, 
+        {
+            "airport_name": "\u84ec\u83b1\u56fd\u9645\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.8071", 
+            "longitude": "120.8175"
+        }, 
+        {
+            "airport_name": "\u5a01\u6d77\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.1889", 
+            "longitude": "122.2411"
+        }, 
+        {
+            "airport_name": "\u6f4d\u574a\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.6415", 
+            "longitude": "119.12"
+        }, 
+        {
+            "airport_name": "\u70df\u53f0\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.4076", 
+            "longitude": "121.3773"
+        }, 
+        {
+            "airport_name": "\u6ee8\u5dde\u5927\u9ad8", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.636", 
+            "longitude": "117.8134"
+        }, 
+        {
+            "airport_name": "\u4e1c\u8425\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.5105", 
+            "longitude": "118.7895"
+        }, 
+        {
+            "airport_name": "\u5415\u6881\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.68", 
+            "longitude": "111.1443"
+        }, 
+        {
+            "airport_name": "\u6b66\u5bbf\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "37.4449", 
+            "longitude": "112.3742"
+        }, 
+        {
+            "airport_name": "\u4e94\u53f0\u5c71\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.0078", 
+            "longitude": "113.5963"
+        }, 
+        {
+            "airport_name": "\u8fd0\u57ce\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "35.1123", 
+            "longitude": "111.0423"
+        }, 
+        {
+            "airport_name": "\u957f\u6cbb\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.2462", 
+            "longitude": "113.1288"
+        }, 
+        {
+            "airport_name": "\u6714\u5dde\u5e73\u6714\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "39.2354", 
+            "longitude": "112.4585"
+        }, 
+        {
+            "airport_name": "\u960e\u826f\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.6432", 
+            "longitude": "109.2331"
+        }, 
+        {
+            "airport_name": "\u54b8\u9633\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "34.4456", 
+            "longitude": "108.7539"
+        }, 
+        {
+            "airport_name": "\u6986\u6797\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "38.3619", 
+            "longitude": "109.6017"
+        }, 
+        {
+            "airport_name": "\u5ef6\u5b89\u673a\u573a", 
+            "airport_type": "\u6c11\u822a\u673a\u573a", 
+            "latitude": "36.6384", 
+            "longitude": "109.5573"
+        }, 
+        {
+            "airport_name": "\u6d66\u57ce\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "34.8359", 
+            "longitude": "109.5469"
+        }, 
+        {
+            "airport_name": "\u5b89\u5eb7\u4e94\u91cc\u94fa\u673a\u573a", 
+            "airport_type": "\u901a\u7528\u673a\u573a", 
+            "latitude": "32.706", 
+            "longitude": "108.9413"
+        }
+    ]
+}

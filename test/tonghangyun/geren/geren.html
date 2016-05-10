@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script>	
+	$(document).ready(function(){
+				if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+				)
+				{
+					$("body").addClass("min");
+				}
+	})
+</script>
+<script type="text/javascript" src="../js/api"></script>
+
+</head>
+
+<body>
+<img src="../img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="../img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="#">帮助中心</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="../geren/geren.html">M18211121338用户</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="../geren/login.html">退出</a>
+        </div>
+    
+    </div>
+</div>
+<div id="menu">
+    <div class="menu">
+    	<a href="../index.html"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="../index.html">首页</a></li>
+            <li><a href="../hangfuwu/">机场检索</a></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="../gongqiu/gongqiu.html">通航供需平台</a></li>
+            <li><a href="#">气象情报</a></li>        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div class="main">
+		<div class="geren_mbx"><a href="#">主页</a> > <a href="#">个人中心</a></div>
+            <div class="geren_l">
+                <h3>个人注册资料</h3>
+                <p><a href="geren.html" class="cur">用户中心</a></p>
+                <p><a href="geren_ziliao.html">基本资料管理</a></p>
+                <p><a href="geren_repwd.html">修改密码</a></p>
+                <p><a href="geren_anquan.html">财户绑定/安全</a></p>
+                <p><a href="geren_fabu.html">我的需求管理</a></p>
+                
+                <p><a href="geren_fabu.html">用户收藏</a></p>
+            </div>
+            <div class="geren_r">
+				<p class="geren_r_t1">消息：欢迎成为本站会员。</p>
+                <div class="geren_r_nr">
+                	<div class="geren_index"> 
+                    	<a href="#"><img src="../img/geren_thumb.png" alt="" width="83" height="80" border="0"/></a>
+                        <div>
+                       	  <p>你好，M18211121338</p>
+							<p>您当前积分：0 分</p>
+							<p>您上次登陆IP：114.252.210.179 您当前IP：114.252.210.179</p>
+							<p><a href="../gongqiu/gongqiu.html" style="font-size:16px; padding-left:105px;">快速发布任务</a>&nbsp;</p>
+                        </div>
+                    </div>
+                
+                
+              </div>
+            </div>
+        
+        
+  </div>
+</div>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+</body>
+</html>

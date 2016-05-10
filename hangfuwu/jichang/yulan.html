@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>机场录入预览-通航云</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script>	
+	$(document).ready(function(){
+				if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+				)
+				{
+					$("body").addClass("min");
+				}
+	})
+</script>
+<script type="text/javascript" src="../js/luru.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/input.css">
+</head>
+
+<body>
+<img src="../img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="../img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="http://www.177fly.com/tonghangyun/hangfuwu/jichang/luru.html">机场录入</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="http://www.177fly.com/tonghangyun/index.php?m=member&c=index&a=login&forward=&siteid=1">登陆</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="http://www.177fly.com/tonghangyun/index.php?m=member&c=index&a=register&siteid=1">注册</a>
+        </div>
+    
+    </div>
+</div>
+<div id="menu">
+    <div class="menu">
+    	<a href="http://www.177fly.com/tonghangyun/index.html"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="http://www.177fly.com/tonghangyun/index.html">首页</a></li>
+            <li><a href="http://www.177fly.com/tonghangyun/hangfuwu/#/" target="_blank">机场检索</a></li>
+            <li><a href="#" target="_blank">随e飞</a></li>
+            <li><a href="#" target="_blank">维修客</a></li>
+            <li><a href="http://www.177fly.com/tonghangyun/index.php?m=content&c=index&a=lists&catid=9" target="_blank">通航供需平台</a></li>
+            <li><a href="#">气象情报</a></li>        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+</div>
+<div id="main_luru">
+	<div class="luru_ad"><a href="#"><img src="../img/ad.png" width="100%" alt=""/></a></div>
+  <div class="main_luru">
+        <div class="luru_mbx"><a href="#">主页</a> > <a href="#">机场检索</a> > 机场详情录入</div>
+        <h2>请录入通航机场信息</h2>
+         <div class="luru_nr luru_top" style="display:block;">
+           <p class="bi"><span>*&nbsp;<em>长度单位：</em></span>
+              <input name="rad[]" type="radio" id="rad" checked>米
+              <input type="radio" id="rad2" name="rad[]">英尺
+           </p>
+           <p class="bi"><span>*&nbsp;<em>经纬度计量方式：</em></span>
+              <input type="radio" id="rad01_1" name="rad[00]" checked>度分秒
+              <input type="radio" id="rad01_2" name="rad[00]">十进制
+           </p>
+        </div>
+		<div class="luru" id="luru1">
+            <h3>基本信息（必填） <span class="shou"> </span></h3>
+            <div class="luru_nr" style="display:block;">
+            <dl class="luruyulan">
+            	<dt>八达岭机场<span>（经度:E121°37′16.4″ 纬度:N31°20′09″ 海拔（m）:100）</span>:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                <dd>
+                	<div class="luruyulan_l">
+                        <p>地址:  北京市延庆县航空路1号</p>
+                        <p>性质:公开</p>
+                        <p>飞行区等级:</p>
+                        <p>导航和着陆设施:</p>
+                        <p>联系人:</p>
+                        <p>电子邮箱:</p>
+                        <p>消防等级:</p>
+                    </div>
+                    <div class="luruyulan_c">
+                        <p>	电话: 021-38991710/38991717	</p>
+                        <p>	机场标高:	</p>
+                        <p>	夜航服务:	</p>
+                        <p>	机场所有者:	</p>
+                        <p>	电话:	</p>
+                        <p>	开放时间:	</p>
+                        <p>	机场使用许可有效期:	</p>
+                    
+                    </div>
+                    <div class="luruyulan_r">
+                        <p>	类型: 	</p>
+                        <p>	塔台: 	</p>
+                        <p>	机场管理机构:	</p>
+                        <p>	手机:	</p>
+                        <p>	空域面积:	</p>
+                        <p>	与城市的位置关系:	</p>
+                    </div>
+                
+                </dd>
+           	</dl>
+            
+            </div>
+        </div>
+		<div class="luru" id="luru2">
+            <h3>通信（非必填）<span> </span></h3>
+            <div class="luru_nr">
+                <dl class="luruyulan">
+                    <dt>通信:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                    <dd>
+                        <div class="luruyulan_l">
+                            <p>	呼号:	</p>
+                        </div>
+                        <div class="luruyulan_c">
+                            <p>	频率: 021-38991710/38991717	</p>
+                        </div>
+                        <div class="luruyulan_r">
+                            <p>	电话:13444444444	</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+		<div class="luru" id="luru3">
+            <h3>机库（非必填） <span> </span></h3>
+            <div class="luru_nr">
+             <dl class="luruyulan">
+            	<dt>机库信息:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                <dd>
+                	<div class="luruyulan_l">
+                        <p>	机库类型：临时</p>
+                    </div>
+                    <div class="luruyulan_c">
+                        <p>	总数量：2	</p>
+                    </div>
+                    <div class="luruyulan_r">
+                        <p>	总面积(m)：54 </p>
+                    </div>
+					<h5>停机位号及停放机型</h5>
+                	<div class="luruyulan_l">
+                        <p>	1号位: S76C+及以下机型	</p>
+                        <p>	1号位: S76C+及以下机型	</p>
+
+                    </div>
+                    <div class="luruyulan_c">
+                        <p>	1号位: S76C+及以下机型	</p>
+                        <p>	1号位: S76C+及以下机型  	</p>
+                   </div>
+                    <div class="luruyulan_r">
+                        <p>	1号位: S76C+及以下机型	</p>
+                    </div>
+                    
+                </dd>
+           	</dl>
+            </div>
+        </div>
+		<div class="luru" id="luru4">
+            <h3>设施（非必填） <span> </span></h3>
+            <div class="luru_nr">
+            <dl class="luruyulan">
+            	<dt>设施:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                <dd>
+                	<div class="luruyulan_l">
+                        <p>	塔台高度:30 	</p>
+                        <p>	电台型号: VH-500	</p>
+                        <p>	气象型号:GLEHE100	</p>
+                    </div>
+                    <div class="luruyulan_c">
+                        <p>	塔台面积:150	</p>
+                        <p>	电台数量:3	</p>
+                        <p>	气象功能:温度、湿度、气压、风向、风速、云低高、能见度	</p>
+                    </div>
+                    <div class="luruyulan_r">
+                        <p>	放飞人员数量:3	</p>		
+                        <p>	呼号:高东	</p>		
+                        <p>		</p>		
+                    </div>
+				  <h5>设施</h5>
+					<table border="1" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <th>名称</th>
+                          <th>类型</th>
+                          <th>数量</th>
+                        </tr>
+                        <tr>
+                          <td>电源车机</td>
+                          <td>DFE001</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>飞机清洗机</td>
+                          <td>DFE001</td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>消防设备</td>
+                          <td>DFE001</td>
+                          <td>2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+					<table border="1" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <th>名称</th>
+                          <th>数量</th>
+                          <th>吨位</th>
+                        </tr>
+                        <tr>
+                          <td>油车</td>
+                          <td>2</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>油车</td>
+                          <td>2</td>
+                          <td>15</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                </dd>
+           	</dl>
+            </div>
+        </div>
+		<div class="luru" id="luru5">
+            <h3>服务（非必填） <span> </span></h3>
+             <div class="luru_nr">
+            <dl class="luruyulan">
+            	<dt>服务:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                <dd>
+                	<div class="luruyulan_l">
+                        <p>	维修机型:DFE001	</p>
+                        <p>	维修备注:有偿维修，一次300元 	</p>
+                        <p>	航汽100LL:道达尔	</p>
+                        <p>	消防救援服务:有	</p>
+                        <p>	过夜停靠: 300/次	</p>
+                        <p>	气象资料类型:例行天气报告   	</p>
+                    </div>
+                    <div class="luruyulan_c">
+                        <p>	维修数量:5	</p>
+                        <p>	联系人: 张三／13423945849	</p>
+                        <p>	航煤:中石化	</p>
+                        <p>	起降服务:无	</p>
+                        <p>	人员住宿:80/晚／人	</p>
+                    </div>
+                    <div class="luruyulan_r">
+                        <p>	维修等级:二类	</p>
+                        <p>	放电服务:规格一级	</p>
+                        <p>	航汽95:无	</p>
+                        <p>	飞机清洗:100/次	</p>
+                        <p>	气象观测方式:自动观测	</p>
+                   </div>
+                </dd>
+           	</dl>
+            </div>
+       </div>
+	<div class="luru" id="luru6">
+            <h3>驻场通航企业（非必填） <span> </span></h3>
+             <div class="luru_nr">
+                <dl class="luruyulan">
+                    <dt>企业信息:<div class="caozuo"><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></div></dt>
+                    <dd>
+                        <div class="luruyulan_l">
+                            <p>	名称:陕西精工通用航空资质类型（甲类）	</p>
+                        </div>
+                        <div class="luruyulan_c">
+                            <p>	联系人：李四 /13493823847	</p>		
+                        </div>
+                        <div class="luruyulan_r">
+                           <p>	资质类型:	</p>		
+                        </div>
+                        <p>	常用临时起降点:八达岭机场野外临时起降点（E121°37′16.4″/N31°20′09″）	</p>
+                        <p>	业务类型:飞行体验、飞行培训、空中游览、空中拍摄、飞机租赁、农林作业、巡线作业、吊挂作业、运输               	</p>
+                      	<h5>飞机型号</h5>
+					<table border="1" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <th>型号</th>
+                          <th>数量</th>
+                          <th>年飞行小时数</th>
+                        </tr>
+                        <tr>
+                          <td>CESSNA 208</td>
+                          <td>2</td>
+                          <td>202</td>
+                        </tr>
+                        <tr>
+                          <td>CESSNA 208</td>
+                          <td>2</td>
+                          <td>202</td>
+                        </tr>
+                        <tr>
+                          <td>CESSNA 208</td>
+                          <td>2</td>
+                          <td>202</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </dd>
+                </dl>
+            </div>
+     </div>
+				<form action="./success.html"><p id="sub"><input class="sub" type="submit" value="提交信息"></p><br></form>
+    </div>
+</div>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+<script type="text/javascript" src="../js/input.js"></script>
+</body>
+</html>

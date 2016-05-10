@@ -1,0 +1,208 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
+<style>
+  .jiansuo_title{
+        width: 980px;
+    margin: 10px auto;
+    border: 2px solid #dee2e5;
+    box-shadow:2px 2px 4px #888888;
+       background-color: #fff;
+  }
+  .jiansuo_bold{
+    font-size:14px;
+    float:left;
+    padding:10px 20px;
+    line-height:20px;
+  }
+  .jiansuo_content{
+    width:980px;
+    margin:40px auto 50px auto;
+    border:2px solid #c3c3c3;
+    font-size:14px;
+  }
+  .jiansuo_content ul li{
+        text-decoration: none;
+        float:left;
+        color:#C5C9CA;
+        margin-right:5%;
+        font-size:16px;
+    }
+  .jiansuo_bg{
+    width:100%;
+    height:305px;
+    z-index: -1;
+    position: absolute;
+    top:100px;
+    background-color: rgba(238,238,238,0.45);
+  }
+
+</style>
+<div class="jiansuo_box">
+  <div class="jiansuo_bg"></div>
+   <div class="mbx" style="margin: 10px 120px;">
+      <a href="<?php echo siteurl($siteid);?>">首页</a>
+      <span> > </span>
+      <a href="<?php echo $CATEGORYS['59']['url'];?>"><?php echo $CATEGORYS['59']['catname'];?></a>
+      <span> > </span>
+      <a href="<?php echo $CATEGORYS[$catid]['url'];?>"><?php echo $CATEGORYS[$catid]['catname'];?></a>
+   </div>
+   <div class="jiansuo_title">
+
+      <div class="jiansuo_bold" style=" ">
+        <span style="font-size:18px;margin-bottom:10px;font-weight:bold;">上海中瑞通用航空有限公司</span><br><br>
+         <span style="margin-right:76px;">地址：</span>
+         <span style="margin-right:71px;">北京市延庆县航空路1号</span>
+         <span style="margin-right:47px;">联系电话： </span>
+         <span style="margin-right:20px;">021-38991710/38991717</span><br>
+         <span style="margin-right:20px;">经营许可证号：</span>
+         <span style="margin-right:20px;">距离北京市中心，真方位053°，</span>
+         <span style="margin-right:74px;">邮编：</span>
+         <span style="margin-right:20px;">WWW.DARS.ORG.CN</span><br>
+         <span style="margin-right:47px;">成立时间：</span>
+         <span style="margin-right:163px;">通航一类 </span>
+         <span style="margin-right:47px;">经营状态：</span>
+         <span style="margin-right:20px;">12345678@qq.com</span><br>
+         <span style="margin-right:46px;">注册资金：</span>
+         <span style="margin-right:23px;">交通运输部东海第一救助飞行队 </span> 
+         <span style="margin-right:47px;">法人代表：</span>
+         <span style="margin-right:20px;">2018</span><br>
+         <span style="margin-right:32px;">公司总人数：</span>
+         <span style="margin-right:22px;">交通运输部东海第一救助飞行队</span>
+         <span style="margin-right:47px;">公司类型：</span>
+         <span style="margin-right:20px;">30</span><br>
+         <span style="margin-right:46px;">驻扎机场：</span>
+         <span style="margin-right:161px;">密云机场</span>
+         <span style="margin-right:20px;">飞行器总数量：</span> 
+         <span style="margin-right:20px;">13</span><br>
+                  
+
+      </div>
+      <img style="float: right; width: 20%; margin: 20px;" src="<?php echo IMG_PATH;?>v9/ad5.jpg" alt="">
+      <div style="clear:both;"></div>
+   </div>
+   <div class="jiansuo_content">
+     <div style="background-color:#606465;padding:10px 20px;">
+        <ul>
+          <li>飞行器信息</li>
+          <li>业务内容</li>
+          <li>临时起降点</li>
+          <li>联系方式</li>
+          <li>运营规范</li>
+        </ul>
+        <div style="clear:both;"></div>
+     </div>
+
+       <div>
+         <div class="ja" style="float: left; width: 120px;
+    height: 210px;
+    padding-top: 20px;
+    background-color: rgba(42, 156, 151, 0.22);
+    text-align: center;
+    font-weight: bold;
+        border-bottom: 2px solid #c3c3c3;
+    border-right: 2px solid #c3c3c3;">业务内容</div>
+         <div style=" float: left;  padding: 20px;    border-bottom: 2px solid #c3c3c3; height: 190px; width:818px"><b>甲类</b> <br>
+                    陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务<br>
+                    <b>乙类</b> <br>
+                    陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务<br>
+                    <b>丙类</b> <br>
+                    陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务<br>
+                    <b>俱乐部类</b> <br>
+                    陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、<br>
+                    <b>其它</b><br>
+                    无
+          </div>
+          <div style="clear:both;"></div>
+       </div>
+        <div>
+         <div style="    float: left;
+    width: 120px;
+    height: 40px;
+        border-bottom: 2px solid #c3c3c3;
+    border-right: 2px solid #c3c3c3;
+    line-height: 40px;
+    
+    background-color: rgba(42, 156, 151, 0.22);
+    text-align: center;
+    font-weight: bold;">运营范围</div>
+         <div style="    float: left;
+    /* margin-left: 90px; */
+    border-bottom: 2px solid #c3c3c3;
+    height: 40px;
+    width: 838px;
+    line-height: 40px;
+    padding-left: 20px;">
+            陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、陆上石油服务、
+          </div>
+          <div style="clear:both;"></div>
+       </div>
+       <div>
+         <div style="    float: left;
+    width: 120px;
+    height: 100px;
+        border-bottom: 2px solid #c3c3c3;
+    border-right: 2px solid #c3c3c3;
+    padding-top: 20px;
+    background-color: rgba(42, 156, 151, 0.22);
+    text-align: center;
+    /* margin-top: -10px; */
+    font-weight: bold;">临时起降点</div>
+         <div style="float: left;
+    /* margin-left: 90px; */
+    height: 120px;
+    padding-left: 20px;
+    border-bottom: 2px solid #c3c3c3;
+    width: 838px;">
+            临时起降点1：<br>
+                    经度：E121°37′16.4” 纬度：E121°37′16.4”<br>
+                    临时起降点2：<br>
+                    经度：E121°37′16.4” 纬度：E121°37′16.4”<br>
+                    临时起降点3：<br>
+                    经度：E121°37′16.4” 纬度：E121°37′16.4”<br>
+          </div>
+          <div style="clear:both;"></div>
+       </div>
+       <div>
+         <div style="float: left;
+    width: 120px;
+    height: 120px;
+    padding-top: 20px;
+        border-bottom: 2px solid #c3c3c3;
+    border-right: 2px solid #c3c3c3;
+    background-color: rgba(42, 156, 151, 0.22);
+    text-align: center;
+    /* margin-top: -10px; */
+    font-weight: bold;">飞行器信息</div>
+         <div style="    float: left;
+    /* margin-left: 90px; */
+    height: 100px;
+    padding: 20px;
+    border-bottom: 2px solid #c3c3c3;
+    width: 818px;">
+              CESSNA 208: <br>
+                    数量：2    年飞行小时数：13 <br>
+                        CESSNA 208: <br>
+                     数量：2    年飞行小时数：13 <br>
+                            CESSNA 208: <br>
+                      数量：2    年飞行小时数：13 <br>
+          </div>
+          <div style="clear:both;"></div>
+       </div>
+       <div>
+         <div style="float: left;
+    width: 120px;
+    height: 40px;
+    line-height:40px;
+    border-right: 2px solid #c3c3c3;
+    /* padding-top: 20px; */
+    background-color: rgba(42, 156, 151, 0.22);
+    text-align: center;
+    /* margin-top: -10px; */
+    font-weight: bold;">联系方式</div>
+         <div style=" float: left;  width:818px;    padding: 10px 20px;  padding: 10px 20px;">
+                联系人：李三   联系电话：1234444444
+          </div>
+          <div style="clear:both;"></div>
+       </div>
+   </div>
+</div>
+<?php include template('content', 'footer'); ?>

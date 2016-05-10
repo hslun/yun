@@ -1,0 +1,175 @@
+angular.module('gbApp').directive('broadcast',function(){
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			var slider=element.find('.slider-wrap').children(),
+				bullet=element.find('ul').children(),
+				length=slider.length,
+				current=0,
+				temp='',
+				time='',
+				loopSpeed=4000,
+				fadeSpeed=2000,
+				loop=function(){
+					slider.eq(current).fadeOut(fadeSpeed);
+					bullet.eq(current).removeClass('libg');
+					if (current==(length-1)){
+						current=-1;
+					}
+					current+=1;
+					slider.eq(current).fadeIn(fadeSpeed);
+					bullet.eq(current).addClass('libg');
+				};
+				slider.eq(0).show();
+				bullet.eq(0).addClass('libg');
+				time=setInterval(loop,loopSpeed);
+				bullet.on('click',function(){
+					var index=$(this).index();
+					slider.eq(index).fadeIn().siblings().fadeOut();
+					bullet.eq(index).addClass('libg').siblings().removeClass('libg');
+					clearInterval(time);
+					current=index;
+					time=setInterval(loop,loopSpeed);
+				});
+				slider.hover(
+					function(){
+						clearInterval(time);
+					},function(){
+						time=setInterval(loop,loopSpeed);
+						})
+		}
+	};
+})
+.directive('myhover',function(){
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			element.hover(handleIn,handleOut);
+			//鼠标上移执行的函数
+			var len=element.parent().siblings().length;
+			function handleIn(){
+				element.find('.play-player').fadeIn('fast');
+				element.find('.unclor-layer').css('opacity','0');
+				if(len==element.parent().index()){
+					element.next().fadeIn('fast').css('right',element.parent().width());
+				}else{
+					element.next().fadeIn('fast').css('left',element.parent().width());
+				}
+			}
+			//鼠标例移开执行的函数
+			function handleOut(){
+				element.find('.play-player').fadeOut('fast');
+				element.find('.unclor-layer').css('opacity','0.3');
+				if(len==element.parent().index()){
+					element.next().fadeOut('fast');
+				}else{
+					element.next().fadeOut('fast');
+				}
+			}
+		}
+	};
+})
+.directive('navhover',function(){//导航栏
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			element.on("click",function(){
+				element.addClass('active');
+				element.siblings().each(function(){
+					$(this).removeClass('active');
+				})
+			})
+		}
+	};
+})
+.directive('usertype',function(){
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			scope.checkpersonal=true;
+			scope.selectpri="active";
+			scope.checkpublic=false;
+			scope.selectpub="";
+
+			scope.checkPersonal=function(){
+				if(scope.checkpublic){
+					scope.checkpublic=false;
+					scope.selectpub="";
+					}
+				scope.selectpri="active";
+			}
+			
+			scope.checkPublic=function(){
+				if(scope.checkpersonal){
+					scope.checkpersonal=false;
+					scope.selectpri="";
+				}
+				scope.selectpub="active";
+			}
+		}
+	}
+})
+.directive('privacyhover',function(){
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			element.hover(
+				function(){
+					element.find('a').fadeIn('fast');
+				},function(){
+					element.find('a').fadeOut('fast');
+				})
+		}
+	};
+})
+.directive('scrolldiv',function(){
+	return{
+		restrict:'EA',
+		link:function(scope,element,attr){
+			var prvTop=0,currTop=0;
+				$(document).scroll(function(){
+						currTop=$(document).scrollTop();
+						if(currTop<prvTop){//当滚轮向上滚动触发的事件
+							if(/slideup/.test(element.prop("className"))){
+								element.removeClass('slideup');
+							}
+							element.addClass('slidedown');
+						}else{//当滚轮向下滚动触发的事件
+							if ($(document).scrollTop()>70){
+								element.addClass('slideup');
+								if(/slidedown/.test(element.prop("className"))){
+									element.removeClass('slidedown');
+								}
+							}
+						}
+						prvTop=currTop;
+					}
+				);
+		}
+	}
+})
+.directive('companywork',function(){
+    return{
+        restrict:'EA',
+        templateUrl:'../../../views/companyworks.html',
+        scope:{
+            works:'=workdatas',
+            isShow:'=showworks'
+        },
+        transclude:true,
+        replace:true,
+        link:function(scope,elem,attrs,ctrl,transclude){
+        	scope.close=function(){
+        		scope.isShow=false;
+        	}
+        	//重置事件
+        	scope.resetWork=function(){
+        		alert('123');
+        	}
+        	//确定事件
+        	scope.submitWork=function(){
+        		alert('123');
+        	}
+        }
+    };
+});

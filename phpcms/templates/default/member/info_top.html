@@ -1,0 +1,15 @@
+{template "content","header"}
+<div class="info-tip{if !$_GET['msg']} info-off{/if} main" style="padding:50px 0px 400px;">
+{if $_GET['msg']}
+	{php $city = getcity($city, 'pinyin', 'info_citys_id')}
+	<center><div class="tip-ok ib" style="font-size:20px">恭喜信息发布成功！</div></center>
+    <div class="tip-loc" style="font-size:16px; margin-top:20px;"><a href="{$url}" target="_blank">{$title}（点击查看）</a> 已经成功发布到
+			{loop $zone $r}
+			{$r[name]} 
+			{/loop}<br /><br>
+您还可以：<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid={$siteid}&catid={$catid}&city={$city}&zone={$r[linkageid]}">再发一条</a>
+  </div>
+	{/if}
+    
+</div>
+{template "content","footer"}

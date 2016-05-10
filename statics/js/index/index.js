@@ -1,0 +1,50 @@
+$(function(){
+			$('.jichang_title').click(function(){
+					$('.jichang_title').css({
+					"color":"#1969c0",
+					"border-top":"1px solid #1969c0",
+					"border-left":"1px solid #1969c0",
+					"border-right":"1px solid #1969c0",
+					"border-bottom":"1px solid #fff",
+					"position":"relative",
+					"top":"1px",
+					
+				});
+				$('.qiye_title').css({
+					"border-top":"1px solid #d2d2d2",
+					"border-left":"0px",
+					"border-bottom":"1px solid #1969c0",
+					"border-right":"1px solid #d2d2d2",
+					"position":"relative",
+					"top":"1px",
+					"color":"#717171"
+				});
+				$('.qiye').css('display','none');
+				$('.jichang').css('display','block');
+			});
+		
+			$('.qiye_title').click(function(){
+					$('.qiye_title').css({
+					"color":"#1969c0",
+					"border-top":"1px solid #1969c0",
+					"border-left":"1px solid #1969c0",
+					"border-right":"1px solid #1969c0",
+					"border-bottom":"1px solid #fff",
+					"position":"relative",
+					"top":"1px"
+				});
+				$('.jichang_title').css({
+					"border-top":"1px solid #d2d2d2",
+					"border-left":"1px solid #d2d2d2",
+					"border-bottom":"1px solid #1969c0",
+					"border-right":"0px",
+					"position":"relative",
+					"top":"1px",
+					"color":"#717171"
+				});
+				$('.qiye').css('display','block');
+				$('.jichang').css('display','none');
+			});
+
+			
+		});

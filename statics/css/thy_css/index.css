@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+.index_login{width:220px; float:right; color:#006dbf; font-weight:bold; text-align:right; font-size:16px; padding-top:10px;} 
+.index_login a{font-weight:bold; color:#006dbf;}
+#menu{overflow:hidden; border-bottom: 3px solid #399ff3;}
+
+#main{ overflow:hidden; background:url(../../images/thy_img/ios9_bg.jpg) no-repeat #244676; background-position:center top;}
+.main h2{margin:50px auto; background:#043d6e; width:280px; height:40px; line-height:40px; border-radius:5px; text-align:center;}
+.main h2 span{ padding:0px 20px; color:#f39700;}
+.quguo{overflow:hidden; padding-bottom:30px;}
+.quguo li{display:inline;}
+.quguo a{ display:block; width:155px; float:left; color:#fff; font-size:14px; text-align:center; padding-top:10px; line-height:30px;}
+
+#gmap {display:block; width:540px; height:455px; background:url(../../images/thy_img/map.png) no-repeat; position:relative; margin:50px auto 2em auto;}
+#gmap a {color:#000; font-family:arial, sans-serif; font-size:1.2em; font-weight:bold; text-transform:uppercase;}
+
+a#title2, a#title2:visited {display:block; width:550px; height:617px; padding-top:260px; position:absolute; left:0; top:0; cursor:default; text-decoration:none;}
+* html a#title2 {height:617px; he\ight:0;}/*IE6.0以下中显示*/
+#gmap a#title2:hover {background:transparent url(group_col.gif) no-repeat 0 0; overflow:visible; color:#c00;}
+
+/*新疆*/
+a#xj { display:block; width:210px; height:0; padding-top:160px; overflow:hidden; position:absolute; left:3px; top:54px;}
+* html a#xj {height:230px; he\ight:0;text-indent:-9000px;}
+a#xj:hover {background:transparent url(../../images/thy_img/xj.png) no-repeat 1px -2px;overflow:visible;text-indent:-9000px;}
+a.xj_dt {background:transparent url(../../images/thy_img/xj.png) no-repeat 1px -2px;overflow:visible;text-indent:-9000px;}
+
+/*西南*/
+a#xn {display:block; width:329px; height:0; padding-top:205px; overflow:hidden; position:absolute; left:24px; top:202px;}
+* html a#xn {height:290px; he\ight:0;text-indent:-9000px;}
+a#xn:hover {background:transparent url(../../images/thy_img/xn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.xn_dt {background:transparent url(../../images/thy_img/xn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*西北*/
+a#xb {display:block; width:210px; height:0; padding-top:135px; overflow:hidden; position:absolute; left:141px; top:138px;}
+* html a#xb {height:200px; he\ight:0;text-indent:-9000px;}
+a#xb:hover {background:transparent url(../../images/thy_img/xb.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.xb_dt {background:transparent url(../../images/thy_img/xb.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+
+/*华北*/
+a#hb { display:block; width:231px; height:0; padding-top:229px; overflow:hidden; position:absolute; left:226px; top:7px;}
+* html a#xb {height:323px; he\ight:0;text-indent:-9000px;}
+a#hb:hover {background:transparent url(../../images/thy_img/hb.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.hb_dt {background:transparent url(../../images/thy_img/hb.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*东北*/
+a#db { display:block; width:128px; height:0; padding-top:181px; overflow:hidden; position:absolute; left:414px; top:4px;}
+* html a#db {height:250px; he\ight:0;text-indent:-9000px;}
+a#db:hover {background:transparent url(../../images/thy_img/db.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.db_dt {background:transparent url(../../images/thy_img/db.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*中南*/
+a#zn {display:block; width:147px; height:0; padding-top:222px; overflow:hidden; position:absolute; left:290px; top:216px;}
+* html a#zn {height:320px; he\ight:0;text-indent:-9000px;}
+a#zn:hover {background:transparent url(../../images/thy_img/zn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.zn_dt {background:transparent url(../../images/thy_img/zn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*华南*/
+a#hd {display:block; width:93px; height:0; padding-top:180px; overflow:hidden; position:absolute; left:386px; top:191px;}
+* html a#hd {height:245px; he\ight:0;text-indent:-9000px;}
+a#hd:hover {background:transparent url(../../images/thy_img/hd.png) no-repeat;overflow:visible;text-indent:-9000px;}
+a.hd_dt {background:transparent url(../../images/thy_img/hd.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+.quguo a.xj_nm{background:url(../../images/thy_img/xj_bg.png) center 12px no-repeat;}
+.quguo a.hd_nm{background:url(../../images/thy_img/hd_bg.png) center 12px no-repeat;}
+.quguo a.zn_nm{background:url(../../images/thy_img/zn_bg.png) center 12px no-repeat;}
+.quguo a.hb_nm{background:url(../../images/thy_img/hb_bg.png) center 12px no-repeat;}
+.quguo a.db_nm{background:url(../../images/thy_img/db_bg.png) center 12px no-repeat;}
+.quguo a.xb_nm{background:url(../../images/thy_img/xb_bg.png) center 12px no-repeat;}
+.quguo a.xn_nm{background:url(../../images/thy_img/xn_bg.png) center 12px no-repeat;}
+.quguo #xj_nm:hover{background:url(../../images/thy_img/xj_bg.png) center 12px no-repeat;}
+.quguo #hd_nm:hover{background:url(../../images/thy_img/hd_bg.png) center 12px no-repeat;}
+.quguo #zn_nm:hover{background:url(../../images/thy_img/zn_bg.png) center 12px no-repeat;}
+.quguo #hb_nm:hover{background:url(../../images/thy_img/hb_bg.png) center 12px no-repeat;}
+.quguo #db_nm:hover{background:url(../../images/thy_img/db_bg.png) center 12px no-repeat;}
+.quguo #xb_nm:hover{background:url(../../images/thy_img/xb_bg.png) center 12px no-repeat;}
+.quguo #xn_nm:hover{background:url(../../images/thy_img/xn_bg.png) center 12px no-repeat;}

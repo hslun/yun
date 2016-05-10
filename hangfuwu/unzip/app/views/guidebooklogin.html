@@ -1,0 +1,54 @@
+<div class="loginwrap">
+	<div class="login">
+		<h3>登陆</h3>
+		<div class="user-type">
+			<label for="personal"class="{{selectpri}}" usertype>
+				<input id="personal" type="checkBox" ng-model="checkpersonal" ng-change="checkPersonal()" />个人用户
+			</label>
+			<label for="public" class="{{selectpub}}" usertype>
+				<input id="public" type="checkBox" ng-model="checkpublic" ng-change="checkPublic()"/>公司用户
+			</label>
+		</div>
+		<div class="form-personal" ng-show="checkpersonal">
+			<form>
+				<div class="name">
+					<p>用户名/E-mail地址：</p>
+					<input type="text" ng-model="login.id" required="required"/>
+				</div>
+				<div class="password">
+					<p>密码：</p>
+					<input type="text"  ng-model="login.passwd" required="required"/>
+				</div>
+				<div class="verify">
+					<p>验证码：</p>
+					<input type="text">
+				</div>	
+				<label for="remember">
+					<input id="remember" type="checkBox"/>记住我的登陆状态
+				</label>
+				<a class="user-login"></a>
+			</form>
+		</div>
+		<div class="form-unit" ng-show="checkpublic">
+			<form>
+				<div class="name">
+					<p>公司/E-mail地址：</p>
+					<input type="text" ng-model="login.id" required="required"/>
+				</div>
+				<div class="password">
+					<p>密码：</p>
+					<input type="text"  ng-model="login.passwd" required="required"/>
+				</div>
+				<div class="verify">
+					<p>验证码：</p>
+					<input type="text">
+				</div>	
+				<label for="remember">
+					<input id="remember" type="checkBox"/>记住我的登陆状态
+				</label>
+				<a class="user-login"></a>
+			</form>
+		</div>
+	</div>
+	<div class="hint">><a href="#/register">还未注册</a></div>
+</div>

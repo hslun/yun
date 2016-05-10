@@ -1,0 +1,106 @@
+<div class="registerwrap">
+	<div class="register">
+		<h3>注册</h3>
+		<div class="user-type">
+			<label for="personal" class="{{selectpri}}" usertype>
+				<input id="personal" type="checkBox" ng-model="checkpersonal" ng-change="checkPersonal()" />个人用户
+			</label>
+			<label for="public" class="{{selectpub}}" usertype>
+				<input id="public" type="checkBox" ng-model="checkpublic" ng-change="checkPublic()"/>公司用户
+			</label>
+		</div>
+		<div class="form-personal" ng-show="checkpersonal">
+			<div class="name">
+					<span>用户名:</span>
+					<input type="text"  required="required"/>
+			</div>
+			<div class="Email">
+					<span>地址:</span>
+					<input type="text" required="required"/>
+			</div>
+			<div class="name">
+					<span>输入密码:</span>
+					<input type="text" required="required"/>
+			</div>
+			<div class="name">
+					<span>确定密码:</span>
+					<input type="text" required="required"/>
+			</div>
+			<div class="verify">
+				<span>验证码：</span>
+				<input type="text">
+			</div>
+			<label for="remember">
+					<input id="remember" type="checkBox"/>我已认真阅读"<a href=""class="rule">服务条款</a>"
+				</label>
+		</div>
+		<div class="form-public" ng-show="checkpublic">
+			<form action="">
+				<div class="company-info">
+					<span>公司名称：</span>
+					<input type="text" ng-model="companyName">
+					<p>6-18数字、字母和下划线</p>
+				</div>
+				<div class="company-info">
+					<span>联系电话：</span>
+					<input type="text" ng-model="companyPhone">
+				</div>
+				<div class="company-info">
+					<span>邮寄地址：</span>
+					<input type="text" ng-model="companyAddress">
+					<p>6-18数字、字母和下划线</p>
+				</div>
+				<div class="company-info">
+					<span>邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</span>
+					<input type="text" ng-model="companyEmail">
+					<p>未使用注册的邮箱地址</p>
+				</div>
+				<div class="company-info">
+					<span>输入密码：</span>
+					<input type="password" ng-model="passwordInit">
+					<p>最少6个字符，英文字符(区分大小写)，符号或数字</p>
+				</div>
+				<div class="company-info">
+					<span>确认密码：</span>
+					<input type="password" ng-model="passowrd">
+					<p>再输入一次密码</p>
+				</div>
+				<hr/>
+				<div class="company-info">
+					<span>公司规模：</span>
+					<select>
+						<option value="">0-50人</option>
+						<option value="">51-500人</option>
+						<option value="">501-1000人</option>
+						<option value="">1000人以上</option>
+					</select>
+				</div>
+				<div class="company-info">
+					<span>公司分类：</span>
+					<select>
+						<option value="">141部航校</option>
+						<option value="">91/135部航空公司</option>
+						<option value="">政府机构/协会</option>
+						<option value="">145部维修单位</option>
+						<option value="">医疗救援组织</option>
+						<option value="">其他</option>
+					</select>
+				</div>
+				<div class="company-info">
+					<span>主营业务：</span>
+					<select ng-click="chooseWorks()"></select>
+				</div>
+				<div class="company-info">
+					<span>验证码：</span>
+					<input type="text"/>
+				</div>
+				<div class="company-info">
+					<input type="checkBox">我已认真阅读"<a href="" class="rule">服务条款</a>"
+				</div>
+				<a href="" class="registerbtn">注册</a>
+			</form>
+		</div>
+	</div>
+	<div class="hint"><a href="#/login">>已注册请登陆</a></div>
+	<companywork workdatas="works" showworks="showworks"></companywork>
+</div>

@@ -1,0 +1,14 @@
+{
+	"address":{
+		"name":"地址：",
+		"content":"北京市星火路4号B座"
+	},
+	"phone":{
+		"name":"电话：",
+		"content":"400-6393-177"
+	},
+	"email":{
+		"name":"邮箱：",
+		"content":"service@177fly.com"
+	}
+}

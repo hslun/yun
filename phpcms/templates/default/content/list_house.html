@@ -1,0 +1,165 @@
+{template "content","header"}
+{php $info_linkageid = getinfocache('info_linkageid')}<!--  所在地 -->
+{php $city_id = is_numeric($city) ? getcity($city,'pinyin','info_citys_id') : trim($_GET['city'])}
+{php $cityid = getcity($city_id,'linkageid')}
+{php $cityname = getcity($city_id,'name')}
+{php $city = getcity($city_id,'pinyin')}
+<!--main-->
+
+<div id="main">
+    <div class="gongqiu_list">
+        <div class="mbx"><a href="{siteurl($siteid)}">首页</a><span> > </span><a href="{$CATEGORYS[9][url]}">{$CATEGORYS[9][catname]}</a><span> > </span><a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a></div>
+        <div class="gongqiu_city_list">
+            <div class="gongqiu_city_list_1"><h4>类  别：</h4>
+                <ul>
+            {loop subcat(getinfocache('11'),0,0,$siteid) $r}
+                {if $r[catid]==9}
+                    <li><a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">全部</a></li>
+                {/if}
+                {if $r[catid]==11}
+                    <li>{if $catid!=11}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=11}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==17}
+                    <li>{if $catid!=17}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=17}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==18}
+                    <li>{if $catid!=18}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=18}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==19}
+                    <li>{if $catid!=19}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=19}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==20}
+                    <li>{if $catid!=20}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=20}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==21}
+                    <li>{if $catid!=21}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=21}</a>{/if}</li>
+                {/if}
+                {if $r[catid]==23}
+                    <li>{if $catid!=23}<a class="f30" href="{makecaturl($r[url], $city, getinfocache('multi_city'))}">{/if}{$r[catname]}{if $catid!=23}</a>{/if}</li>
+                {/if}
+            {/loop}
+                </ul>
+            </div>
+            <div class="gongqiu_city_list_1"><h4>供求：</h4>
+                <ul>
+            {loop filters('rent_mode',$modelid) $r}
+                <li>{$r[menu]}</li>
+            {/loop}
+                </ul>
+            </div>
+        {php $zone = intval($_GET['zone'])}
+            {php $zones = show_linkage($info_linkageid,$cityid,$cityid,$modelid)}
+          <div class="gongqiu_city_list_1"><h4>所在地：</h4>
+              <ul>
+            {loop $zones  $area}
+                {if $zone == $area['linkageid'] || get_linkage_level($info_linkageid,$zone)== $area['linkageid']}
+                <li><em>{$area['name']}</em></li>
+                {else}
+                <li><a href="{$area['url']}">{$area['name']}</a> </li>
+                {/if}
+            {/loop}
+              </ul>
+          </div>
+      </div>
+    {php $sql = structure_filters_sql($modelid,$cityid)}
+    {php $cachetime = getinfocache('info_cachetime')}
+    
+        <div class="gongqiu_list_l">
+            <h2>最新更新需求信息 <a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&city=">发布需求</a></h2>
+            <ul>
+            {php $top_posid = ($zone==0) ? getinfocache('top_city_posid') : (get_linkage_level($info_linkageid,$zone,'child') ? getinfocache('top_zone_posid') : getinfocache('top_district_posid'))}
+            {php $where = ($zone==0) ? '`extention` LIKE \''.$cityid.'_%\'' : (get_linkage_level($info_linkageid,$zone,'child') ? '`extention` LIKE \''.$cityid.'_'.$zone.'%\'' : '`extention` = \''.$cityid.'_'.get_linkage_level($info_linkageid,$zone,'parentid').'_'.$zone.'\'')}
+            {pc:content action="position"  posid="$top_posid" where="$where" order="listorder DESC" num="10" expiration="1" cache="$cachetime"}
+                {loop $data $r}
+                <li><a href="{$r[url]}">
+                    <p class="gongqiu_name"><span class="gongqiu_tt">{$r[title]}</span> <span class="gongqiu_gongsi">发布人：{$r['contact']}</span></p>
+                    <p class="gongqiu_city"><span class="gongqiu_diqu">
+                    ({if $r[zone]}{get_linkage($r[zone], $info_linkageid, '', 0)}{/if}{if $r[xiaoqu_address]}{$r[xiaoqu_address]}{/if})
+                    </span> <span class="gongqiu_other">发布时间：{timeinterval($r[inputtime])}</span> </p>
+                </a></li>
+                {/loop}
+            {/pc}
+            {php $urlrule = makeurlrule()}
+            {pc:content action="lists" catid="$catid"  where="$sql" num="10" order="listorder DESC,inputtime DESC" page="$page" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            <div style="display:none" id="content_total">{$content_total}</div> 
+            {loop $data $r}
+            {php $photos_num = count(string2array($r[photos]))}
+                    {if $r[catid] == $catid}
+                <li><a href="{$r[url]}">
+                    <p class="gongqiu_name"><span class="gongqiu_tt">{$r[title]}</span> <span class="gongqiu_gongsi">发布人：{$r['contact']}</span></p>
+                    <p class="gongqiu_city"><span class="gongqiu_diqu">
+                    ({if $r[zone]}{get_linkage($r[zone], $info_linkageid, '', 0)}{/if}{if $r[xiaoqu_address]}{$r[xiaoqu_address]}{/if})
+                    </span> <span class="gongqiu_other">发布时间：{timeinterval($r[inputtime])}</span> </p>                
+                </a></li>
+                        {else}
+                {/if}
+
+                
+            {/loop}
+            {/pc}
+            </ul>
+            <div id="page">{$pages}</div>                           
+        </div>
+        <div class="gongqiu_list_r">
+            <dl class="dl index_zhanhui">
+                <dt><a href="#" class="dt_tt">飞行器租赁/托管</a></dt>
+                <dd><ul>
+            {pc:content action="lists" catid="12"  where="$sql" num="5" order="listorder DESC,inputtime DESC" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            {loop $data $r}
+            {php $photos_num = count(string2array($r[photos]))}
+                    <li> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+            {/loop}
+            {/pc}
+            {pc:content action="lists" catid="13"  where="$sql" num="5" order="listorder DESC,inputtime DESC" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            {loop $data $r}
+            {php $photos_num = count(string2array($r[photos]))}
+                    <li> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+            {/loop}
+            {/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+                <dt><a href="#" class="dt_tt">执照</a></dt>
+                <dd><ul>
+            {pc:content action="lists" catid="16"  where="$sql" num="10" order="listorder DESC,inputtime DESC" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            {loop $data $r}
+            {php $photos_num = count(string2array($r[photos]))}
+                    <li> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+            {/loop}
+            {/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+                <dt><a href="#" class="dt_tt">其他</a></dt>
+                <dd><ul>
+            {pc:content action="lists" catid="23"  where="$sql" num="10" order="listorder DESC,inputtime DESC" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            {loop $data $r}
+            {php $photos_num = count(string2array($r[photos]))}
+                    <li> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+            {/loop}
+            {/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        <div class="gongqiu_bt">
+            <dl class="dl">
+                <dt><a href="#" class="dt_tt">飞行包机/托管</a></dt>
+                <dd><ul>
+            {pc:content action="lists" catid="10"  where="$sql" num="4" order="listorder DESC,inputtime DESC" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+            {loop $data $r}
+            {if $n<4}
+            {php $photos_num = count(string2array($r[photos]))}
+                        <li><a href="{$r['url']}">
+                            <p class="gongqiu_tt">{str_cut($r['title'], 40)}</p>
+                            <p class="gongqiu_city"><p class="gongqiu_ren"><p class="gongqiu_ren">{$r['contact']}</p></a>
+                        </li>
+            {/loop}
+            {/if}
+            {/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        
+  </div>
+</div>
+{template 'yp', 'footer'}

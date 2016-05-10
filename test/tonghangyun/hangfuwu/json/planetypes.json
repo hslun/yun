@@ -1,0 +1,19 @@
+{"items":[
+    {  "name": "通用飞机",
+        "minzoom":5,
+        "maxzoom":19,
+        "owner":0
+   },
+   {  "name": "军用飞机",
+       "minzoom":5,
+       "maxzoom":19,
+       "owner":2
+   },
+   {  "name": "民用飞机",
+      "minzoom":5,
+      "maxzoom":19,
+      "owner":1
+   }
+]
+
+}

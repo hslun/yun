@@ -1,0 +1,7 @@
+{if $_username}{L('hellow')} {get_nickname()},
+ <a href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">{L('member_center')}</a>
+ <a href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('logout')}</a>&nbsp;&nbsp;
+ {else} 
+ <a href="{APP_PATH}index.php?m=member&c=index&a=register&siteid={$siteid}" target="_blank">{L('register')}</a> <span>|</span> 
+ <a href="{APP_PATH}index.php?m=member&c=index&a=login&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('login')}
+{/if}

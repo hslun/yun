@@ -1,0 +1,239 @@
+﻿ /* 整体初始属性 */
+body {
+    line-height: 1.334;
+    background-color: #f7f7f7;
+}
+body, input, textarea, select, button,label {
+    font: 14px  "黑体","微软雅黑",Microsoft Yahei, Tahoma, Geneva, sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure {
+    margin: 0;
+}
+/*页面顶部样式 */
+.top-fix-bar {
+    height: 66px;
+}
+
+.top-fix-bar .top-fix-inner {
+    background-color: #fff;
+}
+.top-fix-bar .top-fix-inner {
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    top: 0;
+    left: 0;
+    _position: absolute;
+    height: 55px;
+    color: #bababa;
+    box-shadow: 0 2px 0 #ebecef;
+}
+.page-container{
+    width: 100%;
+    min-width: 600px;
+    height: 370px;
+    background-color:#f7f7f7;
+    font:14px "黑体","微软雅黑",Microsoft Yahei, Tahoma, Geneva, sans-serif;
+}
+.containernew
+{
+	color: rgb(51, 51, 51);
+	display: block;
+	height: 896px;
+	line-height: normal;
+	margin-bottom: 0px;
+	margin-left: 81.5px;
+	margin-right: 81.5px;
+	margin-top: 0px;
+	min-width: 800px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 1100px;
+    margin: auto;
+}
+
+.page-content {
+    margin-bottom: 50px;
+    height: 100%;
+    min-height: 720px;
+}
+.toppadding{
+    padding-top: 20px;
+}
+.tabline{
+	background-color: #616465;
+	height: 40px;
+
+}
+.tabline a{
+	color: #b0b2b3;
+	width: 80px;
+    height: 40px;
+    border: 0px solid #dcdcdc;
+    font-weight: normal;
+    margin:auto;
+    display: inline-block;
+    text-align:center;
+    font-size: 15px;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration:none;
+}
+.tabline a:active{color:white;border-bottom: 2px solid #dcdcdc;background: #cacccd;text-decoration: none;}
+.tabline a:hover{color:white;border-bottom: 2px solid #dcdcdc;text-decoration: none;}
+#table {width:100%;	margin-bottom: 120px;}
+#table td {border-bottom:2px solid #dcdcdc;
+	
+	padding: 8px;
+	line-height:2;
+}
+#table td.two {border-right:none;}
+#table td.thr {border-bottom:none;}
+table{
+
+    border: 2px solid #dcdcdc;
+    border-top: 0px;
+    padding: 0px;
+}
+table tr td.first_td{
+	font-size:18px; 
+	text-align: center;
+	border-right:2px solid #dcdcdc;
+	width: 90px;
+    background-color: #f7fbfd;
+}
+#table tr td.redtable{
+	border-bottom: none;
+}
+#table_borderred tr td{
+	border:2px solid #acacac;
+	border-top: 0px;
+	border-left: 0px;
+	width:140px;
+	padding: 0px;
+}
+#table_borderred tr td.one
+{
+	border-left:2px solid #acacac;
+
+}
+#table_borderred{
+	border-top: 2px solid #acacac;
+	text-align: center;
+
+}
+
+
+#table_borderredth tr td{
+	border:2px solid #acacac;
+	border-top: 0px;
+	border-left: 0px;
+	width:160px;
+	padding: 0px;
+}
+#table_borderredth tr td.one
+{
+	border-left:2px solid #acacac;
+
+}
+#table_borderredth{
+	border-top: 2px solid #acacac;
+	text-align: center;
+
+
+}
+/* 密云机场详细信息 */
+.planedetail{
+    position: relative;
+    display: block;
+    height:310px;
+    background-color:#fff;
+    box-shadow:1px 1.73px 6px 0px rgb(182, 175, 175);
+    margin-bottom: 15px;
+    padding: 15px 10px 0 15px;
+    line-height: 1.5;
+}
+.planedetail .infor{
+    padding-left: 20px;
+    display: inline-block;
+}
+.plantform-img{
+	position: absolute;
+	bottom: 30px;
+	color: #276ab0;
+    top: 50px;
+    right: 60px;
+    height:190px;
+    border: 1px solid #d3d3d3;
+    border-bottom: 2px solid #d3d3d3;
+}
+.img-border{
+	border-bottom: 1px solid #d3d3d3;
+
+}
+.planedetail .infor span{
+	width: 150px;
+	float: left;
+}
+.span_one{
+
+	left: 20px;
+}
+.planedetail .infor span.span_two{
+width: 280px;
+float: left;
+
+}
+.planedetail .top{
+    padding-top: 20px;
+}
+/* 搜索框 */
+.searchinput {
+    display: inline-block;
+    left: 20px;
+    width: 350px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    padding: 0 65px 0 5px;
+    background-color: #fff;
+    color: #000000;
+    vertical-align:middle;
+    float: left;
+    border-right: none;
+}
+.searchbutton{
+	height: 26px;
+	background-color: #14b1c4;
+	border-top: 1px solid #14b1c4;
+	border-bottom: none;
+
+}
+.searchbutton .iconsearch {
+    cursor: pointer;
+    width: 18px;
+    height: 25px;
+    display: inline-block;
+    background: url(ico-search.png) no-repeat;
+    background-position: 3px 3px;
+}
+/*置顶样式设置*/
+.fix-layout {
+position: fixed;
+right: 20px;
+bottom: 15%;
+z-index: 20;
+}
+.gb-operation-area .gb-operation-button {
+width: 45px;
+position: relative;
+height: 45px;
+display: block;
+text-decoration: none;
+overflow: hidden;
+color: #80796c;
+background-image: url(icozhiding.png);
+}

@@ -1,0 +1,54 @@
+{ 
+        "民航机场":{
+           "imag":"../images/ico-8.png",
+           "overimag":"../images/ico-8-s.png",
+           "legendimg":"../images/minhang.png",
+           "imagcolor":"#6190dc",
+           "lablestyle":{ "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "transparent",
+                           "border":"0px",
+                           "font-family":"黑体",
+                           "font-weight":"700"
+                         }
+          },
+        "通用机场":{
+            "imag":"../images/ico-9.png",
+            "overimag":"../images/ico-9-s.png",
+             "legendimg":"../images/tongqin.png",
+            "imagcolor":"#988080",
+             "lablestyle":{ "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "transparent",
+                           "border":"0px",
+                           "font-family":"黑体",
+                           "font-weight":"700"
+                         }
+          },
+         "直升机场":{
+            "imag":"../images/ico-10.png",
+            "overimag":"../images/ico-10-s.png",
+            "legendimg":"../images/zhishengjichang.png",
+            "imagcolor":"#fe6869",
+             "lablestyle":{ "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "transparent",
+                           "border":"0px",
+                           "font-family":"黑体",
+                           "font-weight":"700"
+                         }
+       },
+        "临时":{
+          "imag":"../images/ico-9.png",
+          "overimag":"../images/ico-9-s.png",
+          "legendimg":"../images/linshi.png", 
+          "imagcolor":"#fbb846",
+           "lablestyle":{ "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "transparent",
+                           "border":"0px",
+                           "font-family":"黑体",
+                           "font-weight":"700"
+                         }
+       }
+}

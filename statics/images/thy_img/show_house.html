@@ -1,0 +1,171 @@
+{template 'content', 'header'}
+<!--main-->
+
+<div id="main">
+    <div class="gongqiu_list">
+    	<div class="mbx"><a href="{siteurl($siteid)}">首页</a><span> > </span><a href="{$CATEGORYS[9][url]}">{$CATEGORYS[9][catname]}</a><span> > </span><a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a></div>
+        <h1>{$title}&nbsp;&nbsp;&nbsp;<a href="javascript:;" class="f12 fn blue" onclick="add_favorite('{$title}');" id='favorite' style="font-size:14px;">(收藏)</a></h1>
+        <div class="gongqiu_list_l gongqiu_show">
+            <dl class="dl">
+            	<dt class="gongqiu_name" id="gongqiu_show_name">
+                	<span class="gongqiu_tt"></span>
+                    <span class="gongqiu_ren">时间：{$inputtime}</span></dt>
+            	<dd>
+                	<h2>具体需求：</h2>
+                    <h2>供需类型：{$rent_mode}</h2>
+                    <h2>所在地：{$address}</h2>
+                    <h2>说明:</h2>
+                    <p>
+                        {$content}
+                    </p>
+                    	{if $rs[map]}
+                        <h5 style="margin-left:20px; font-size:16px; border-bottom:1px solid #ccc;">位置：</h5>
+                        {$map}
+						<style type="text/css">
+						#mapObj{margin-left:80px;}
+						</style>
+                        {/if}
+                    <p class="lianxi">如果对该需求有兴趣，可以联系我们详细了解！<br>
+					<a href="javascript:" onclick="ShowDiv('MyDiv','fade')">联系通航云</a></p>
+        			<dl class="user" style="padding-top:15px;">
+                    </dl>
+                </dd>
+            </dl>
+
+
+        </div>
+        <div class="gongqiu_list_r">
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a></dt>
+            	<dd><ul>
+			{pc:content action="lists" catid="$catid"  where="$sql" num="15" order="listorder DESC,inputtime DESC" page="$page" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+			{loop $data $r}
+			{php $photos_num = count(string2array($r[photos]))}
+		            <li> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        <div class="gongqiu_bt">
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">飞行器租凭/包机/托管</a></dt>
+            	<dd><ul>
+			{pc:content action="lists" catid="$catid"  where="$sql" num="4" order="listorder DESC,inputtime DESC" page="$page" moreinfo="1" cache="$cachetime" urlrule="$urlrule"}
+			{loop $data $r}
+			{php $photos_num = count(string2array($r[photos]))}
+						<li><a href="{$r['url']}">
+                        	<p class="gongqiu_tt">{str_cut($r['title'], 50)}</p>
+                            <p class="gongqiu_city"><p class="gongqiu_ren"><p class="gongqiu_ren">{$r['contact']}</p></a>
+                        </li>
+			{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        
+  </div>
+</div>
+<script language="JavaScript">
+<!--
+	function add_favorite(title) {
+		$.getJSON('{APP_PATH}api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('收藏成功');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+//-->
+</script>
+<script type="text/javascript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+<script type="text/javascript">
+	//弹出隐藏层
+	function ShowDiv(show_div,bg_div)
+		{
+			document.getElementById(show_div).style.display='block';
+			document.getElementById(bg_div).style.display='block' ;
+			var bgdiv = document.getElementById(bg_div);
+			bgdiv.style.width = document.body.scrollWidth;
+			// bgdiv.style.height = $(document).height();
+			$("#"+bg_div).height($(document).height());
+		};
+	//关闭弹出层
+	function CloseDiv(show_div,bg_div)
+		{
+			document.getElementById(show_div).style.display='none';
+			document.getElementById(bg_div).style.display='none';
+		};
+</script>
+    <div id="fade" class="black_overlay">
+    </div>
+    <div id="MyDiv" class="white_content" style="background:url({APP_PATH}/tonghangyun/img/form_bg.png) no-repeat">
+        <div style="text-align: right; cursor: default; height: 40px;">
+        	<span style="float:left; color:"></span>
+            <span style="font-size: 16px;" onclick="CloseDiv('MyDiv','fade')">&nbsp;&nbsp;</span>
+        </div>
+	<script language="javascript" type="text/javascript" src="http://www.177fly.com/tonghangyun/statics/js/dialog.js"></script>
+    <link href="http://www.177fly.com/tonghangyun/statics/css/table_form.css" rel="stylesheet" type="text/css">
+    <link href="http://www.177fly.com/tonghangyun/statics/css/dialog.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="http://www.177fly.com/tonghangyun/statics/js/dialog.js"></script>    
+    <div class="form_div">    
+    <form method="post" action="http://www.177fly.com/tonghangyun/index.php?m=formguide&amp;c=index&amp;a=show&amp;formid=23&amp;siteid=1" name="myform" id="myform"> 
+    <p><span class="form_c">姓&nbsp;&nbsp;氏：&nbsp;</span><em><input type="text" name="info[name]" style="width:200px;height:28px; font-size:14px; border-radius:5px; line-height:28px;"  id="name" size="10" value="" class="input-text"> </em>    </p>
+    <p><span class="form_c"> &nbsp;</span><em><input type="radio" name="info[sex]" id="sex_1" value="1"> 先生<input type="radio" name="info[sex]" id="sex_2" value="2"> 女士</em>    </p>
+    <p><span class="form_c">手机号：&nbsp;</span><em><input type="text" name="info[phone]" id="phone" style="width:200px;height:28px; font-size:14px; border-radius:5px; line-height:28px;" value="" size="" class="input-text"> </em>    </p>
+    <input type="hidden" name="info[xuqiu]" id="xuqiu" size="50" value="{$title}" class="input-text">
+    <input type="hidden" name="info[lianjie]" id="lianjie" size="50" value="{$url}" class="input-text"> 
+    <p><input type="submit" name="dosubmit" id="dosubmit" style="margin-top:15px; padding:10px 20px; font-size:18px; color:#FFF; background:#006dbf; border-radius:5px;" value=" 提交 "> </form>  </p>  
+    </div>
+    </div>
+    </div>
+<style>
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+.white_content {
+	display: none;
+	position:fixed;
+	top: 40%;
+	margin-top:-150px;
+	left: 50%;
+	margin-left:-250px;
+	width: 500px;
+	height: 300px;
+	border: 5px solid #FFF;
+	background-color: white;
+	padding:20px;
+	border-radius:5px;
+	z-index:1002;
+	overflow: auto;
+}
+.white_content_small {
+	display: none;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	width: 40%;
+	height: 50%;
+	border: 16px solid lightblue;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+}
+#myform{width:360px; margin:0px auto;}
+#myform p{ margin:10px;}
+#myform p span{display:block; font-size:22px; color:#006dbf; width:100px; float:left;}
+#myform p em{list-style:none; display:block;}
+</style>
+
+{template 'yp', 'footer'}

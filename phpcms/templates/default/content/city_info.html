@@ -1,0 +1,11 @@
+{php $area = getlocalinfo(ip())}
+<!--main-->
+<div class="wp clear more-ctiy">
+	<div class="current">我们猜您可能在{$area[name]}，点击进入<a href="{get_url()}&city={$area[pinyin]}" class="f14 fb blue">{$area[name]}</a></div>
+    <div class="city-list">
+    	<h5>按拼音选择城市</h5>
+		<dl>
+			<dt>A.</dt><dd><a href="#" onclick="co('as')">鞍山</a><a href="#" onclick="co('ay')">安阳</a><a href="#" onclick="co('anqing')">安庆</a></dd>
+		</dl>
+    </div>
+</div>

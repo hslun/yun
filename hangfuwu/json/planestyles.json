@@ -1,0 +1,57 @@
+{
+  "0":{
+          "imag":"./images/ico-tongyong.png",
+          "overimag":"./images/ico-tongyong.png",
+          "legendimg":"./images/ico-tongyong.png",
+          "imagcolor":"#846c6c",
+           "lablestyle":{ "width":"195px",
+                          "height":"115px",
+                          "margin":"0px",
+                           "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "opacity":0.9,
+                           "border":"0px",
+                           "font-family":"宋体",
+                           "font":"12px",
+                           "background":"url(./images/planepopover.png) "
+                         }
+       },
+       "1":{
+          "imag":"./images/ico-minyong.png",
+          "overimag":"./images/ico-minyong.png",
+           "legendimg":"./images/ico-minyong.png",
+           "imagcolor":"#846c6c",
+            "lablestyle":{
+                          "width":"195px",
+                          "height":"115px",
+                          "margin":"0px",
+                          "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "#F1F1F1",
+                           "opacity":0.9,
+                           "border":"0px",
+                           "font-family":"宋体",
+                          "font":"12px",
+                            "background":"url(./images/planepopover.png) "
+                         }
+       } ,
+       "2":{
+          "imag":"./images/ico-junyong.png",
+          "overimag":"./images/ico-junyong.png",
+           "legendimg":"./images/ico-junyong.png",
+           "imagcolor":"#846c6c",
+            "lablestyle":{
+                          "width":"195px",
+                          "height":"115px",
+                          "margin":"0px",
+                           "color":"#5C4242",
+                           "filter": "Glow(Color=#ff0000, Strength=2)",
+                           "backgroundColor": "#F1F1F1",
+                           "opacity":0.9,
+                          "border":"0px",
+                           "font-family":"宋体",
+                           "font":"12px",
+                            "background":"url(./images/planepopover.png) "
+                         }
+       }
+    }

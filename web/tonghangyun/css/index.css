@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+.index_login{width:220px; float:right; color:#006dbf; font-weight:bold; text-align:right; font-size:16px; padding-top:10px;} 
+.index_login a{font-weight:bold; color:#006dbf;}
+#menu{overflow:hidden; border-bottom: 3px solid #399ff3;}
+
+#main{ overflow:hidden; background:url(../img/bg.jpg) no-repeat; background-position:center top;}
+.main h2{margin:50px auto; background:#043d6e; width:280px; height:40px; line-height:40px; border-radius:5px; text-align:center;}
+.main h2 span{ padding:0px 20px; color:#f39700;}
+.quguo{overflow:hidden; padding-bottom:30px;}
+.quguo li{display:inline;}
+.quguo a{ display:block; width:155px; float:left; color:#399ff3; font-size:18px; text-align:center; padding-top:10px;}
+
+#gmap {display:block; width:755px; height:655px; background:url(../img/map.png) no-repeat; position:relative; margin:50px auto 2em auto;}
+#gmap a {color:#000; font-family:arial, sans-serif; font-size:1.2em; font-weight:bold; text-transform:uppercase;}
+
+a#title2, a#title2:visited {display:block; width:550px; height:617px; padding-top:260px; position:absolute; left:0; top:0; cursor:default; text-decoration:none;}
+* html a#title2 {height:617px; he\ight:0;}/*IE6.0以下中显示*/
+#gmap a#title2:hover {background:transparent url(group_col.gif) no-repeat 0 0; overflow:visible; color:#c00;}
+
+/*新疆*/
+a#xj { display:block; width:300px; height:0; padding-top:230px; overflow:hidden; position:absolute; left:3px; top:73px;}
+* html a#xj {height:230px; he\ight:0;text-indent:-9000px;}
+a#xj:hover {background:transparent url(../img/xj.png) no-repeat -20px -20px;overflow:visible;text-indent:-9000px;}
+
+/*西南*/
+a#xn {display:block; width:455px; height:0; padding-top:290px; overflow:hidden; position:absolute; left:33px; top:281px;}
+* html a#xn {height:290px; he\ight:0;text-indent:-9000px;}
+a#xn:hover {background:transparent url(../img/xn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*西北*/
+a#xb {display:block; width:300px; height:0; padding-top:200px; overflow:hidden; position:absolute; left:196px; top:192px;}
+* html a#xb {height:200px; he\ight:0;text-indent:-9000px;}
+a#xb:hover {background:transparent url(../img/xb.png) no-repeat -20px -20px;overflow:visible;text-indent:-9000px;}
+
+
+/*华北*/
+a#hb { display:block; width:330px; height:0; padding-top:323px; overflow:hidden; position:absolute; left:314px; top:10px;}
+* html a#xb {height:323px; he\ight:0;text-indent:-9000px;}
+a#hb:hover {background:transparent url(../img/hb.png) no-repeat -20px -20px;overflow:visible;text-indent:-9000px;}
+
+/*东北*/
+a#db { display:block; width:170px; height:0; padding-top:250px; overflow:hidden; position:absolute; left:580px; top:3px;}
+* html a#db {height:250px; he\ight:0;text-indent:-9000px;}
+a#db:hover {background:transparent url(../img/db.png) no-repeat -20px -20px;overflow:visible;text-indent:-9000px;}
+
+/*中南*/
+a#zn {display:block; width:200px; height:0; padding-top:320px; overflow:hidden; position:absolute; left:404px; top:303px;}
+* html a#zn {height:320px; he\ight:0;text-indent:-9000px;}
+a#zn:hover {background:transparent url(../img/zn.png) no-repeat;overflow:visible;text-indent:-9000px;}
+
+/*华南*/
+a#hd {display:block; width:125px; height:0; padding-top:245px; overflow:hidden; position:absolute; left:537px; top:267px;}
+* html a#hd {height:245px; he\ight:0;text-indent:-9000px;}
+a#hd:hover {background:transparent url(../img/hd.png) no-repeat -20px -20px;overflow:visible;text-indent:-9000px;}
+
+

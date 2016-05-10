@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/slide.css"/>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script type="text/javascript" src="./js/api"></script>
+
+</head>
+
+<body>
+<img src="img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	{$catname}<a href="http://www.177fly.com/tonghangyun/">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+
+        </div>
+        <div class="index_login">
+ <a href="http://www.177fly.com/tonghangyun/index.php?m=member&c=index&a=login" target="_top">登陆</a> <span>|</span> 
+ <a href="http://www.177fly.com/tonghangyun/index.php?m=member&c=index&a=register&siteid=1" target="_blank">注册</a>
+        </div>
+    
+    </div>
+</div>
+    <div class="menu">
+    	<a href="http://www.177fly.com/tonghangyun/"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="http://www.177fly.com/tonghangyun/">首页</a></li>
+            <li><a href="http://www.177fly.com/tonghangyun/hangfuwu/#/">机场检索</a></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="http://www.177fly.com/tonghangyun/index.php?m=content&c=index&a=lists&catid=9">通航供需平台</a></li>
+            <li><a href="#">气象情报</a></li>        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+    
+    
+	<div id="header">
+      <div class="slides">
+            <div class="slideInner">
+            {if $catid==30}
+            	{php $i=46}
+            {/if}
+            {if $catid==31}
+            	{php $i=47}
+            {/if}
+            {if $catid==32}
+            	{php $i=48}
+            {/if}
+            {if $catid==33}
+            	{php $i=49}
+            {/if}
+            {if $catid==34}
+            	{php $i=50}
+            {/if}
+            {if $catid==35}
+            	{php $i=51}
+            {/if}
+            {if $catid==36}
+            	{php $i=52}
+            {/if}
+{pc:content action="lists" catid="$i" num="20" order="id ASC" return="info"}
+{loop $info $r}
+                 <a href="#" style="background:url($info[thumb]) center center no-repeat rgb(16, 82, 179);">
+
+                </a>
+{/loop}  
+{/pc}   
+            </div>
+            <div class="nav">
+                <a class="prev" href="javascript:;"></a>
+                <a class="next" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+<div class="index_jianjie">
+    	<div class="jianjie_ditu">
+        	<img src="img/ditu.png" width="429" height="353" alt="全国地图"/>
+        </div>
+        <div class="jianjie_font">
+        	<img src="img/2.png" width="151" height="36" alt=""/>
+        	<p>国内第一家服务于通用航空的公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台……</p>
+            <ul>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    
+<div class="main">
+    	<div class="main_1">
+        	<h2>供需信息</h2>
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">飞行器租凭/包机/托管</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">新店开业求租2架小飞机</a></li>
+                    <li><a href="#">广西地区求租小型固定翼</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">因公务需要租用湾流550</a></li>
+                    <li><a href="#">山东地区农林植保求租</a></li>
+                    <li><a href="#">河北地区农林植保求租</a></li>
+                    <li><a href="#">横店影视租无人机航拍</a></li>
+                    <li><a href="#">天津婚庆公司求租小型直升机</a></li>
+                    <li><a href="#">克拉玛依求租直升机</a></li>
+                    <li><a href="#">上海某公司寻直升机托管</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">贝尔AS350长期租凭</a></li>
+                    <li><a href="#">内蒙某集团公司寻托管直升机</a></li>
+                    <li><a href="#">江苏省某机场求租AW139机组</a></li>
+                    <li><a href="#">三亚飞行俱乐部求租5个三角翼</a></li>
+                    <li><a href="#">四川求租无人机植保</a></li>
+                </ul></dd>
+            </dl>
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">新店开业求租2架小飞机</a></li>
+                    <li><a href="#">广西地区求租小型固定翼</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">因公务需要租用湾流550</a></li>
+                    <li><a href="#">山东地区农林植保求租</a></li>
+                    <li><a href="#">河北地区农林植保求租</a></li>
+                    <li><a href="#">横店影视租无人机航拍</a></li>
+                    <li><a href="#">天津婚庆公司求租小型直升机</a></li>
+                    <li><a href="#">克拉玛依求租直升机</a></li>
+                    <li><a href="#">上海某公司寻直升机托管</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">贝尔AS350长期租凭</a></li>
+                    <li><a href="#">内蒙某集团公司寻托管直升机</a></li>
+                    <li><a href="#">江苏省某机场求租AW139机组</a></li>
+                    <li><a href="#">三亚飞行俱乐部求租5个三角翼</a></li>
+                    <li><a href="#">四川求租无人机植保</a></li>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">第二届中国天津国际直升机博览</a></li>
+                    <li><a href="#">2015中国国际农用航空植保展览</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                </ul></dd>
+            </dl>
+        </div>
+   	  <div class="main_2">
+        	<h2>会员专区</h2>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">最新加入的通航机场企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">金牌VIP通航企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+        </div>
+		<!----main3--->
+    </div>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+</body>
+</html>

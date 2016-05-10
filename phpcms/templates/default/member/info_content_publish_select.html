@@ -1,0 +1,66 @@
+{template 'member', 'header'}
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
+{if isset($show_validator)}
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+{/if}
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
+
+<div id="main_login" style=" background:url({IMG_PATH}thy_img/ios9_bg.jpg) no-repeat center center #244676; height:700px;">
+    <div class="main_gongqiu" style="    padding-top: 120px;">
+ 	   {if $step == 1}
+        <div class="main_gongqiu_l">
+
+            <a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=11"><img src="{IMG_PATH}thy_img/gongqiu_03.png" width="171" height="171" alt=""/> </a>
+        	<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=17"><img src="{IMG_PATH}thy_img/gongqiu_05.png" width="171" height="171" alt=""/> </a>
+        	<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=18"><img src="{IMG_PATH}thy_img/gongqiu_07.png" width="171" height="171" alt=""/> </a>
+        	<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=19"><img src="{IMG_PATH}thy_img/gongqiu_14.png" width="171" height="171" alt=""/> </a>
+        	<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=20"><img src="{IMG_PATH}thy_img/gongqiu_15.png" width="171" height="171" alt=""/> </a>
+        	<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=21"><img src="{IMG_PATH}thy_img/gongqiu_16.png" width="171" height="171" alt=""/> </a>
+       </div>
+      <div class="main_gongqiu_r">
+      		<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid=1&catid=23"><img src="{IMG_PATH}thy_img/gongqiu_09.png" width="171" height="355" alt=""/></a>
+      </div>
+	   {elseif $step == 2}
+	   {pc:content action="category" catid="$catid" num="8" siteid="$siteid" order="listorder ASC"}
+			<ul class="sub">
+		   {loop $data $r}
+				<li>
+				<a href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid={$siteid}&catid={$r[catid]}&city={$city}">{$r[catname]}</a> 
+				</li>		   
+		   {/loop}
+		   </ul>
+	   {/pc}
+	   {elseif $step == 3 || $step == 4}
+       	<h2 style="font-size:16px; display:block; font-weight:normal; padding-left:20px; ">请选择要要发布的地区：</h2>
+        <ul class="sub" style="width:695px; margin:0px auto; background:#FFFFFF; margin-top:-30px; border-radius:5px; overflow:hidden; padding:30px;">
+		 {loop $zone_arrchild $r}
+			{if $r['linkageid'] != $zone}
+				<li style="width:150px; float:left; line-height:40px; text-align:center;">
+				<a style="font-size:14px;" href="{APP_PATH}index.php?m=member&c=content&a=info_publish&siteid={$siteid}&catid={$catid}&city={$citypinyin}&zone={$r[linkageid]}">{$r[name]}</a> 
+				</li>
+			{/if}
+		 {/loop}	 
+        </ul>
+
+		{/if}
+  </div>
+</div>
+
+<script type="text/javascript"> 
+<!--
+//只能放到最下面
+$(function(){
+	$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'200',height:'50'}, 	function(){$(obj).focus();
+	boxid = $(obj).attr('id');
+	if($('#'+boxid).attr('boxid')!=undefined) {
+		check_content(boxid);
+	}
+	})}});
+	{$formValidator}
+})
+//-->
+</script>
+{template 'content', 'footer'}

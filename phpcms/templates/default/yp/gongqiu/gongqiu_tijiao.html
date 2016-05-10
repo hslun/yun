@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script>	
+	$(document).ready(function(){
+				if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+				)
+				{
+					$("body").addClass("min");
+				}
+	})
+</script>
+<link rel="stylesheet" type="text/css" href="../css/input.css">
+</head>
+
+<body>
+<img src="../img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="../img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="#">帮助中心</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="../geren/login.html">登陆</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="../geren/zhuce.html">注册</a>
+        </div>
+    
+    </div>
+</div>
+<div id="menu">
+    <div class="menu">
+    	<a href="../index.html"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a href="{siteurl($siteid)}">首页</a></li>
+    	{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<li><a href="{$r[url]}">{$r[catname]}</a></li>
+			{/loop}
+        {/pc}        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div class="gongqiu_list">
+    	<div class="mbx"><a href="#">通航云</a> > <a href="#">通航需求</a></div>
+        <div class="gongqiu_list_l gongqiu_show">
+        	<ul id="gongqiu_leixing">
+            	<li class="gqlx1"><a href="#" class="cur"><img src="../img/8.png" alt=""/></a></li>
+            	<li class="gqlx2"><a href="#"><img src="../img/9.png" alt=""/></a></li>
+            	<li class="gqlx3"><a href="#"><img src="../img/10.png" alt=""/></a></li>
+            	<li class="gqlx4"><a href="#"><img src="../img/12.png" alt=""/></a></li>
+            	<li class="gqlx5"><a href="#"><img src="../img/13.png" alt=""/></a></li>
+            	<li class="gqlx6"><a href="#"><img src="../img/14.png" alt=""/></a></li>
+            	<li class="gqlx7"><a href="#"><img src="../img/15.png" alt=""/></a></li>
+            
+            </ul>
+            <form novalidate action="./success.html">
+            <dl class="dl">
+            	<dt class="gongqiu_name" id="gongqiu_show_name"><a href="#" class="dt_tt">包机飞行</a></dt>
+            	<dd class="my_form luru_nr">
+                    <p class="bi"><span>*&nbsp;<em>飞行主题：：</em></span>
+                        <div class="danxuan">
+                         <input type="radio" id="rad10-1" name="rad[10]" checked>直升机观光
+                          <input type="radio" id="rad10-2" name="rad[10]">固定翼观光<br>
+                          <input type="radio" id="rad10-3" name="rad[10]">滑翔伞/动力伞
+                          <input type="radio" id="rad10-4" name="rad[10]">高空跳<br>
+                          <input type="radio" id="rad10-7" name="rad[10]">公务通勤
+                          <input type="radio" id="rad10-5" name="rad[10]">医疗救援<br>
+                          <input type="radio" id="rad10-6" name="rad[10]">其他&nbsp;&nbsp;&nbsp;<input type="text" size="10" maxlength="10">
+                        </div>
+                    </p>
+                    <p class="bi"><span>*&nbsp;<em>出发地：</em></span>
+                          <input type="radio" id="rad11-1" name="rad[11]" checked>国内
+                          <input type="radio" id="rad11-2" name="rad[11]">国外<br><input type="text" name="chufadi" size="33" maxlength="30" required>
+                    </p>
+                    <p class="bi"><span>*&nbsp;<em>目的地：</em></span>
+                          <input type="radio" id="rad12-1" name="rad[12]" checked>国内
+                          <input type="radio" id="rad12-2" name="rad[12]">国外<br><input type="text" size="33" maxlength="30" required>
+                    </p>
+                    <p class="bi"><span>*&nbsp;<em>出行时间：</em></span><input type="text" name="chuxingshijian" size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>出行天数：</em></span><input type="text" name="chuxingtianshu" size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>同行成人数：</em></span><input type="text"  name="chuxingrenshu"size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>同行儿童数：</em></span><input type="text" name="chixingertongshu" size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>描述您的需求：</em></span><textarea cols="50" name="xuqiu" rows="5"></textarea></p>
+                </dd>
+            </dl>
+            <dl class="dl">
+            	<dt class="gongqiu_name" id="gongqiu_show_name"><a href="#" class="dt_tt">包机飞行</a></dt>
+            	<dd class="my_form luru_nr">
+                   <p class="bi"><span>*&nbsp;<em>联系我们：</em></span><input type="text" name="lianxi" size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>电话：</em></span><input type="text" name="dianhua" size="33" placeholder="电话" required="" data-rule-number="true" data-msg-required="请输入正确的电话" data-msg-number="请输入正确的电话" data-msg-minlength="请输入最小8位" minlength="8" maxlength="20"></p>
+                    <p class="bi"><span>*&nbsp;<em>邮箱：</em></span><input type="text" name="youxiang" size="33" class="fn-tinput" placeholder="邮箱" required="" data-rule-mm="true" data-msg-required="请输入邮箱" data-msg-mm="请输入正确格式"></p>
+                    <p class="bi"><span>*&nbsp;<em>顾问联系时间：</em></span>
+                          <input type="radio" id="rad13-1" name="rad[13]" checked>全天皆可 
+                          <input type="radio" id="rad13-3" name="rad[13]">午休时间
+                          <input type="radio" id="rad13-4" name="rad[13]">晚上下班后
+                          <input type="radio" id="rad13-5" name="rad[13]">打电话前短信确认
+                    </p>
+				<p id="sub"><input class="sub" type="submit" value="&nbsp;&nbsp;确定提交&nbsp;&nbsp;"></p>
+                </dd>
+            </dl>
+            </form>
+
+        </div>
+        <div class="gongqiu_list_r">
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">第二届中国天津国际直升机博览</a></li>
+                    <li><a href="#">2015中国国际农用航空植保展览</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">第二届中国天津国际直升机博览</a></li>
+                    <li><a href="#">2015中国国际农用航空植保展览</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                </ul></dd>
+            </dl>
+        </div>
+        <div class="gongqiu_bt">
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">飞行器租凭/包机/托管</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#"><p class="gongqiu_tt">[新店开业求租2架小飞机]</p><p class="gongqiu_city">辽宁鞍山</p><p class="gongqiu_ren">王先生</p></a></li>
+                    <li><a href="#"><p class="gongqiu_tt">[新店开业求租2架小飞机]</p><p class="gongqiu_city">辽宁鞍山</p><p class="gongqiu_ren">王先生</p></a></li>
+                    <li><a href="#"><p class="gongqiu_tt">[新店开业求租2架小飞机]</p><p class="gongqiu_city">辽宁鞍山</p><p class="gongqiu_ren">王先生</p></a></li>
+                    <li><a href="#"><p class="gongqiu_tt">[新店开业求租2架小飞机]</p><p class="gongqiu_city">辽宁鞍山</p><p class="gongqiu_ren">王先生</p></a></li>
+                </ul></dd>
+            </dl>
+        </div>
+        
+  </div>
+</div>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+    //jquery.validate
+	$("#jsForm11").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+
+
+//下面是一些常用的验证规则扩展
+
+/*-------------验证插件配置 懒人建站http://www.51xuediannao.com/-------------*/
+
+//配置错误提示的节点，默认为label，这里配置成 span （errorElement:'span'）
+$.validator.setDefaults({
+	errorElement:'span'
+});
+
+//配置通用的默认提示语
+$.extend($.validator.messages, {
+	required: '必填',
+    equalTo: "请再次输入相同的值"
+});
+
+/*-------------扩展验证规则 懒人建站http://www.51xuediannao.com/-------------*/
+//邮箱 
+jQuery.validator.addMethod("mail", function (value, element) {
+	var mail = /^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$/;
+	return this.optional(element) || (mail.test(value));
+}, "邮箱格式不对");
+
+//电话验证规则
+jQuery.validator.addMethod("phone", function (value, element) {
+    var phone = /^0\d{2,3}-\d{7,8}$/;
+    return this.optional(element) || (phone.test(value));
+}, "电话格式如：0371-68787027");
+
+//区号验证规则  
+jQuery.validator.addMethod("ac", function (value, element) {
+    var ac = /^0\d{2,3}$/;
+    return this.optional(element) || (ac.test(value));
+}, "区号如：010或0371");
+
+//无区号电话验证规则  
+jQuery.validator.addMethod("noactel", function (value, element) {
+    var noactel = /^\d{7,8}$/;
+    return this.optional(element) || (noactel.test(value));
+}, "电话格式如：68787027");
+
+//手机验证规则  
+jQuery.validator.addMethod("mobile", function (value, element) {
+    var mobile = /^1[3|4|5|7|8]\d{9}$/;
+	return this.optional(element) || (mobile.test(value));
+}, "手机格式不对");
+
+//邮箱或手机验证规则  
+jQuery.validator.addMethod("mm", function (value, element) {
+    var mm = /^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$|^1[3|4|5|7|8]\d{9}$/;
+	return this.optional(element) || (mm.test(value));
+}, "格式不对");
+
+//电话或手机验证规则  
+jQuery.validator.addMethod("tm", function (value, element) {
+    var tm=/(^1[3|4|5|7|8]\d{9}$)|(^\d{3,4}-\d{7,8}$)|(^\d{7,8}$)|(^\d{3,4}-\d{7,8}-\d{1,4}$)|(^\d{7,8}-\d{1,4}$)/;
+    return this.optional(element) || (tm.test(value));
+}, "格式不对");
+
+//年龄
+jQuery.validator.addMethod("age", function(value, element) {   
+	var age = /^(?:[1-9][0-9]?|1[01][0-9]|120)$/;
+	return this.optional(element) || (age.test(value));
+}, "不能超过120岁"); 
+///// 20-60   /^([2-5]\d)|60$/
+
+//传真
+jQuery.validator.addMethod("fax",function(value,element){
+    var fax = /^(\d{3,4})?[-]?\d{7,8}$/;
+    return this.optional(element) || (fax.test(value));
+},"传真格式如：0371-68787027");
+
+//验证当前值和目标val的值相等 相等返回为 false
+jQuery.validator.addMethod("equalTo2",function(value, element){
+    var returnVal = true;
+    var id = $(element).attr("data-rule-equalto2");
+    var targetVal = $(id).val();
+    if(value === targetVal){
+        returnVal = false;
+    }
+    return returnVal;
+},"不能和原始密码相同");
+
+//大于指定数
+jQuery.validator.addMethod("gt",function(value, element){
+    var returnVal = false;
+    var gt = $(element).data("gt");
+    if(value > gt && value != ""){
+        returnVal = true;
+    }
+    return returnVal;
+},"不能小于0 或空");
+
+//汉字
+jQuery.validator.addMethod("chinese", function (value, element) {
+    var chinese = /^[\u4E00-\u9FFF]+$/;
+    return this.optional(element) || (chinese.test(value));
+}, "格式不对");
+
+//指定数字的整数倍
+jQuery.validator.addMethod("times", function (value, element) {
+    var returnVal = true;
+    var base=$(element).attr('data-rule-times');
+    if(value%base!=0){
+        returnVal=false;
+    }
+    return returnVal;
+}, "必须是发布赏金的整数倍");
+
+//身份证
+jQuery.validator.addMethod("idCard", function (value, element) {
+    var isIDCard1=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;//(15位)
+    var isIDCard2=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;//(18位)
+
+    return this.optional(element) || (isIDCard1.test(value)) || (isIDCard2.test(value));
+}, "格式不对");
+
+
+</script>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2016通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+<script type="text/javascript" src="../js/input.js"></script>
+</body>
+</html>

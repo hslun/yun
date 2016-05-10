@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" href="../styles/login.css">
+    <!-- endbuild -->
+  </head>
+<body ng-app="userApp"  class="loginBody" ng-controller="userLoginCtrl">
+	<div class="login_content">
+		<div class="login_logo"></div>
+		<div class="fm_field">	
+			<form class="form">
+				<label for="name">用户名
+					<input name="name" type="text" id="name" ng-model="login.id" required="required"/>
+				</label>
+				<label for="password">密&nbsp&nbsp码
+					<input name="password" type="password" id="password" ng-model="login.passwd" required="required"/>
+				</label>
+				<label for="remember">
+					<input name="remember" type="checkBox" id="remember" />记住密码
+				</label>
+				<input type="image"class="button" src="images/login.png" ng-click="submit()">
+			</form>
+		</div>
+	</div>
+	<script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/tools/hmac-sha256.js"></script>
+    <script src="scripts/loginapp.js"></script>  
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link type="text/css" rel="stylesheet" href="{CSS_PATH}reset.css">
+<link type="text/css" rel="stylesheet" href="{CSS_PATH}info.css">
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+</head>
+<body>
+<div class="body-top">
+    <div class="content">
+
+    	<div class="left-wp">
+            <div class="login lh24 blue"><a href="{APP_PATH}index.php?m=content&c=rss&siteid={get_siteid()}" class="rss ib">rss</a><span class="rt"><script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script></span></div>		
+		</div>
+    </div>
+</div>
+{php $info_linkageid = getinfocache('info_linkageid')}
+{php $city_id = is_numeric($city) ? getcity($city,'pinyin','info_citys_id') : trim($_GET['city'])}
+{php $cityid = getcity($city_id,'linkageid')}
+{php $cityname = getcity($city_id,'name')}
+{php $city = getcity($city_id,'pinyin')}
+<div class="header wp">
+    <a href="" class="logo"><img src="{IMG_PATH}info/logo.png" /></a>	
+    <div id="cityName">
+	<div class="currentCity">{$cityname}</div>
+	{if getinfocache('multi_city')}<a href="javascript:;" class="tabCity">切换城市</a>{/if}	
+	</div>
+    <div class="search-bar">
+        <dl class="clear">
+			<form action="{APP_PATH}index.php" method="get" target="_blank">
+			<input type="hidden" name="m" value="search"/>
+			<input type="hidden" name="c" value="index"/>
+			<input type="hidden" name="a" value="init"/>
+			<input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+			<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>			
+            <dt class="s_select cu-span"><a href="javascript:;" class="select-btn"><span>选择分类</span></a>
+                <div>
+				   {php $search_model = getcache('search_model_'.$siteid, 'search');}
+				   {loop getinfocache('info_modelid') $r}
+                    <a href="#" val="{$search_model[$r[modelid]][typeid]}">{$r[name]}</a>
+				   {/loop}
+                </div>
+            </dt>
+            <dd class="btn"><input type="submit" value=" " /></dd>
+            <dd class="input">
+                <input type="text" id="q" name="q"/>
+            </dd>
+			</form>
+        </dl>
+        <strong>热词：</strong><span class="blue" id="hotKey"><a href="javascript:;">北京租房</a> <a href="javascript:;">北京二手</a></span>
+    </div>
+</div>
+<script type="text/javascript">
+function _select(name){
+	var s_span = $(".select-btn span"),	s_select = $(".s_select div"),s_select_a = $(".s_select div a"),v = $("#typeid");
+	  s_span.bind('mouseover',function(){
+			s_select.show();
+	  }).bind('mouseleave',function(){
+			s_select.hide()
+	  });
+	  s_select.bind('mouseover',function(){
+			s_select.show();
+	  }).bind('mouseleave',function(){
+			s_select.hide()
+	  });
+	//获取选项值
+	s_select_a.click(function(){
+		var t = $(this);  
+		s_span.text(t.text());
+		v.val(t.attr("val"));
+		s_select.hide();
+	});
+}
+_select();
+//热词选择
+function hotKey(){
+	var v_Search=$("#q"),key = $("#hotKey a");
+	key.click(function(){
+		$this = $(this);
+		v_Search.val($this.text());
+	})	
+}
+hotKey();
+//地区
+$(".tabCity").click(function(event){
+	  var offset =  $(event.target).offset(),ListCity = $(".ListCity");
+	  event.stopPropagation();
+	  ListCity.css({left:offset.left+"px",top:offset.top+$(event.target).height()+"px",display:"block"});        
+});
+$(document).click(function(){$(".ListCity").hide();});
+</script>
+{if getinfocache('multi_city')}
+<div class="ListCity" style="display:none">
+	<div class="content clearfix">
+		<dl>
+		<dt>地区：</dt>
+		<dd>
+		{loop getcity() $r}
+		<a href="{$CATEGORYS[$catid]['url']}&city={$r[pinyin]}">{$r[name]}</a>
+		{/loop}
+		</dd>
+		</dl>
+		<!--<a href="#" class="more">更多城市</a>-->
+	 </div>
+</div>
+{/if}
+<div class="nav-bar wp">
+    <map>
+    	{pc:content action="category" catid="0" num="8" siteid="$siteid" order="listorder ASC"}
+        	<ul class="nav-site cu-span">
+			<li><a href="{siteurl($siteid)}"><span>首页</span></a></li>
+			{loop $data $r}
+			<li class="line">|</li>
+			<li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+			{/loop}
+            </ul>
+        {/pc}
+    </map>
+</div>
+<div class="bk15"></div>

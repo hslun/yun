@@ -1,0 +1,19 @@
+{ "items":[
+         { "name":"民航机场",
+           "minzoom":5,
+           "maxzoom":19
+        },
+        {"name":"通用机场",
+              "minZoom":7,               
+              "maxZoom":19
+        },
+         { "name": "直升机场",
+            "minzoom":5,
+            "maxzoom":19
+         },
+         {  "name": "临时",
+            "minzoom":7,
+            "maxzoom":19
+         }
+  ]  
+}

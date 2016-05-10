@@ -1,0 +1,608 @@
+body{
+	font-family: Helvetica Neue,Hiragino Sans GB,Microsoft Yahei,WenQuanYi Micro Hei,sans-seri;
+	margin:0;
+}
+input :focus{
+	color:#14b1c4;
+}
+/*页面顶部样式设计*/
+/*定义顶部动画效果*/
+.gbtopbar{
+	position:fixed;
+	display: block;
+	top:0px;
+	z-index:3;
+	width:100%;
+	height: 55px;
+	background: #fff;
+	margin:0 auto;
+	border-bottom:1px solid #eee;
+	opacity:0.95;
+}
+.animated{
+	/*定义动画的时间为0.5s*/
+	-webkit-animation-duration:0.5s;
+	/*定义*/
+	-webkit-animation-fill-mode:both;
+}
+.slidedown{
+	-webkit-animation-name:slidedown;
+}
+.slideup{
+	-webkit-animation-name:slideup;
+	border: none;
+}
+/*调用动画*/
+@-webkit-keyframes slideup{
+	0%{
+		-webkit-transform:translate(0px,0px);
+	}
+	50%{
+		-webkit-transform:translate(0px,-35px);
+	}
+	100%{
+		-webkit-transform:translate(0,-70px);
+	}
+}
+@-webkit-keyframes slidedown{
+	0%{
+		-webkit-transform:translate(0px,0px);
+	}
+	50%{
+		-webkit-transform:translate(0px,0px);
+	}
+	100%{
+		-webkit-transform:translate(0,0px);
+	}
+}
+/*定义动画结果结束*/
+.hfwlogo,nav,.gbsearch{
+	float: left;
+}
+.hfwlogo{
+	width: 200px;
+	height: 59px;
+	background: url(../../../images/guidebook/logo.png) no-repeat 2px;
+}
+nav{
+	margin-top: 5px;
+}
+nav ul li{
+	float: left;
+	list-style: none;
+	margin-right: 50px;
+	font-size: 16px;
+}
+nav ul li a{
+	color:#000;
+	text-decoration: none;
+}
+nav ul li a:visited{
+	color:#313232;
+}
+nav ul li a:hover{
+	color:#14b1c4;
+}
+nav ul .active a:visited{
+	color:#14b1c4;
+}
+.gbsearch{
+	height: 38px;
+	width: 190px;
+	margin-top: 5px;
+	display: none;
+}
+.gbsearch input{
+	float:left;
+	height: 35px;
+	padding: 0px;
+	border: 1px solid #14b1c4;
+}
+.gbsearch a{
+	float:left;
+	width: 37px;
+	height: 37px;
+	background: url(../../../images/guidebook/ico-search.png) no-repeat;
+}
+.hfwlogin{
+	float:right;
+	width: 80px;
+	height: 38px;
+	background: url(../../../images/guidebook/login.png) no-repeat;
+	margin:5px 20px 20px;
+}
+.user-head{
+	float: right;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	margin:5px 10px 10px;
+	padding-left: 38px;
+	background: url(../../../images/guidebook/touxiang.png) no-repeat;
+	display: none;
+}
+.moduleshow{
+	display: block;
+}
+.modulehide{
+	display: none;
+}
+hr{
+	border:1px solid #ddd;
+}
+/*页面顶部样式设计结束*/
+
+
+/*情报信息页面样式设计*/
+/*图片轮播样式设计*/
+.slider{
+	position: relative;
+	height: 398px;
+	max-width: 1366px;
+	margin:0 auto;
+}
+.slider-wrap{
+	height: 398px;
+}
+.slider-wrap .page{
+	display: none;
+	position:absolute;
+	width:100%;
+	height: 398px;
+}
+.page{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.slider-1{
+	background: url(../../../images/guidebook/1202-1.png) no-repeat;
+}
+.slider-2{
+	background: url(../../../images/guidebook/1202-2.png) no-repeat;
+}
+.slider-3{
+	background: url(../../../images/guidebook/1202-3.png) no-repeat;
+}
+.bullet{
+	position:absolute;
+	width:90px;
+	padding: 0px;
+	bottom: 10px;
+	right:20px;
+	z-index: 2;
+}
+.bullet li{
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	margin:0 10px;
+	cursor: pointer;
+	float:left;
+}
+.bullet li:hover{
+	background: #14b1c4;
+}
+.fa{
+	background: #fff;
+}
+.libg{
+	background: #14b1c4;
+}
+.button-group{
+	position:relative;
+	width:1000px;
+	height: 300px;
+	z-index:1;
+}
+.button-group a{
+	position: absolute;
+	display: block;
+	width: 170px;
+	height: 35px;
+	right: 0px;
+	bottom: 0px;
+	background: #14b1c4;
+	border-radius:5px;
+	line-height: 35px;
+	text-align: center;
+	color:#ffffff;
+	text-decoration: none;
+}
+/*图片轮播样式结束*/
+.privacy{
+	background: url(../../../images/guidebook/image1-ico-1.png);
+}
+.airport{
+	background: url(../../../images/guidebook/image1-ico-2.png);
+}
+.landing{
+	background: url(../../../images/guidebook/image1-ico-3.png);
+}
+.flying{
+	background: url(../../../images/guidebook/image1-ico-4.png);
+}
+.privacy:hover{
+	background: url(../../../images/guidebook/image1-ico-1-s.png);
+}
+.airport:hover{
+	background: url(../../../images/guidebook/image1-ico-2-s.png);
+}
+.landing:hover{
+	background: url(../../../images/guidebook/image1-ico-3-s.png);
+}
+.flying:hover{
+	background: url(../../../images/guidebook/image1-ico-4-s.png);
+}
+/*情报信息页面样式设计结束*/
+/*分割线设计*/
+.detail-title{
+	height: 1px;
+	width: 850px;
+	margin:0 auto;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+.detail-title span{
+	position:relative;
+	top: -13px;
+	font-size: 26px;
+	color:#535353;
+	background: #fff;
+	padding: 0 20px;
+}
+/*分割线设计结束*/
+.detail-content{
+	overflow: hidden;
+	zoom:1;
+	margin:30px 0px;
+}
+.contact-col-1{
+	padding-top: 5px;
+}
+.introduce{
+	width: 900px;
+	height: auto;
+	margin:50px auto;
+	clear: left;
+}
+/*情报信息页面样式设计*/
+.row-privacy{
+	margin:0px;
+}
+.privacyinfo>div:nth-child(2){
+	height: 489px;
+	margin-top: 30px;
+}
+.privacyinfo>div:nth-child(3){
+	height: 490px;
+}
+.privacyinfo>div:nth-child(4){
+	height: 488px;
+}
+/*情报信息页面样式设计结束*/
+/*系统服务页面样式设计*/
+.row-system{
+	width: 100%;
+	margin-top: 30px;
+	overflow: hidden;
+	zoom:1;
+}
+.col-system{
+	width: 50%;
+	float:left;
+	font-family: "Yahei";
+	font-size: 12px;
+	color:#393939;
+}
+.col-system img{
+	width: 345px;
+	height: 204px;
+}
+/*系统服务页面样式设计结束*/
+/*联系我们页面样式设计*/
+.contact-col-1{
+	width: 260px;
+	height: 100px;
+	float: left;
+}
+.contact-col-1 p:first-child{
+	font-size: 26px;
+}
+.contact-col-1 p:last-child{
+	font-size: 16px;
+}
+.address{
+	background: url(../../../images/guidebook/contactus-1.png) no-repeat;
+	padding-left: 35px;
+}
+.phone{
+	background: url(../../../images/guidebook/contactus-2.png) no-repeat;
+	padding-left: 35px;
+}
+.email{
+	background: url(../../../images/guidebook/contactus-3.png) no-repeat;
+	padding-left: 45px;
+}
+.contact-col-1 p{
+	margin:0 0 0 5px;
+}
+/*联系我们页面样式设计结束*/
+/*数据统计页面样式设计*/
+.row-datacount{
+	margin-top: 30px;
+}
+/*数据统计页面样式设计结束*/
+.view-container{
+	margin: 0 auto;
+}
+.view-container{
+	padding-top: 70px;
+}
+/*登陆成功后的页面样式设计*/
+.user-info{
+	width: 900px;
+	margin:0 auto;
+	overflow: hidden;
+	zoom:1;
+}
+.user-info>div:nth-child(2n){
+	margin-left: 80px;
+}
+.user-info>div{
+	position: relative;
+	float:left;
+	width: 400px;
+	min-height: 300px;
+	margin-bottom: 30px;
+	border: 1px solid #ddd;
+}
+header{
+	color:#fff;
+	height: 40px;
+	line-height: 40px;
+	font-size:18px;
+	padding-left: 20px;
+	background-color:#14b1c4;
+}
+.user-info>div:first-child{
+	border-width:0px;
+}
+.user-map img,.user-map>.privacy-hover{
+	width: 400px;
+	height: 295px;
+}
+.user-map>.privacy-hover{
+	line-height: 295px;
+}
+.user-agency p{
+	border-bottom: 1px solid #ddd;
+	height: 40px;
+	line-height: 40px;
+	margin:0px;
+	padding-left: 10px;
+}
+.user-info table{
+	width: 100%;
+}
+.user-info table th{
+	font-weight: 400px;
+}
+.user-info table td{
+	text-align: center;
+}
+.more-info{
+	position:absolute;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	color: #14b1c4;
+	background: #ddd;
+	bottom: 0px;
+}
+/*@media screen and (max-width: 950px){
+	.user-info>div{
+		width: 800px;
+		margin:20px auto;
+	}
+	.user-info>div:nth-child(2n){
+		margin:20px auto;
+	}
+	.user-map img,.user-map>.privacy-hover{
+	width: 800px;
+	height: 295px;
+	}
+}*/
+/*登陆成功后的页面样式设计结束*/
+/*footer导航设计*/
+.gbcontainer{
+	width: 100%;
+	overflow: hidden;
+	zoom:1;
+	font-family: "Yahei";
+	font-size: 12px;
+	color:#91e7f1;
+	background: #5fa5ad;
+}
+.footer-nav{
+	overflow: hidden;
+	zoom:1;
+	padding: 30px 20px 10px 100px;
+	color:#fff;
+}
+.nav-group{
+	float:left;
+	margin-left: 70px;
+}
+.nav-group h4{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+.nav-group li{
+	margin-bottom: 20px;
+	list-style: none;
+}
+.nav-group li a{
+	color:#fff;
+	text-decoration: none;
+}
+.footer-nav{
+	width: 1010px;
+	margin:0 auto;
+}
+/*footer导航设计结束*/
+.gbfooter{
+	width: 100%;
+	height: 85px;
+	background: #5899a1;
+	overflow: hidden;
+	zoom:1;
+}
+/*版权所有样式设计606369*/
+.copyright{
+	width: 400px;
+	margin:10px auto 0px auto;
+	padding-top: 50px;
+	text-align: center;
+	background: url(../../../images/guidebook/hangfuwu.png) no-repeat top center;
+	font-family: "方正细圆简";
+	font-size: 14px;
+	color:#97ecf6;
+}
+/*版权所有样式设计结束*/
+/*登陆页面设计*/
+.login,.register{
+	width: 500px;
+	margin-bottom: 50px;
+	padding-left: 200px;
+	float:left;
+}
+ h3,.form-personal div{
+	color:#14b1c4;
+}
+.user-type{
+	margin-bottom: 20px;
+}
+.user-type .active{
+	color:#14b1c4;
+}
+.user-type label{
+	margin-right: 50px;
+}
+.form-personal{
+	min-height: 500px;
+}
+.form-personal p{
+	margin:0px;
+}
+.form-personal div{
+	margin:20px 0px 20px 0px;
+}
+.hint a{
+	color:#000000;
+	text-decoration: none;
+}
+.hint{
+	float: left;
+	margin: 50px;
+}
+.form-personal label{
+	display: block;
+	margin-bottom: 20px;
+}
+.user-login{
+	display: block;
+	width: 80px;
+	height: 38px;
+	background:url(../../../images/guidebook/login.png) no-repeat;
+}
+/*登陆页面样式设计结束*/
+/*注册页面样式设计*/
+.register{
+	float: left;
+}
+.company-info{
+	margin-bottom: 20px;
+}
+.company-info span{
+	color:#14b1c4;
+}
+.company-info p{
+	margin-top:5px;
+	padding-left: 85px;
+	font-size: 12px;
+	color:#A6ABAB;
+}
+.rule{
+	color:#14b1c4;
+	cursor: pointer;
+	text-decoration: none;
+}
+.registerbtn{
+	display: block;
+	width: 150px;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	background: #14b1c4;
+}
+.company-works{
+	position:absolute;
+	width: 660px;
+	z-index:5;
+	left:400px;
+	top:200px;
+	border:2px solid #14b1c4;
+	font-size: 14px;
+}
+.workhead{
+	width:630px;
+	height:30px;
+	margin:0 auto;
+	line-height: 30px;
+	border-bottom:1px solid #000;
+}
+.worktitle{
+	padding-left: 10px;
+}
+.closebtn{
+	display: inline-block;
+	width:14px;
+	height: 14px;
+	float: right;
+	margin-top: 5px;
+	cursor:pointer;
+	padding-top: 5px;
+	background: url(../../../images/guidebook/ico-close.png) no-repeat;
+	background-size: 14px; 
+}
+.company-works p{
+	width: 220px;
+	height: 20px;
+	float:left;
+	font-size: 12px;
+	font-family: "宋体"
+}
+.workbtn{
+	clear: left;
+}
+.workbtn a{
+	width: 60px;
+	height: 20px;
+	margin: 0 10px 10px 0px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 20px;
+	cursor:pointer;
+	color:#fff;
+	font-size: 12px;
+	background: #14b1c4;
+	float:right;
+}
+
+/*注册页面样式设计结束*/

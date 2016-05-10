@@ -1,0 +1,399 @@
+.airportdetail{
+	min-width: 870px;
+	overflow: .auto;
+}
+/*顶部样式设计*/
+.searchwrapper{
+    min-height:62px;
+	border:1px solid #C9C9C9;	
+	opacity: 0.8;
+	min-width: 1024px
+}
+.top-fix-wrap {
+width: 1280px;
+margin: 0 auto;
+position: relative;
+}
+.logo-kuaifei{     
+	  float:left; 
+	  margin:1px 0px 0px 40px;  
+	  width: 200px;   
+	  height:59px;   
+	  background:url(../images/logo.png) no-repeat;
+}
+/*搜索框样式*/
+.detail-search{
+     float: left; 
+     margin-top:10px;
+     margin-left: 30px;
+}
+.detail-search .detail-key,
+.detail-search .btnSearch{
+	float:left;
+	margin:0px;
+	padding: 0px;
+	height: 30px;
+}
+.detail-search .detail-key{
+	outline: none;
+	width: 320px;
+	height: 38px;
+	border:1px solid #b3b3b3;
+	border-right: 0px;
+	font-size: 16px;
+	margin-left: 40px;
+}
+.detail-search .btnSearch{
+	width:90px;
+	height:38px;
+	background-image:url("../images/search.png");
+}
+/*用户登录样式*/
+.userwrapper{     
+	float:right; 
+	padding-top: 6px;
+	padding-right:10px; 
+	font-size: 10px;
+}
+.detail-top,.detail-right{
+	border:1px solid #c9c9c9;
+}
+.detail-top{
+	width: 100%;
+	height:60px;
+}
+/*飞机详细页面*/
+.detail-content{
+	width:90%;
+	height: 100%;
+	margin:10px 5%;
+}
+.detail-left,.detail-right{
+	float: left;
+	 -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -ms-transition: width 2s ease;
+    transition: width 1s ease;
+}
+/*详细页面左边部分*/
+.detail-left{
+	width: 75%;
+}
+.detail-left .detail-basic{
+	width: 90%;
+	border:1px solid #cccccc;
+	min-height: 260px;
+	margin:0px 5%;
+	padding:20px;
+	background: #f6f6f6;
+}
+.basic-top{
+	height: 30px;
+}
+.basic-name{
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	font-family: '黑体';
+	font-size:24px;
+	color:#444444;
+}
+.basic-top-tool{
+	float:right;
+}
+.detail-basic .toolbtn{
+	float: left;
+	width:20px;
+	height: 20px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+}
+.detail-share{
+	background: url(../images/ico-22.png) no-repeat;
+}
+.detail-collect{
+	background: url(../images/ico-20.png) no-repeat;
+}
+.detail-correct{
+	background: url(../images/ico-21.png) no-repeat;
+}
+.basic-bottom table tr td{
+	vertical-align: top;
+}
+.basic-bottom table tr td:nth-child(2){
+	color:#14b1c4;
+}
+.basic-bottom table tr:nth-last-child(1) td:nth-child(2){
+	color:#000;
+}
+.basic-bottom table tr td:first-child{
+	width:10%;
+	font-family: '黑体';
+	font-size:14px;
+	color:#737373;
+}
+.basic-bottom table tr td:nth-child(2){
+	width:40%;
+	font-family: '黑体';
+	font-size:14px;
+	color:#14b1c4;
+}
+.basic-bottom{
+	overflow:auto; zoom:1;
+}
+.basic-info,.basic-img{
+		float:left;
+}
+.basic-info{
+	width: 60%;
+}
+.basic-img{
+	width: 40%;
+	height: 204px;
+	background: url(../images/airport.jpg) no-repeat;
+}
+/*详细信息部分样式*/
+.detail-left .detail-more{
+	width:90%;
+	margin:10px 5%;
+}
+.detail-more .nav{
+	border-bottom:1px solid #eee;
+	margin-bottom: 15px;
+}
+.detail-more .nav li{
+	float:left;
+	width:100px;
+}
+.detail-more .nav a {
+	font-family: '黑体';
+	padding:5px;
+	font-size:14px;
+	color:#2B2B2B;
+	text-align: center;
+}
+.nav .active{
+	border-bottom: 2px solid #14b1c4;
+}
+.tab-content{
+	min-height: 200px;
+}
+/*跑道信息样式*/
+.runway-top{
+	overflow: auto;
+	zoom:1;
+	width: 60%;
+	margin:0 auto;
+}
+.runway-top .targetnum{
+	height:70px;
+	margin:0px 15px;
+	padding-right: 30px;
+	float: left;
+}
+.targetnum .num{
+	font-family: '黑体';
+	font-size:26px;
+	color:#14b1c4;
+	text-align: center;
+}
+.targetnum .targettype{
+	text-align: center;
+	font-family: '黑体';
+	font-size:14px;
+	color:#444444;
+}
+/*跑道表格设置*/
+.runway-bottom table{
+	width:100%;
+	border: 1px solid #cccccc;
+}
+.runway-bottom table tr:nth-child(odd){
+	height: 32px;
+}
+.runway-bottom table tr:nth-child(even){
+	background:#ececec;
+	height: 32px;
+	line-height: 32px;
+}
+.runway-bottom table td{
+	text-align: center;
+}
+.runway-bottom{
+	margin:0 30px;
+}
+.runway-bottom table tr:first-child th{
+	width:20%;
+	font-family: '黑体';
+	font-size:14px;
+	color:#737373;
+	text-align: center;
+}
+
+/*跑道信息样式结束*/
+/*机场服务样式*/
+.aiprotservice table{
+	margin:0px 20px;
+}
+.aiprotservice table tr td:first-child{
+	width:20%;
+	vertical-align: top;
+}
+.aiprotservice table tr td:nth-child(2){
+	width:65%;
+	color:#14b1c4;
+}
+/*机场服务样式结束*/
+/*评论专区样式*/
+.detail-left .detail-comment{
+	width:90%;
+	margin:0px 5%;
+}
+.comment-top{
+	border-bottom:1px solid #cccccc;
+}
+.comment-title{
+	width: 60px;
+	border-bottom: 2px solid #14b1c4;
+}
+.comment-middle,.comment-content{
+	width:90%;
+	margin:0 auto;
+	overflow: auto;
+	zoom:1;
+}
+.commentwrap{
+	background: #f6f6f6;
+}
+.comment-totalnum{
+	float:right;
+	margin-top: 5px;
+}
+.comment-totalnum span{
+	color:#14b1c4;
+}
+.comment-input{
+	border-radius:5px;
+	width:100%;
+	min-height: 100px;
+	max-width: 700px;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.comment-commit{
+	 float:right; 
+	 background-color: #14b1c4;
+	 width:60px;
+	 height:30px;
+	 text-align: center;
+	 line-height: 30px;
+	 color:#fff;
+}
+.comment-all{
+	height: 30px;
+	line-height: 30px;
+	border-top:1px solid #cccccc;
+	background: #f6f6f6;
+}
+.detail-comment hr{
+	border-color:#cccccc;
+}
+.comment-content{
+	overflow: hidden;
+	zoom:1;
+}
+.comment-content hr{
+	width:100%;
+}
+.comment-type{
+	font-family: '黑体';
+	font-size: 14px;
+	color:#666666;
+}
+.comment-time{
+	float:left;
+	font-family: '黑体';
+	font-size: 12px;
+	color:#999999;
+}
+.comment-expand{
+	float:right;
+	font-family: '黑体';
+	font-size: 12px;
+	color:#303030;
+}
+.comment-expand .comment-reply{
+	margin-left: 20px;
+	
+}
+.comment-expand .comment-supportnum{
+	color:red;
+}
+/*评论专区样式结束*/
+
+@media only screen and (max-width: 1000px){
+    .detail-right{
+    	display: none;
+        width: 0;
+        border-width:0;
+     }
+     .detail-left{
+     	width:98%;
+     }
+}
+/* 快飞资讯样式设计 */
+.detail-right{
+	width: 25%;
+	overflow: hidden;
+	zoom:1;
+}
+.hfga{
+	font-family: '微软雅黑';
+}
+.hfga img{
+	width:100%;
+}
+.kfinfo-label{
+	height: 29px;
+	width:90px;
+	line-height: 29px;
+	text-align: center;
+	color:#fff;
+	background: #006DBF;
+	font-size: 14px;
+}
+.detail-right hr{
+	margin: 0px 0px 5px 0px;
+	padding-left: 25%;
+	border:1px solid #399ff3;
+}
+.kfinfo-item{
+	width:100%;
+	overflow: hidden;
+	zoom:1;
+	margin-bottom: 10px;
+}
+.kfinfo-item img{
+	display: block;
+	float:left;
+	height: 60px;
+	width: 60px;
+}
+.kfinfo-item a{
+	color: #000;
+}
+.kfinfo-item a:hover{
+	text-decoration: none;
+}
+.kfinfo-detail p{
+	text-align: right;
+	font-size: 12px;
+	padding-right: 10px;
+}
+.kfinfo-title{
+	float: left;
+	padding-left: 10px;
+	min-width:150px;
+	max-width: 195px;
+}

@@ -1,0 +1,125 @@
+{template 'yp', 'header'}
+<!--main-->
+
+<div id="main">
+    <div class="gongqiu_list">
+    	<div class="mbx"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	<div class="gongqiu_city_list">
+            <div class="choosed">
+            <strong class="ib">您已选择:</strong>{if is_array($parent_url) && !empty($parent_url)}
+            <a href="{$parent_url['url']}" class="">{$parent_url['title']}</a>{/if}{loop $filter $fil}<a href="{$fil['url']}">{$fil['title']}</a>{/loop}
+            </div>
+		{if $cat_arr}
+        	<div class="gongqiu_city_list_1"><h4>类  别：</h4>
+            	<ul>
+			{php $fdata = yp_filters('catid',$modelid,$cat_arr,0);}
+			{loop $fdata $r}
+				{$r[menu]}
+			{/loop}
+                </ul>
+            </div>
+		{/if}
+        	<div class="gongqiu_city_list_1"><h4>类  别：</h4>
+            	<ul>
+			{loop yp_filters('tid',$modelid) $r}
+				{$r[menu]}
+			{/loop}
+                </ul>
+            </div>
+		{php $areaid = intval($_GET['areaid']); $linkage_data = yp_show_linkage(1, 'areaid', $areaid, $modelid);}
+		{if $linkage_data}
+       	  <div class="gongqiu_city_list_1"><h4>所在地：</h4>
+           	  <ul>
+			{loop $linkage_data $r}
+				<li><a href="{$r['url']}">{$r['title']}</a></li>
+			{/loop}
+              </ul>
+          </div>
+		{/if}
+      </div>
+    
+        <div class="gongqiu_list_l">
+        	<h2>最新更新需求信息 <a href="../gongqiu/gongqiu_list.html">发布需求</a></h2>
+            <ul>
+			{php $sql = yp_filters_sql($modelid);$y=1;$lisrorder = array('1'=>'updatetime ASC', 'updatetime DESC');}
+			{php $order = $_GET['order'] ? $listorder[intval($_GET['order'])] : 'updatetime DESC'}
+			{pc:yp action="position" posid="$posid" modelid="$modelid" catid="$catid" order="listorder asc" num="5" expiration="1"}
+			{loop $data $r}
+			 {php $userid = get_memberinfo_buyusername($r['username'], 'userid');$memberinfo = get_companyinfo($userid, 'companyname, publish_total, url');$publish_total = string2array($memberinfo['publish_total']);}
+            	<li><a href="{$r[url]}">
+                	<p class="gongqiu_name"><span class="gongqiu_tt">{$r[title]}</span> <span class="gongqiu_gongsi">{$memberinfo['companyname']}</span><span class="gongqiu_ren">{get_company_rank($r['userid'])}</span> </p>
+                	<p class="gongqiu_city"><span class="gongqiu_diqu">{$r[yieldly]}</span> <span class="gongqiu_other">发布时间：{date("Y-m-d",$r[inputtime])}</span> </p>
+                
+                </a></li>
+			{php $y++;}
+				{/loop}
+			{/pc}
+            
+			{php $urlrule = yp_makeurlrule();}
+ 			{pc:yp action="lists" where="$sql" modelid="$modelid" order="$order" num="10" urlrule="$urlrule"}
+			{loop $data $r}
+			 {php $memberinfo = get_companyinfo($r['userid'], 'companyname, publish_total, url');$publish_total = string2array($memberinfo['publish_total']);}
+            	<li><a href="{$r[url]}">
+                	<p class="gongqiu_name"><span class="gongqiu_tt">[{$r[title]}]</span> <span class="gongqiu_gongsi">{$memberinfo['companyname']}</span><span class="gongqiu_ren">{get_company_rank($r['userid'])}92</span> </p>
+                	<p class="gongqiu_city"><span class="gongqiu_diqu">{$r[yieldly]}</span> <span class="gongqiu_other">发布时间：{date("Y-m-d",$r[updatetime])}</span> </p>
+                
+                </a></li>
+			{php $y++;}
+				{/loop}
+			{/pc}
+            </ul>
+            <div id="page">{$pages}</div>                           
+        </div>
+        <div class="gongqiu_list_r">
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                {php $buy_type = $this->buy_type;}
+				{pc:yp action="position" posids="$this->global_posid" modelid="$modelid" order="listorder asc" num="10" expiration="1"}
+				 {loop $data $r}
+		            <li><a href="{yp_filters_url('tid', array('tid'=>$r['tid'], 'catid'=>$r['catid']), 2, $modelid)}" class="blue" target="_blank">[{$buy_type[$r['tid']]}]</a> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+		         {/loop}
+				{/pc}
+	             {pc:yp action="lists" modelid="$modelid" order="id DESC" num="10"}
+	         	  {loop $data $r}
+		            <li><a href="{yp_filters_url('tid', array('tid'=>$r['tid'], 'catid'=>$r['catid']), 2, $modelid)}" class="blue" target="_blank">[{$buy_type[$r['tid']]}]</a> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+			      {/loop}
+				 {/pc}
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+			{php $buy_type = $this->buy_type;}
+			{pc:yp action="hits" modelid="$modelid" day="1"}
+					{loop $data $r}
+						<li><a href="{yp_filters_url('tid', array('tid'=>$r['tid'], 'catid'=>$r['catid']), 2, $modelid)}" class="blue" target="_blank">[{$buy_type[$r['tid']]}]</a> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+					{/loop}
+			{/pc}
+            {pc:yp action="hits" modelid="$modelid" order="weekviews DESC"}
+					{loop $data $r}
+						<li><a href="{yp_filters_url('tid', array('tid'=>$r['tid'], 'catid'=>$r['catid']), 2, $modelid)}" class="blue" target="_blank">[{$buy_type[$r['tid']]}]</a> <a href="{$r['url']}">{str_cut($r['title'], 40)}</a></li>
+					{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        <div class="gongqiu_bt">
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">飞行器租凭/包机/托管</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+            {pc:yp action="hits" modelid="$modelid" order="weekviews DESC"}
+					{loop $data $r}
+						<li><a href="{$r['url']}">
+                        	<p class="gongqiu_tt">{str_cut($r['title'], 30)}</p>
+                            <p class="gongqiu_city"><p class="gongqiu_ren"><p class="gongqiu_ren">[{$buy_type[$r['tid']]}]</p></a>
+                        </li>
+					{/loop}
+			{/pc}
+                </ul></dd>
+            </dl>
+        </div>
+        
+  </div>
+</div>
+{template 'yp', 'footer'}

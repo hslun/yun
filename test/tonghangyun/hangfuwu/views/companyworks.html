@@ -1,0 +1,22 @@
+<div ng-show="isShow" class="company-works">
+	<div class="workhead">
+		<span class="worktitle">请选择主营业务，最多不超过5项</span>
+		<span class="closebtn" ng-click="close()"></span>
+	</div>
+	<div class="workcontent">
+		<p ng-repeat="work in works">
+			<label for="{{work.name}}">
+				<input type="checkBox" id="{{work.name}}">{{work.name}}
+			</label>
+		</p>
+		<p>
+			<label for="else">
+				<input type="checkBox" id="else">其他
+			</label>
+		</p>
+	</div>
+	<div class="workbtn">
+		<a ng-click="resetWork()">重置</a>
+		<a ng-click="submitWork()">确定</a>
+	</div>
+</div>

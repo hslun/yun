@@ -1,0 +1,176 @@
+<div class="airportdetail">
+	<div class="searchwrapper">
+	<a class="logo-kuaifei" ng-href="http://www.177fly.com/"></a>
+	<div class="detail-search">
+		<input type="text" class="detail-key" ng-model="keywords" ng-keypress="enterSearch($event)">
+		<a  class="btnSearch"  ng-click="searchairport()"></a>
+		</div>
+	</div>
+	<!-- <div class="userwrapper">
+		<a>欢迎您,身份</a><span>|</span>
+		<a>快飞网|</a><span>|</span>
+		<a>登录</a><span>|</span>
+		<a>注册</a>
+	</div>	 -->
+	<div class="detail-content">
+		<div class="detail-left">
+			<div class="detail-basic">
+				<div class="basic-top">
+					<div class="basic-name">{{airportDetail.airport_name|emptydata}}--{{airportDetail.airport_type|emptydata}}</div>
+					<div class="basic-top-tool">
+						<p class="toolbtn detail-share"></p>
+						<p class="toolbtn detail-collect"></p>
+						<p class="toolbtn detail-correct"></p>
+						<p class="toolbtn">...</p>
+					</div>
+				</div>
+				<div class="basic-bottom">
+					<div class="basic-info">
+						<table>
+							<tr>
+								<td>经度:</td>
+								<td>{{airportDetail.longitude|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>纬度:</td>
+								<td>{{airportDetail.latitude|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>海拔:</td>
+								<td>{{airportDetail.hight|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>飞行等级:</td>
+								<td>{{airportDetail.airport_type|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>三字码:</td>
+								<td>{{airportDetail.three_code|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>四字码:</td>
+								<td>{{airportDetail.four_code|emptydata}}</td>
+							</tr>
+							<tr>
+								<td>机场描述:</td>
+								<td><p>{{airportDetail.describe|emptydata}}</p></td>
+							</tr>
+						</table>
+					</div>
+					<div class="basic-img"></div>
+				</div>
+			</div>
+			<div class="detail-more">
+				<mytab>
+					<mypane title='跑道信息'>
+						<div class='runwayinfo'>
+							<div class="runway-top">
+								<div class="targetnum apronnum">
+									<div class="num">{{airportDetail.apron|emptydata}}</div>
+									<div class="targettype">停机坪数</div>
+								</div>
+								<div class="targetnum hangarnum">
+									<div class="num">{{airportDetail.hangar|emptydata}}</div>
+									<div class="targettype">机库数</div>
+								</div>
+								<div class="targetnum runwaynum">
+									<div class="num">{{airportDetail.ttn|emptydata}}</div>
+									<div class="targettype">跑道数</div>
+								</div>
+							</div>
+							<div class="runway-bottom">
+								<table>
+									<tr>
+										<th>跑道等级</th>
+										<th>方向</th>
+										<th>长度(M)</th>
+										<th>宽度(M)</th>
+										<th>表面类型</th>
+									</tr>
+									<tr ng-repeat="tin in airportDetail.tin">
+										<td>{{tin.airfield_level|emptydata}}</td>
+										<td>{{tin.runway_direction|emptydata}}</td>
+										<td>{{tin.runway_length|emptydata}}</td>
+										<td>{{tin.runway_width|emptydata}}</td>
+										<td>{{tin.runway_surfacetype|emptydata}}</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</mypane>
+					<mypane title='机场服务'>
+						<div class="aiprotservice">
+							<table>
+								<tr>
+									<td>驻场公司：</td>
+									<td>{{airportDetail.inacompany|emptydata}}</td>
+								</tr>
+								<tr>
+									<td>联系电话：</td>
+									<td>{{airportDetail.tel|emptydata}}</td>
+								</tr>
+								<tr>
+									<td>维修服务：</td>
+									<td>{{airportDetail.maintenance|emptydata}}</td>
+								</tr>
+								<tr>
+									<td>航油供应：</td>
+									<td>{{airportDetail.fuel|emptydata}}</td>
+								</tr>
+								<tr>
+									<td>航空管制频道：</td>
+									<td>{{airportDetail.radio|emptydata}}</td>
+								</tr>
+								<tr>
+									<td>助航条件：</td>
+									<td>{{airportDetail.vnc|emptydata}}</td>
+								</tr>
+							</table>
+						</div>
+					</mypane>
+					<mypane title='气象情报'>
+						暂无数据
+					</mypane>
+				</mytab>
+			</div>
+			<div class="detail-comment">
+				<div class="comment-top">
+					<div class="comment-title">评论专区</div>
+				</div>
+				<div class="commentwrap">
+					<div class="comment-middle">
+						<p class="comment-totalnum">共有<span>25</span>评论</p>
+						<div class="comment-edit">
+							<textarea class="comment-input" placeholder='请输入评论'></textarea>
+						</div>
+						<p class="comment-commit">发布</p>
+					</div>
+				</div>
+				<p class="comment-all">全部评论</p>
+				<div class="comment-content"><!--评论在此ng-repeat-->
+					<p class="comment-type">手机用户<span>[北京]</span><small>123</small></p>
+					<p class="comment-detail">首都机场位于北京市东北方向</p>
+					<p class="comment-time">今天08:40</p>
+					<p class="comment-expand">支持<span class="comment-supportnum">(204)</span><span class="comment-reply">回复</span></p>
+					<hr/>
+				</div>
+				<hr/>
+			</div>
+		</div>
+		<div class="detail-right">
+			<div class="hfga">
+				<a href=""><img ng-src="http://www.177fly.com/uploadfile/2014/0512/20140512051758348.jpg" alt="海丰通航-通用航空综合保障专家"></a>
+				<div class="hfga-title">海丰通航-通用航空综合保障专家</div>
+			</div>
+			<div class="kfinfo-label">快飞资讯</div>
+			<hr>
+			<div ng-repeat="item in kfinformations|limitTo:10" class="kfinfo-item">
+				<img ng-src="{{item.thumb}}" alt="暂无图片">
+				<div class="kfinfo-detail">
+					<a ng-href="{{item.url}}" class="kfinfo-title" target="_blank">{{item.title}}</a>
+					<p>{{item.author}}|{{item.updatetime}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,208 @@
+<div class="maphtml" onselectstart="return false;">
+<div class="searchwrapper">
+<img src="http://tonghangyun.com.cn/img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="http://tonghangyun.com.cn/img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="http://tonghangyun.com.cn/hangfuwu/jichang/luru.html">机场录入</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+         <a href="http://tonghangyun.com.cn/index.php?m=member&c=index&a=login" target="_top">登陆</a> <span>|</span> 
+         <a href="http://tonghangyun.com.cn/index.php?m=member&c=index&a=register&siteid=1" target="_blank">注册</a>
+        </div>
+    
+    </div>
+</div>
+
+
+    <div class="menu">
+    	<a href="http://tonghangyun.com.cn/"><h1 class="logo">通航云</h1></a>
+            <div class="citywrapper">
+                <div class="selCity">
+                    <p class="cityName">北京</p>
+                    <a class="changeBtn" ng-click="changeCity()">[切换城市]</a>
+                </div>
+                <div class="jc_search">
+                    <select class="condition" ng-model="myCondition"ng-options="value.name as value.name for value in selectOPts">
+                    <option value="">  机场  </option>
+                    <option value="">  机场  </option>
+                    <option value="">  机场  </option>
+                    </select>
+                    <input type="text" class="key" ng-model="keywords" ng-keypress="enterSearch($event)">
+                    <a  class="btnSearch"  ng-click="searchairport()"><img src="http://tonghangyun.com.cn/img/seach_bt.png" width="91" height="37" alt=""/></a>
+                </div>
+            </div>
+    </div>
+
+</div>
+
+<city citysdata='citys' showcitys="isshow" localcity="cityName"></city>
+<div class="bottom" id="map">
+	<div class="maptool">
+			<nav class="navbar navbar-default tools_r_con" role="navigation">	
+				<ul class="nav  navbar-nav">     
+					<li  ng-click="addFilghtLineTool()"><a><span class="toolBtn-ico line"></span><span class="toolBtn-cont">航线</span></a></li>
+					<li  ng-click="planeSwitch()"><a><span class="toolBtn-ico line"></span><span class="toolBtn-cont">态势</span></a></li>
+		      <li class="dropdown">
+		          <a class="dropdown-toggle" data-toggle="dropdown">
+		          <span class="toolBtn-ico tool"></span><span class="toolBtn-cont">工具</span><span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a ng-click="addMarkerTool()"><span class="dropdown-ico marker"></span>标记</a></li>
+		            <li><a ng-click="addDistanceTool()"><span class="dropdown-ico range"></span>测距</a></li>
+		           <!--  <li><a href="#"><span class="dropdown-ico cut"></span>截图</a></li>
+		            <li><a href="#"><span class="dropdown-ico share"></span>分享</a></li>
+		            <li><a href="#"><span class="dropdown-ico print"></span>打印</a></li> -->
+		          </ul>
+		      </li>
+			    <li><a  allscreen><span class="toolBtn-ico screen"></span><span class="toolBtn-cont">全屏</span></a></li>
+			    </ul>
+			</nav>
+	</div>
+	<div class="flightline" ng-show='lineSwitch' >
+        <div class="top">
+    			<span class="lineTitleBtn-ico">
+    				<span class="lineTitleBtn-img"></span>
+    				<span class="lineTitleBtn-cot" ng-click="opentest()">航线</span>
+    			</span>
+		    </div>
+       <div class="bottom">
+        	<div class="planetype">
+        		<div class="planetype_img">
+        			<img alt="{{flightline.planetype}}" ng-src={{planepicture}}>
+        		</div>
+        		<div class="planetype_select">
+        			<p><select  ng-change="selectPlaneManufacturer()" ng-model="myPlaneManufacturer" ng-options="value.manufacturer as value.manufacturer group by value.group for value in myPlanes">
+       					<option value="">--请选择厂商--</option>
+       					</select></p>
+       					<p><select  ng-change="selectPlaneType()" ng-model="flightline.planetype" name="planetype" ng-options="value.id as value.id group by value.group for value in myPlaneTypes">
+       						<option value="">--请选择机型--</option>
+       					</select></p>
+        		</div>
+        	</div>
+        	<div class="planeinfo">
+        		<table>
+        			<tr>
+        				<td>飞行器类型:</td>
+        				<td> {{planeDetail.aircraft_type}}</td>
+        				<td>航程(km):</td>
+        				<td>{{planeDetail.voyage}}</td>
+        			</tr>
+        			<tr>
+        				<td>座位数:</td>
+        				<td>{{planeDetail.seats}}</td>
+        				<td>航速(km/h):</td>
+        				<td>{{planeDetail.cruising_speed}}</td>
+        			</tr>
+        			<tr>
+        				<td colspan=2>总载重(kg):</td>
+        				<td colspan=2><input type="text" ng-model="flightline.weight" ng-change="changeWeight()" name="weight"></td>
+        			</tr>
+        		</table>
+        	</div>
+        	<div class="calculate">
+        		<table>
+        			<tr>
+        				<td>{{flightline.distance}}</td>
+        				<td>{{time}}</td>
+        				<td>{{oil}}</td>
+        			</tr>
+        			<tr>
+        				<td>总航程(km)</td>
+        				<td>预计用时(min)</td>
+        				<td>预计油耗(L)</td>
+        			</tr>
+        		</table>
+        	</div>
+        	<div class="points" >
+        		<table>
+       		           <tbody>
+       			           	<tr>
+       							<td>序号</td>
+       							<td>位置</td>
+       							<td>经纬度</td>
+       						</tr>
+       					</tbody>
+       			    </table>
+       			    <table>		    		
+       	                <tbody class="points_table" tabcontain>
+       						<tr ng-repeat="linePoint in  flightline.points">
+       							<td class="lineId">{{linePoint.pointIndex}}</td>
+       							<td class='linePosition'>{{linePoint.name}}</td>
+       							<td class="linePrecise">{{linePoint.latitude_show}} &nbsp{{linePoint.longitude_show}}</td>
+       						</tr>
+       				    </tbody>
+       				</table>
+        	</div>
+       	 </div>
+       	 <mapinfo></mapinfo>
+	</div>
+  <div class="resultlist" ng-show="resultSwitch">
+    <div class="top">
+      <span class="lineTitleBtn-ico">
+        <span class=""></span>
+        <span class="lineTitleBtn-cot" ng-click="opentest()"></span>
+      </span>
+    </div>
+    <div class="resultcontent">
+        <p>搜索结果：（共{{resultLength}}个）</p>
+        <div class="resultitem" ng-repeat="plane in  searchplanes | offset:currentPage*itemsPerPage | limitTo:itemsPerPage">
+          <div ng-click="selectPlane(plane.ID)" class="resulttitle">
+            <span class="planetitle-img">{{$index|letter}}</span>
+            <span class="planetitle-id">{{plane.ID}}</span>
+          </div>
+        <table>
+          <tr>
+            <td>经度：</td>
+            <td>{{plane.Latitude|num2}}</td>
+            <td>纬度：</td>
+            <td>{{plane.Longitude|num2}}</td>
+          </tr>
+          <tr>
+            <td>高度：</td>
+            <td>{{plane.Altitude|addmeter}}</td>
+            <td>所属地区：</td>
+            <td>{{plane.Company}}</td>
+          </tr>
+          <tr>
+            <td>航速：</td>
+            <td>{{plane.Speed|num4}}</td>
+            <td>航向：</td>
+            <td>{{plane.Direction|num4}}</td>
+          </tr>
+        </table>
+           <!--  <div class="resulttool">
+                <span class="toolBtn"><span class="toolBtn-img collect-img"></span>收藏</span>
+                <span class="toolBtn"><span class="toolBtn-img share-img"></span>分享</span>
+                <span class="toolBtn"><span class="toolBtn-img correct-img"></span>纠错</span>
+            </div> -->
+        </div>
+        <pagination></pagination>
+    </div>
+  </div>
+	<div class="{{lineStatus}}" ng-click="lineControl()"></div>	
+    <div id="baiduMap" class="mapcontainer {{mapstatus}}">
+    </div>
+	<div class="legend">
+		<table>
+			<tbody>
+				<tr ng-repeat="legend in legends">
+					<td><a class="{{legend.isshow}}" ng-click="closeOverlay($index)"></a></td>
+					<td><img ng-src="{{legend.typelegendimg}}"></td>
+					<td><span class="name">{{legend.typename}}</span></td>
+					<td>{{legend.markerscount}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+
+
+
+

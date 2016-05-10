@@ -1,0 +1,60 @@
+  /*切换城市*/
+.selCity{
+	width:90px;
+	height:34px;
+	margin:5px;
+	margin-left: 15px;
+	float:left;
+	text-align: center;
+}
+.selCity a:hover{
+	cursor: pointer;
+}
+.selCity .cityName,.selCity .changeBtn{
+	width:60px;
+	margin:0px;
+	text-align: center;
+	height: 15px;
+}
+.selCity .cityName{
+	height: 15px;
+	width: 100%;
+}
+.selCity .changeBtn{
+	height: 15px;
+	margin-top: 4px;
+	font-size: 13px;
+}
+/*搜索框样式*/
+.search{
+     float: left; 
+     padding-top:6px;
+}
+.search .key,
+.search .btnSearch,
+.search .condition{
+	float:left;
+	margin:0px;
+	padding: 0px;
+	height: 30px;
+}
+.search .condition{
+	width:70px;
+	height: 38px;
+	border:1px solid #b3b3b3;
+	border-right: 0px;
+	outline: none;
+}
+.search .key{
+	width: 320px;
+	height: 38px;
+	border:1px solid #b3b3b3;
+	border-left: 0px;
+	font-size: 16px;
+	outline: none;
+}
+.search .btnSearch{
+	width:90px;
+	height:38px;
+	background-image:url("../images/search.png");
+}

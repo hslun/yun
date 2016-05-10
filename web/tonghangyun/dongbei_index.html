@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/slide.css"/>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script type="text/javascript" src="./js/api"></script>
+
+</head>
+
+<body>
+<img src="img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="#">帮助中心</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="geren/login.html">登陆</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="geren/zhuce.html">免费注册</a>
+        </div>
+    
+    </div>
+</div>
+    <div class="menu">
+    	<a href="./index.html"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="./index.html">首页</a></li>
+            <li><a href="hangfuwu/">机场检索</a></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="gongqiu/gongqiu.html">通航供需平台</a></li>
+            <li><a href="#">气象情报</a></li>        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+    
+    
+	<div id="header">
+      <div class="slides">
+            <div class="slideInner">
+                 <a href="#" style="background:url(img/banner1bg.jpg) no-repeat rgb(16, 82, 179);">
+                     <img src="img/banner1.png" style="padding-top:50px;" /> 
+                </a>
+                 <a href="#" style="background:url(img/banner1bg.jpg) no-repeat rgb(16, 82, 179);">
+                     <img src="img/banner1.png" style="padding-top:50px;" /> 
+                </a>
+                 <a href="#" style="background:url(img/banner1bg.jpg) no-repeat rgb(16, 82, 179);">
+                     <img src="img/banner1.png" style="padding-top:50px;" /> 
+                </a>
+            </div>
+            <div class="nav">
+                <a class="prev" href="javascript:;"></a>
+                <a class="next" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+<div class="index_jianjie">
+    	<div class="jianjie_ditu">
+        	<img src="img/ditu.png" width="429" height="353" alt="全国地图"/>
+        </div>
+        <div class="jianjie_font">
+        	<img src="img/2.png" width="151" height="36" alt=""/>
+        	<p>国内第一家服务于通用航空的公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台……</p>
+            <ul>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+                <li><a href="#">弹性扩展，负载均衡智能应对大数据处理请求</a></li>
+                <li><a href="#">无需运维管理与架构设计</a></li>
+                <li><a href="#">99.95%SLA，首批可信云认证</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    
+<div class="main">
+    	<div class="main_1">
+        	<h2>供需信息</h2>
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">飞行器租凭/包机/托管</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">新店开业求租2架小飞机</a></li>
+                    <li><a href="#">广西地区求租小型固定翼</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">因公务需要租用湾流550</a></li>
+                    <li><a href="#">山东地区农林植保求租</a></li>
+                    <li><a href="#">河北地区农林植保求租</a></li>
+                    <li><a href="#">横店影视租无人机航拍</a></li>
+                    <li><a href="#">天津婚庆公司求租小型直升机</a></li>
+                    <li><a href="#">克拉玛依求租直升机</a></li>
+                    <li><a href="#">上海某公司寻直升机托管</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">贝尔AS350长期租凭</a></li>
+                    <li><a href="#">内蒙某集团公司寻托管直升机</a></li>
+                    <li><a href="#">江苏省某机场求租AW139机组</a></li>
+                    <li><a href="#">三亚飞行俱乐部求租5个三角翼</a></li>
+                    <li><a href="#">四川求租无人机植保</a></li>
+                </ul></dd>
+            </dl>
+            <dl class="dl">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">新店开业求租2架小飞机</a></li>
+                    <li><a href="#">广西地区求租小型固定翼</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">因公务需要租用湾流550</a></li>
+                    <li><a href="#">山东地区农林植保求租</a></li>
+                    <li><a href="#">河北地区农林植保求租</a></li>
+                    <li><a href="#">横店影视租无人机航拍</a></li>
+                    <li><a href="#">天津婚庆公司求租小型直升机</a></li>
+                    <li><a href="#">克拉玛依求租直升机</a></li>
+                    <li><a href="#">上海某公司寻直升机托管</a></li>
+                    <li><a href="#">大连婚庆公司求租直升机</a></li>
+                    <li><a href="#">贝尔AS350长期租凭</a></li>
+                    <li><a href="#">内蒙某集团公司寻托管直升机</a></li>
+                    <li><a href="#">江苏省某机场求租AW139机组</a></li>
+                    <li><a href="#">三亚飞行俱乐部求租5个三角翼</a></li>
+                    <li><a href="#">四川求租无人机植保</a></li>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zhanhui">
+            	<dt><a href="#" class="dt_tt">航油航材</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li><a href="#">第二届中国天津国际直升机博览</a></li>
+                    <li><a href="#">2015中国国际农用航空植保展览</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                    <li><a href="#">2015第二届上海国际航空维修及</a></li>
+                    <li><a href="#">2015青岛国际通用航空博览会</a></li>
+                    <li><a href="#">2015中国（安阳）通用航空产业</a></li>
+                </ul></dd>
+            </dl>
+        </div>
+   	  <div class="main_2">
+        	<h2>会员专区</h2>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">最新加入的通航机场企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+            <dl class="dl index_zuixin">
+            	<dt><a href="#" class="dt_tt">金牌VIP通航企业</a><a href="#" class="dt_more">更多 >></a></dt>
+            	<dd><ul>
+                    <li class="index_gongsi_h">
+                    	<p class="index_gongsi_name">公司名称</p>
+                    	<p class="index_gongsi_diqu">地区</p>
+                    	<p class="index_gongsi_time">注册时间</p>
+                    </li>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                    <a href="#"><li>
+                    	<p class="index_gongsi_name">西亚直升机航空有限公司</p>
+                    	<p class="index_gongsi_diqu">乌鲁木齐市</p>
+                    	<p class="index_gongsi_time">2015-07-28</p>
+                    </li></a>
+                </ul></dd>
+            </dl>
+        </div>
+		<div class="main_3">
+        	<h2>通航企业/机场</h2>
+<div class="content">
+<div class="tonghqyjc">
+	<div id="loading" style="display: none;"><img src="./img/loading.gif"></div>
+            <div class="chazhaoydt" style="clear:both;">
+            	<div class="xuanthqjc">
+                	<div class="TabTitleth">
+                        <ul id="myTab3">
+                          <li class="activec" onclick="nTabsa(this,0,0);">
+                            <p>通航公司</p>
+                          </li>
+                          <li class="normalc" onclick="nTabsa(this,0,1);">
+                            <p>机场</p>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="TabContent">
+                    	<div id="myTab_Cont0">
+						<!--#006CBF-->
+                        	<div class="diqvxz">
+                            	<ul>
+									<li><a href="javascript:void(0)" id="s_0" onclick="map_list('全国',0,'106.616161,35.199954','',5)" style="color: rgb(0, 108, 191);">全　国</a></li>
+                                	<li><a href="javascript:void(0)" id="s_1" onclick="map_list('北京市',1,'116.403874,39.914889','',8)" style="color: rgb(114, 127, 139);">北京市</a></li>
+                                    <li><a href="javascript:void(0)" id="s_2" onclick="map_list('天津市',2,'117.210813,39.14393','',8)" style="color: rgb(114, 127, 139);">天津市</a></li>
+                                    <li><a href="javascript:void(0)" id="s_3" onclick="map_list('河北省',3,'117.203332,39.153618','',8)" style="color: rgb(114, 127, 139);">河北省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_4" onclick="map_list('山西省',4,'112.515496,37.866566','',8)" style="color: rgb(114, 127, 139);">山西省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_5" onclick="map_list('内蒙古自治区',5,'114.415868,43.468238','',8)" style="color: rgb(114, 127, 139);">内蒙古区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_6" onclick="map_list('辽宁省',6,'122.753592,41.6216','',8)" style="color: rgb(114, 127, 139);">辽宁省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_7" onclick="map_list('吉林省',7,'126.597366,43.887038','',8)" style="color: rgb(114, 127, 139);">吉林省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_8" onclick="map_list('黑龙江省',8,'128.047414,47.356593','',8)" style="color: rgb(114, 127, 139);">黑龙江省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_9" onclick="map_list('上海市',9,'121.487899,31.249162','',8)" style="color: rgb(114, 127, 139);">上海市</a></li>
+                                    <li><a href="javascript:void(0)" id="s_10" onclick="map_list('江苏省',10,'121.434163,31.230436','',8)" style="color: rgb(114, 127, 139);">江苏省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_11" onclick="map_list('浙江省',11,'119.957202,29.159494','',8)" style="color: rgb(114, 127, 139);">浙江省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_12" onclick="map_list('安徽省',12,'117.216005,31.859252','',8)" style="color: rgb(114, 127, 139);">安徽省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_13" onclick="map_list('福建省',13,'117.984943,26.050118','',8)" style="color: rgb(114, 127, 139);">福建省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_14" onclick="map_list('江西省',14,'115.676082,27.757258','',8)" style="color: rgb(114, 127, 139);">江西省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_15" onclick="map_list('山东省',15,'118.527663,36.09929','',8)" style="color: rgb(114, 127, 139);">山东省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_16" onclick="map_list('河南省',16,'113.486804,34.157184','',8)" style="color: rgb(114, 127, 139);">河南省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_17" onclick="map_list('湖北省',17,'112.410562,31.209316','',8)" style="color: rgb(114, 127, 139);">湖北省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_18" onclick="map_list('湖南省',18,'111.720664,27.695864','',8)" style="color: rgb(114, 127, 139);">湖南省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_19" onclick="map_list('广东省',19,'113.394818,23.408004','',8)" style="color: rgb(114, 127, 139);">广东省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_20" onclick="map_list('广西区',20,'108.924274,23.552255','',8)" style="color: rgb(114, 127, 139);">广西区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_21" onclick="map_list('海南省',21,'109.733755,19.180501','',8)" style="color: rgb(114, 127, 139);">海南省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_22" onclick="map_list('重庆市',22,'106.530635,29.544606','',8)" style="color: rgb(114, 127, 139);">重庆市</a></li>
+                                    <li><a href="javascript:void(0)" id="s_23" onclick="map_list('四川省',23,'102.89916,30.367481','',8)" style="color: rgb(114, 127, 139);">四川省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_24" onclick="map_list('贵州省',24,'106.734996,26.902826','',8)" style="color: rgb(114, 127, 139);">贵州省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_25" onclick="map_list('云南省',25,'101.592952,24.864213','',8)" style="color: rgb(114, 127, 139);">云南省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_26" onclick="map_list('西藏区',26,'89.137982,31.367315','',8)" style="color: rgb(114, 127, 139);">西藏区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_27" onclick="map_list('陕西省',27,'109.503789,35.860026','',8)" style="color: rgb(114, 127, 139);">陕西省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_28" onclick="map_list('甘肃省',28,'102.457625,38.103267','',8)" style="color: rgb(114, 127, 139);">甘肃省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_29" onclick="map_list('青海省',29,'96.202544,35.499761','',8)" style="color: rgb(114, 127, 139);">青海省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_30" onclick="map_list('宁夏回族自治区',30,'106.155481,37.321323','',8)" style="color: rgb(114, 127, 139);">宁夏区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_31" onclick="map_list('新疆维吾尔自治区',31,'85.614899,42.127001','',8)" style="color: rgb(114, 127, 139);">新疆区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_32" onclick="map_list('台湾省',32,'121.560973,25.475928','',8)" style="color: rgb(114, 127, 139);">台湾省</a></li>
+                                    <li><a href="javascript:void(0)" id="s_33" onclick="map_list('香港特区',33,'114.186124,22.293586','',8)" style="color: rgb(114, 127, 139);">香港特区</a></li>
+                                    <li><a href="javascript:void(0)" id="s_34" onclick="map_list('澳门特区',34,'113.557519,22.204118','',8)" style="color: rgb(114, 127, 139);">澳门特区</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="myTab_Cont1" style="display:none;">
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="xuanchakdt">
+                	<div id="allmap" style="overflow: hidden; position: relative; z-index: 0; color: rgb(0, 0, 0); text-align: left; background-color: rgb(243, 241, 236);"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(http://api0.map.bdimg.com/images/openhand.cur) 8 8, default;"><div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 738px; height: 376px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 681px; top: -84px; z-index: -8.0834e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 655px; top: -82px; z-index: -8.07362e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 663px; top: -78px; z-index: -8.05163e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 700px; top: -31px; z-index: -7.78012e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 686px; top: -77px; z-index: -8.04318e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 746px; top: -59px; z-index: -7.94082e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 539px; top: 24px; z-index: -7.46335e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 586px; top: -71px; z-index: -8.012e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 691px; top: -14px; z-index: -7.68368e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 708px; top: -104px; z-index: -8.1985e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 761px; top: -343px; z-index: -9.46115e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 430px; top: -101px; z-index: -8.17836e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 551px; top: -196px; z-index: -8.69802e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 524px; top: 13px; z-index: -7.53042e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 564px; top: -43px; z-index: -7.85064e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 988px; top: -198px; z-index: -8.71204e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 689px; top: -76px; z-index: -8.03669e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 692px; top: -21px; z-index: -7.72477e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 839px; top: -125px; z-index: -8.31337e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 921px; top: -438px; z-index: -9.92437e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 1043px; top: -323px; z-index: -9.36276e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 890px; top: -572px; z-index: -1.05433e+07; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 804px; top: 223px; z-index: -6.24983e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 653px; top: 304px; z-index: -5.72903e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 658px; top: 385px; z-index: -5.19782e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 780px; top: 62px; z-index: -7.23912e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 328px; top: 240px; z-index: -6.14133e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 319px; top: 174px; z-index: -6.55675e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 480px; top: 107px; z-index: -6.96944e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: -159px; top: -227px; z-index: -8.86165e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 599px; top: 487px; z-index: -4.50665e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 582px; top: 107px; z-index: -6.96442e+06; -webkit-user-select: none; background: url(http://api0.map.bdimg.com/images/blank.gif);" title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"><label class="BMapLabel" unselectable="on" style="position: absolute; display: none; cursor: inherit; border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: arial, sans-serif; z-index: -20000; -webkit-user-select: none; color: rgb(190, 190, 190); background-color: rgb(190, 190, 190);">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 681px; top: -84px; z-index: -8.0834e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 655px; top: -82px; z-index: -8.07362e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 663px; top: -78px; z-index: -8.05163e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 700px; top: -31px; z-index: -7.78012e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 686px; top: -77px; z-index: -8.04318e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 746px; top: -59px; z-index: -7.94082e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 539px; top: 24px; z-index: -7.46335e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 586px; top: -71px; z-index: -8.012e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 691px; top: -14px; z-index: -7.68368e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 708px; top: -104px; z-index: -8.1985e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 761px; top: -343px; z-index: -9.46115e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 430px; top: -101px; z-index: -8.17836e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 551px; top: -196px; z-index: -8.69802e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 524px; top: 13px; z-index: -7.53042e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 564px; top: -43px; z-index: -7.85064e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 988px; top: -198px; z-index: -8.71204e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 689px; top: -76px; z-index: -8.03669e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 692px; top: -21px; z-index: -7.72477e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 839px; top: -125px; z-index: -8.31337e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 921px; top: -438px; z-index: -9.92437e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 1043px; top: -323px; z-index: -9.36276e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 890px; top: -572px; z-index: -1.05433e+07;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 804px; top: 223px; z-index: -6.24983e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 653px; top: 304px; z-index: -5.72903e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 658px; top: 385px; z-index: -5.19782e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 780px; top: 62px; z-index: -7.23912e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 328px; top: 240px; z-index: -6.14133e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 319px; top: 174px; z-index: -6.55675e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 480px; top: 107px; z-index: -6.96944e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: -159px; top: -227px; z-index: -8.86165e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 599px; top: 487px; z-index: -4.50665e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 582px; top: 107px; z-index: -6.96442e+06;"><div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; overflow: hidden;"><img src="http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; overflow: visible; z-index: -100; left: 369px; top: 188px; display: block; transform: translate3d(0px, 0px, 0px);"><img src="./177fly_files/saved_resource" style="position: absolute; border: none; width: 256px; height: 256px; left: -40px; top: -325px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(1)" style="position: absolute; border: none; width: 256px; height: 256px; left: -552px; top: -69px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(2)" style="position: absolute; border: none; width: 256px; height: 256px; left: -296px; top: -69px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(3)" style="position: absolute; border: none; width: 256px; height: 256px; left: -296px; top: 187px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(4)" style="position: absolute; border: none; width: 256px; height: 256px; left: 216px; top: -69px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(5)" style="position: absolute; border: none; width: 256px; height: 256px; left: 216px; top: -325px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(6)" style="position: absolute; border: none; width: 256px; height: 256px; left: -296px; top: -325px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(7)" style="position: absolute; border: none; width: 256px; height: 256px; left: 216px; top: 187px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(8)" style="position: absolute; border: none; width: 256px; height: 256px; left: -40px; top: 187px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(9)" style="position: absolute; border: none; width: 256px; height: 256px; left: -552px; top: -325px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(10)" style="position: absolute; border: none; width: 256px; height: 256px; left: -552px; top: 187px; max-width: none; opacity: 1;"><img src="./177fly_files/saved_resource(11)" style="position: absolute; border: none; width: 256px; height: 256px; left: -40px; top: -69px; max-width: none; opacity: 1;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: none; visibility: hidden;"><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 0; display: none;"></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 10; display: none;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div></div><div class="pano_close" title="退出全景" style="z-index: 1201; display: none;"></div><a class="pano_pc_indoor_exit" title="退出室内景" style="z-index: 1201; display: none;"><span style="float:right;margin-right:12px;">出口</span></a><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api0.map.bdimg.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorTL" style="width: 62px; height: 192px; bottom: auto; right: auto; top: 10px; left: 10px; position: absolute; z-index: 1100;"><div class="BMap_stdMpPan" style="background-position: 0px 0px;"><div class="BMap_button BMap_panN" title="向上平移"></div><div class="BMap_button BMap_panW" title="向左平移"></div><div class="BMap_button BMap_panE" title="向右平移"></div><div class="BMap_button BMap_panS" title="向下平移"></div><div class="BMap_stdMpPanBg BMap_smcbg"></div></div><div class="BMap_stdMpZoom" style="height: 147px; width: 62px;"><div class="BMap_button BMap_stdMpZoomIn" title="放大一级" style="background-position: 0px -221px;"><div class="BMap_smcbg"></div></div><div class="BMap_button BMap_stdMpZoomOut" title="缩小一级" style="top: 126px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSlider" style="height: 108px;"><div class="BMap_stdMpSliderBgTop" style="height: 108px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSliderBgBot" style="top: 79px; height: 33px;"></div><div class="BMap_stdMpSliderMask" title="放置到此级别"></div><div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(http://api0.map.bdimg.com/images/openhand.cur) 8 8, default; top: 79px;"><div class="BMap_smcbg"></div></div></div><div class="BMap_zlHolder"><div class="BMap_zlSt"><div class="BMap_smcbg"></div></div><div class="BMap_zlCity"><div class="BMap_smcbg"></div></div><div class="BMap_zlProv"><div class="BMap_smcbg"></div></div><div class="BMap_zlCountry"><div class="BMap_smcbg"></div></div></div></div><div class="BMap_stdMpGeolocation" style="position: initial; display: none; margin-top: 43px; margin-left: 10px;"><div class="BMap_geolocationContainer" style="position: initial; width: 24px; height: 24px; overflow: hidden; margin: 0px; box-sizing: border-box;"><div class="BMap_geolocationIconBackground" style="width: 24px; height: 24px; background-image: url(http://api0.map.bdimg.com/images/navigation-control/geolocation-control/pc/bg-20x20.png); background-size: 20px 20px; background-position: 3px 3px; background-repeat: no-repeat;"><div class="BMap_geolocationIcon" style="position: initial; width: 24px; height: 24px; cursor: pointer; background-image: url(&#39;http://api0.map.bdimg.com/images/navigation-control/geolocation-control/pc/success-10x10.png&#39;); background-size: 10px 10px; background-repeat: no-repeat; background-position: center;"></div></div></div></div></div><div unselectable="on" class=" BMap_scaleCtrl BMap_noprint anchorBL" style="bottom: 18px; right: auto; top: auto; left: 81px; width: 62px; position: absolute; z-index: 10;"><div class="BMap_scaleTxt" unselectable="on" style="color: black; background-color: transparent;">200&nbsp;公里</div><div class="BMap_scaleBar BMap_scaleHBar" style="background-color: black;"><img style="border:none" src="./177fly_files/mapctrls.png"></div><div class="BMap_scaleBar BMap_scaleLBar" style="background-color: black;"><img style="border:none" src="./177fly_files/mapctrls.png"></div><div class="BMap_scaleBar BMap_scaleRBar" style="background-color: black;"><img style="border:none" src="./177fly_files/mapctrls.png"></div></div><div unselectable="on" class=" BMap_omCtrl BMap_ieundefined BMap_noprint anchorBR quad4" style="width: 13px; height: 13px; bottom: 0px; right: 0px; top: auto; left: auto; position: absolute; z-index: 10;"><div class="BMap_omOutFrame" style="width: 149px; height: 149px;"><div class="BMap_omInnFrame" style="bottom: auto; right: auto; top: 5px; left: 5px; width: 142px; height: 142px;"><div class="BMap_omMapContainer"></div><div class="BMap_omViewMv" style="cursor: url(http://api0.map.bdimg.com/images/openhand.cur) 8 8, default;"><div class="BMap_omViewInnFrame"><div></div></div></div></div></div><div class="BMap_omBtn BMap_omBtnClosed" style="bottom: 0px; right: 0px; top: auto; left: auto;"></div></div><div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; color: black; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10; background: none;"><span _cid="1" style="display: inline;"><span style="font-size:11px">© 2015 Baidu&nbsp;- Data © <a href="http://www.navinfo.com/" style="display:inline;">NavInfo</a> &amp; <a href="http://www.cennavi.com.cn/" style="display:inline;">CenNavi</a> &amp; <a href="http://www.365ditu.com/" style="display:inline;">道道通</a></span></span></div><div style="height: 32px; position: absolute; z-index: 30; bottom: 0px; right: auto; top: auto; left: 1px;" class=" anchorBL"><a title="到百度地图查看此区域" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="./177fly_files/copyright_logo.png"></a></div></div>
+           
+                </div>
+            </div>
+        </div>
+
+</div>
+<div class="f_ad" style="padding-top:15px;"></div>
+<div class="footer_line"></div>
+<input type="hidden" name="province" id="province" value="全国">
+<input type="hidden" name="province_id" id="province_id" value="0">
+<input type="hidden" name="qy_type" id="qy_type" value="1">
+<input type="hidden" name="zb" id="zb" value="106.616161,35.199954">
+<script type="text/javascript" src="./js/InfoBox_min.js"></script>
+<script type="text/javascript">
+	function map_list(province,id,zb,qy_type,Zoom){
+	//alert(Zoom);
+		$("#s_"+id).css("color","#006CBF");
+			for (var i=0; i<=34; i++){
+				if(i!=id){
+					$("#s_"+i).css("color","#727F8B");
+				}
+		}
+		
+		//省Id
+		$("#province_id").val(id);
+	  var map = new BMap.Map("allmap");  // 创建Map
+		// 百度地图API功能
+		$("#province").val(province);
+		$("#zb").val(zb);
+		var zbarr = new Array();
+			zbarr = zb.split(",")
+		map.addControl(new BMap.NavigationControl()); 
+		map.addControl(new BMap.ScaleControl()); 
+		map.addControl(new BMap.OverviewMapControl()); 
+		map.centerAndZoom(new BMap.Point(zbarr[0],zbarr[1]), 5); // 初始化地图，设置中心点坐标和地图级别
+		
+		//map.addControl(new BMap.MapTypeControl()); 
+		var myIcon = new BMap.Icon("http://www.177fly.com/statics/images/kuaifei_images/mk_icon.png", new BMap.Size(23, 25),{
+			ffset: new BMap.Size(10, 25), 
+			imageOffset: new BMap.Size(0, 0),
+			anchor: new BMap.Size(10, 30),
+			infoWindowAnchor: new BMap.Size(10, 0)
+		});
+		$("#loading").bind("ajaxSend", function(){ //使用bind
+			$(this).show();
+		});
+		$.ajax({
+			type: "post",//使用get方法访问后台
+			dataType: "json",//返回json格式的数据
+			url: "http://www.177fly.com/index.php?m=gys&c=index&a=map_list",//要访问的后台地址
+			data: "qy_type=" + $("#qy_type").val() +"&province="+province,//要发送的数据
+			complete :function(){$("#loading").fadeOut(1000);},//AJAX请求完成时隐藏loading提示
+			success: function(data){//msg为返回的数据，在这里做数据绑定
+				//alert(data.length);
+				if(data.length==0){return false;}
+				for(var i=0;i<data.length;i++){
+				 var strjcwz = data[i].jcwz;
+				 var strj = new Array();
+					strj = strjcwz.split(",");
+					//alert(content[i]);
+					var point = new BMap.Point(strj[0],strj[1]);
+					var marker = new BMap.Marker(point, { icon: myIcon }); 
+					map.addOverlay(marker);
+					if(data[i].yunying_type==0){
+						var content = ['<div class="ditukuag"><div class="ditukuag1"><h3>公司名称：'+data[i].company+'</h3></div><div class="ditukuag2"><ul><li><p>'+data[i].serve+'</p></li><li><p>地址：'+data[i].province+data[i].city+data[i].county+'</p></li></ul></div></div>'];
+					}else{
+						var opening_state = data[i].opening_state;
+						if(opening_state==1){
+							var open ="开放";
+						}else{
+							var open ="关闭";
+						}
+					var parking_num,jiku_num;
+					if(data[i].jiku_num==""){
+						jiku_num = "未知";
+					}else{
+						jiku_num = data[i].jiku_num;
+					}
+					if(data[i].parking_num==""){
+						parking_num = "未知";
+					}else{
+						parking_num = data[i].parking_num;
+					}
+					var content = ['<div class="ditukuag"><div class="ditukuag1"><h3>机场名称：'+data[i].airport_name+'</h3></div><div class="ditukuag22"><ul><li style="width:176px;"><p>飞行区域等级：'+data[i].quyu_dengji_daima+data[i].quyu_dengji_daihao+'</p></li><li><p>跑道信息：'+data[i].paodao_xinxi+'米</p></li><li style="width:200px;"><p>开放时间：'+data[i].opening_time+'</p></li><li style="width:176px;"><p>是否有塔台：'+data[i].is_tatai+'</p></li><li><p>停机坪数量：'+parking_num+'</p></li><li style="width:176px;"><p>机库面积：'+jiku_num+'</p></li><li style="width:364px;"><p>机场服务：'+data[i].airport_serve+'</p></li><li style="width:200px;"><p>开放状态：'+open+'</p></li></ul></div></div>'];
+					}
+
+					marker.addEventListener("click",openInfo.bind(null,content,map,marker));
+				}
+			}
+		});
+		//alert(map_data.length);
+	}
+	var infoBoxTemp = null;
+	function openInfo(content,map,marker,e){
+		var p = e.target;
+		//var marker = new BMap.Marker(poi);
+		var infoBox = new BMapLib.InfoBox(map,content,{
+			boxStyle:{
+			//top:"-10px"
+			width: "645px"
+			,height: "198px"
+			}
+			,closeIconUrl: "http://www.177fly.com/statics/images/kuaifei_images/map_close.png" //关闭按钮的url地址 
+			,closeIconMargin: "15px 20px 0 0"
+			,enableAutoPan: true
+		});
+		if(infoBoxTemp){
+			infoBoxTemp.close();
+		}
+		infoBoxTemp = infoBox;
+		infoBox.open(marker);
+		return false;
+		var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+		infoBox.open(point);
+		var aaaa =infoBox.getOffset();
+	}
+	map_list("全国",0,'106.616161,35.199954',0,5);
+	//导卡 
+	function nTabsa(thisObj, Num9,qy_type) {
+		$("#qy_type").val(qy_type);
+		var zoom;
+		if($("#province_id").val()==0){
+			zoom = 5;
+		}else{
+			zoom = 5;
+		}
+		map_list($("#province").val(),$("#province_id").val(),$("#zb").val(),$("#qy_type").val(),zoom);
+		if (thisObj.className == "activec") return;
+		var tabList = document.getElementById("myTab3").getElementsByTagName("li");
+		for (i = 0; i < tabList.length; i++) {//点击之后，其他tab变成灰色，内容隐藏，只有点击的tab和内容有属性
+			if (i == qy_type) {
+				thisObj.className = "activec";
+				document.getElementById("myTab_Cont" + i).style.display = "block";
+			} else {
+				tabList[i].className = "normalc";
+				document.getElementById("myTab_Cont0").style.display = "block";
+			}
+		}
+	}
+	/*map end*/
+	$("#down").click(function(){
+		$("html,body").animate({scrollTop:$(".biaoti1").offset().top},300);
+	})
+</script>
+        
+        </div>
+    </div>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+</body>
+</html>

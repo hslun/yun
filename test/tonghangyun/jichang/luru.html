@@ -1,0 +1,622 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-通航云</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".slideInner").slide({
+		slideContainer: $('.slideInner a'),
+		effect: 'easeOutCirc',
+		autoRunTime: 5000,
+		slideSpeed: 1000,
+		nav: true,
+		autoRun: true,
+		prevBtn: $('a.prev'),
+		nextBtn: $('a.next')
+	});
+});
+</script>
+<script>	
+	$(document).ready(function(){
+				if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+				)
+				{
+					$("body").addClass("min");
+				}
+	})
+</script>
+<script type="text/javascript" src="../js/luru.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/input.css">
+</head>
+
+<body>
+<img src="../img/logo.jpg" width="56" height="35" alt="" style="display:none;"/>
+<div id="top">
+	<div class="top">
+    	<div class="diqu">
+        	东北区<a href="#">[切换管理局]</a>
+        </div>
+        <div class="tianqi">
+        	<a href="#">财湖机场 <img src="../img/tianqi.png" width="19" height="18" alt=""/> 21-23℃ <span>优</span></a>
+        </div>
+        <div class="top_help">
+        	<a href="#">帮助中心</a><a href="#">联系我们</a>
+        </div>
+        <div class="index_login">
+        	<a href="../geren/login.html">登陆</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="../geren/zhuce.html">注册</a>
+        </div>
+    
+    </div>
+</div>
+<div id="menu">
+    <div class="menu">
+    	<a href="../index.html"><h1 class="logo">通航云</h1></a>
+        <ul>
+            <li><a id="cur" href="../index.html">首页</a></li>
+            <li><a href="hangfuwu_heard.html">机场检索</a></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="../gongqiu/gongqiu.html">通航供需平台</a></li>
+            <li><a href="#">气象情报</a></li>        	
+        </ul>
+        <div class="search">
+       	  <form>
+            <input class="search_txt" type="text">
+            <input type="submit" class="search_bt" value="&nbsp;">
+          </form>
+        </div>
+    </div>
+</div>
+<div id="main_luru">
+	<div class="luru_ad"><a href="#"><img src="../img/ad.png" width="100%" alt=""/></a></div>
+    <div class="main_luru">
+        <div class="luru_mbx"><a href="#">主页</a> > <a href="#">机场检索</a> > 机场详情录入</div>
+        <h2>请录入通航机场信息</h2>
+		<div class="luru" id="luru1">
+            <h3>基本信息（必填） <span class="shou"> </span></h3>
+            <div class="luru_nr" style="display:block;">
+            <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm">
+                <p class="bi"><span>*&nbsp;<em>长度单位：</em></span>
+                  <input name="rad[]" type="radio" id="rad" checked>米
+                  <input type="radio" id="rad2" name="rad[]">英尺
+                </p>
+                <p class="bi"><span>*&nbsp;<em>经纬度计量方式：</em></span>
+                  <input type="radio" id="rad01_1" name="rad[00]" checked>度分秒
+                  <input type="radio" id="rad01_2" name="rad[00]">十进制
+                </p>
+                <p class="bi"><span>*&nbsp;<em>机场名称：</em></span>
+                <input class="fn-tinput" name="jichangname" maxlength="30" size="33" placeholder="机场名称" required="" data-msg-required="请输入机场名称"  type="text"></p>
+                <p class="bi"><span>*&nbsp;<em>机场性质：</em></span>
+                  <input type="radio" id="rad_1" name="rad[0]" checked>公开
+                  <input type="radio" id="rad_2" name="rad[0]">私人
+                </p>
+           	    <p class="bi"><span>*&nbsp;<em>机场地址：</em></span>
+                    <select name="provinceDiv">
+                    	<option selected="selected" value="">省份</option>
+                        <option value="1">北京</option><option value="2">上海</option><option value="3">天津</option><option value="4">重庆</option>
+                        <option value="5">河北</option><option value="6">山西</option><option value="7">河南</option><option value="8">辽宁</option>
+                        <option value="9">吉林</option><option value="10">黑龙江</option><option value="11">内蒙古</option><option value="12">江苏</option>
+                        <option value="13">山东</option><option value="14">安徽</option><option value="15">浙江</option><option value="16">福建</option>
+                        <option value="17">湖北</option><option value="18">湖南</option><option value="19">广东</option><option value="20">广西</option>
+                        <option value="21">江西</option><option value="22">四川</option><option value="23">海南</option><option value="24">贵州</option>
+                        <option value="25">云南</option><option value="26">西藏</option><option value="27">陕西</option><option value="28">甘肃</option>
+                        <option value="29">青海</option><option value="30">宁夏</option><option value="31">新疆</option><option value="32">台湾</option>
+                        <option value="42">香港</option><option value="43">澳门</option><option value="84">钓鱼岛</option>
+                     </select>
+                    <select name="provinceDiv" class="sele" >
+                    	<option selected="selected" value="">市级</option>
+                        <option value="2800">海淀区</option><option value="2801">西城区</option>
+                        <option value="2802">东城区</option><option value="2803">崇文区</option>
+                        <option value="2804">宣武区</option><option value="2805">丰台区</option>
+                        <option value="2806">石景山区</option><option value="2807">门头沟</option>
+                        <option value="2808">房山区</option><option value="2809">通州区</option>
+                        <option value="2810">大兴区</option><option value="2812">顺义区</option>
+                        <option value="2814">怀柔区</option><option value="2816">密云区</option>
+                        <option value="2901">昌平区</option><option value="2953">平谷区</option>
+                        <option value="3065">延庆县</option>
+                    </select>
+                    <input id="provinceDiv" name="xiangxidizhi" type="text" size="33" placeholder="详细地址" required>
+                    <span for="provinceDiv" class="error" style="display:none;">必填</span>
+                </p>
+                <p class="bi"><span>*&nbsp;<em>机场基准点坐标：</em></span><input type="text" name="jidian" size="33" maxlength="30" required></p>
+                <p class="bi"><span> <em>与城市的位置关系：</em></span><input type="text" size="33" name="weizhi" maxlength="30"></p>
+                <p class="bi"><span>*&nbsp;<em>机场标高：</em></span></p>
+                <p class="bi"><span>*&nbsp;</span>经度：
+                	<input type="text" size="4" name="jingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;°&nbsp;
+                    <input type="text" size="4" name="jingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;′&nbsp;
+                    <input type="text" size="4" name="jingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;″&nbsp;
+                    <span for="jingdu" class="error" style="display:none;">必填</span>
+                </p>
+                <p class="bi"><span>*&nbsp;</span>纬度：
+                	<input type="text" size="4" name="weidu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;°&nbsp;
+                    <input type="text" size="4" name="weidu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;′&nbsp;
+                    <input type="text" size="4" name="weidu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;″&nbsp;
+                    <span for="weidu" class="error" style="display:none;">必填</span>
+                </p>
+                <p class="bi"><span>*&nbsp;</span>精度：
+                	<input type="text" size="4" name="jjingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;°&nbsp;
+                    <input type="text" size="4" name="jjingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;′&nbsp;
+                    <input type="text" size="4" name="jjingdu" placeholder="数字1-4位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="4">&nbsp;″&nbsp;
+                    <span for="jjingdu" class="error" style="display:none;">必填</span>
+              	</p>
+                <p class="bi"><span>*&nbsp;<em>海拔：</em></span><input type="text" size="10" name="gaodu" placeholder="数字1-8位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小1位" minlength="1" maxlength="8"></p>
+                <p class="bi"><span>*&nbsp;<em>类型（华东区）：</em></span>
+                  <input type="radio" id="rad0_1" name="rad[1]" checked>公开
+                  <input type="radio" id="rad0_2" name="rad[1]">私人
+              </p>
+                <p class="bi"><span>*&nbsp;<em>飞行区等级：</em></span><input name="dengji" type="text" size="33" maxlength="10" required></p>
+                <p class="bi"><span>*&nbsp;<em>是否提供夜航：</em></span>
+                  <input type="radio" id="rad1_1" name="rad[2]" checked>公开
+                  <input type="radio" id="rad1_2" name="rad[2]">私人
+              </p>
+                <p class="bi"><span>*&nbsp;<em>是否提供塔台：</em></span>
+                    <input type="radio" id="rad2_1" name="rad[3]" checked>公开
+                    <input type="radio" id="rad2_2" name="rad[3]">私人
+              </p>
+                <p class="bi"><span>*&nbsp;<em>导航和着陆设施：</em></span>
+                    <input type="radio" id="rad3_1" name="rad[4]" checked>公开
+                    <input type="radio" id="rad3_2" name="rad[4]">私人
+              </p>
+                <p class="bi"><span>*&nbsp;<em>机场所有者：</em></span><input name="yongyouzhe" type="text" size="33" maxlength="50" placeholder="机场所有者" required></p>
+                <p class="bi"><span>*&nbsp;<em>机场管理机构：</em></span><input name="jigou" type="text" size="33" maxlength="50" placeholder="机场管理机构" required></p>
+                <p class="bi"><span>*&nbsp;<em>联系人：</em></span><input name="lianxiren" type="text" size="33" maxlength="30" placeholder="联系人" required></p>
+                <p class="bi"><span> <em>电话：</em></span><input name="dianhua" type="noactel" size="33" placeholder="电话" required="" data-rule-number="true" data-msg-required="请输入正确的电话" data-msg-number="请输入正确的电话" data-msg-minlength="请输入最小8位" minlength="8" maxlength="20"></p>
+                <p class="bi"><span>*&nbsp;<em>手机：</em></span><input name="phone" size="33" placeholder="手机号" required="" data-rule-mobile="true" data-msg-required="请输入手机号" data-msg-mobile="请输入正确格式" type="text"></p>
+                <p class="bi"><span>*&nbsp;<em>E-Mail：</em></span><input name="email" type="email" size="33" class="fn-tinput" placeholder="邮箱" required="" data-rule-mm="true" data-msg-required="请输入邮箱" data-msg-mm="请输入正确格式"></p>
+                <p class="bi"><span>*&nbsp;<em>空域面积：</em></span><input type="text" size="33" maxlength="30" required></p>
+                <p class="bi"><span> <em>机场网址：</em></span><input name="wangzhi" type="text" size="33" maxlength="100"></p>
+                <p class="bi"><span><em>开放时间：</em></span><input type="text" size="33"></p>
+                <p class="bi"><span> <em>机场使用许可证最新有效期：</em></span><input type="text" size="33"></p>
+                <p class="bi"><span> <em>消防等级：</em></span><input type="text" size="33"></p>
+                <p class="bi"><span> <em>机场现状概述:</em></span><textarea cols="50" rows="5"></textarea></p>
+            	<div class="tingjiping">
+                    <p class="bi jiajian"><span>*&nbsp;<em>机场预览图片<font>1</font>：</em></span><input type="file" class="file" required><a class="jian" href="javascript:;">删除</a></p>
+                </div>
+                <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+				<p id="sub"><input class="fn-btn btn-primary btn-submit submitBtn sub" type="submit" value="保存 填写下一项"></p>
+            </form>                                                                          
+            </div>
+       </div>
+		<div class="luru" id="luru2">
+            <h3>通信（非必填）<span> </span></h3>
+            <div class="luru_nr">
+            <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm1">
+                <p class="bi"><span>*&nbsp;<em>呼号：</em></span><input name="huhao" type="text" size="33" maxlength="30" placeholder="呼号" required></p>
+                <p class="bi"><span>*&nbsp;<em>频率：</em></span><input name="pinlv" type="text" size="33" maxlength="50" placeholder="频率" required></p>
+                <p class="bi"><span>*&nbsp;<em>联系电话：</em></span><input name="huahaodianhua" type="text" placeholder="数字8-20位" required="" data-rule-number="true" data-msg-required="不能为空" data-msg-number="请输入正确的数字" data-msg-minlength="请输入最小8位" minlength="8" maxlength="20"></p>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+            </form>
+            </div>
+        </div>
+         <div class="luru_nr luru_top" style="display:block;">
+           <p class="bi" style="width:80%;"><span>*&nbsp;<em>是否有停机坪和跑道：</em></span>
+              <input name="rad[32]" type="radio" id="rad32_1">只有停机坪
+              <input name="rad[32]" type="radio" id="rad32_2">只有跑道
+              <input name="rad[32]" type="radio" id="rad32_3" checked>两者都有
+           </p>
+        </div>
+		<div class="luru" id="luru3">
+            <h3>停机坪（停机坪与跑道两者必填其一） <span> </span></h3>
+            <div class="luru_nr">
+            <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm2">
+           	<div class="tingjiping">
+					<p class="bi jiajian"><span>机坪<font>1</font></span> <a class="jian" href="javascript:;">删除机坪</a></p>
+                    <p class="bi"><span>*&nbsp;<em>FATO起飞进近着陆方向：</em></span><input name="fato" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span> <em>频真方位和磁差：</em></span><input name="fangwei" type="text" size="33" maxlength="20" ></p>
+                    <p class="bi"><span>*&nbsp;<em>视助航条件：</em></span><input name="zhuhang" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>机坪直径(m)：</em></span><input name="jipingzhijing" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span> <em>机坪表面材质：</em></span><input name="jipingcaizhi" type="text" size="33" maxlength="30"></p>
+                    <p class="bi"><span> <em>承重能力(PCN)：</em></span><input name="chengzhongnengli" type="text" size="33" maxlength="30" required></p>
+                    <p class="bi"><span> <em>升降带(m)：</em></span><input name="chengjiangdan" type="text" size="33" maxlength="30"></p>
+                    <p class="bi"><span>*&nbsp;<em>滑行道宽度(m)：</em></span><input name="huaxingdao" type="text" size="33" maxlength="30" required></p>
+                    <p class="bi"><span>*&nbsp;<em>1号机坪及停放机型：</em></span><input type="text" name="dingfangjixing" size="33" maxlength="30"　required></p>
+                </div>
+                <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></h4>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+			</form>
+            </div>
+        </div>
+		<div class="luru" id="luru4">
+            <h3>跑道（跑道与停机坪两者必填其一） <span> </span></h3>
+            <div class="luru_nr">
+            <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm3">
+            	<div class="paodao">
+ 					<p class="bi jiajian"><span>跑道<font>1</font></span> <a class="jian" href="javascript:;">删除跑道</a></p>
+                    <p class="bi"><span>*&nbsp;<em>FATO起飞进近着陆方向：</em></span><input name="fato" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>视助航条件：</em></span><input name="zhuhang" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>飞行区尺寸（m）：</em></span><input name="feixingqu" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>升降带（m）：</em></span><input name="shengjiang" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>滑行道宽度（m）：</em></span><input name="huaxingdao" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>视觉坡度指示器：</em></span><input name="shijue" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>跑道末端标示灯：</em></span><input name="paodaomoduan" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>瞄准点：</em></span><input name="miaozhundian" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>中线灯：</em></span><input name="zhongxiandeng" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>进近灯：</em></span><input name="jindengxian" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>着陆点：</em></span><input name="zhuoludian" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>入口内移(M)：</em></span><input name="rukouneiyi" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>仪表等级：</em></span><input name="yibiaodengji" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>盲降等级：</em></span><input name="mangjiangdengji" type="text" size="33" maxlength="10" required></p>
+                    <p class="bi"><span>*&nbsp;<em>障碍物描述：</em></span><input name="zhangaiwu" type="text" size="33" maxlength="10" required></p> 
+                    <p class="bi"><span> <em>频真方位和磁差：</em></span><input name="fangwei" type="text" size="33" maxlength="20" ></p>
+                    <p class="bi"><span> <em>承重能力(PCN)：</em></span><input name="chengzhongnengli" type="text" size="33" maxlength="30" required></p>
+                    <p class="bi"><span> <em>机坪表面材质：</em></span><input name="jipingcaizhi" type="text" size="33" maxlength="30"></p>
+            	</div>
+                <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+                </form>
+
+            </div>
+        </div>
+		<div class="luru" id="luru5">
+            <h3>机库 <span> </span></h3>
+             <div class="luru_nr">
+              <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm4">
+              <p class="bi"><span>*&nbsp;<em>建筑类型：</em></span>
+                  <input type="radio" id="rad10-1" name="rad[10]" checked>永久
+                  <input type="radio" id="rad10-2" name="rad[10]">临时
+                </p>
+                <p class="bi"><span> <em>总数量：</em></span><input name="shuliang" type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>总面积：</em></span><input name="mianji" type="text" size="33" maxlength="30"></p>
+            	<div class="paodao">
+                    <p class="bi jiajian"><span>*&nbsp;<em>机库号及停放机型<font>1</font>：</em></span><input name="jiku" type="text" size="33" maxlength="30" required><a class="jian" href="javascript:;">删除</a></p>
+                </div>
+                <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+            </form>
+            </div>
+       </div>
+		<div class="luru" id="luru6">
+            <h3>设施 <span> </span></h3>
+             <div class="luru_nr">
+			 	<h4>塔台</h4>
+                <p class="bi"><span> <em>高度：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>面积：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>放飞人员数量：</em></span><input type="text" size="33" maxlength="30"></p>
+			 	<h4>电台</h4>
+                <p class="bi"><span> <em>型号：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>数量：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>呼号：</em></span><input type="text" size="33" maxlength="30"></p>
+			 	<h4>气象</h4>
+                <p class="bi"><span> <em>气象型号：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span>*&nbsp;<em>气象类型：</em></span>
+                    <div class="danxuan">
+                        <input type="checkbox" id="chk1" name="chk">温度
+                        <input type="checkbox" id="chk2" name="chk">湿度
+                        <input type="checkbox" id="chk3" name="chk">气压<br>
+                        <input type="checkbox" id="chk4" name="chk2" checked>风俗
+                        <input type="checkbox" id="chk5" name="chk2" checked>风向
+                        <input type="checkbox" id="chk6" name="chk2" checked>运高低<br>
+                        <input type="checkbox" id="chk7" name="chk">能见度
+                     </div> 
+                </p>
+			 	<h4>其他</h4>
+                <div class="qita">
+                    <p class="bi"><span> <em>加油车数量：</em></span><input type="text" size="10" maxlength="10">吨位：<input type="text" size="10" maxlength="10"></p>
+                    <p class="bi"><span> <em>加油管数量：</em></span><input type="text" size="10" maxlength="10">吨位：<input type="text" size="10" maxlength="10"></p>
+                    <div class="paodao">
+                        <p class="bi jiajian"><span> <em>加油机类型<font>1</font>：</em></span><input type="text" size="10" maxlength="10">数量：<input type="text" size="10" maxlength="10"><a class="jian" href="javascript:;">删除</a></p>
+                    </div>
+                    <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+                    <div class="paodao">
+                        <p class="bi jiajian"><span> <em>电源车类型<font>1</font>：</em></span><input type="text" size="10" maxlength="10">数量：<input type="text" size="10" maxlength="10"><a class="jian" href="javascript:;">删除</a></p>
+                    </div>
+                    <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+                    <div class="paodao">
+                        <p class="bi jiajian"><span> <em>飞机清洗机类型<font>1</font>：</em></span><input type="text" size="10" maxlength="10">数量：<input type="text" size="10" maxlength="10"><a class="jian" href="javascript:;">删除</a></p>
+                    </div>
+                    <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+                  <div class="paodao">
+                        <p class="bi jiajian"><span> <em>消防设备类型<font>1</font>：</em></span><input type="text" size="10" maxlength="10">数量：<input type="text" size="10" maxlength="10"><a class="jian" href="javascript:;">删除</a></p>
+                    </div>
+                    <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+                <p class="bi"><span> <em>信息管理系统类型：</em></span><input type="text" size="33" maxlength="30"></p>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+               </div>
+            </div>
+       </div>
+       <div class="luru" id="luru7">
+       		<h3>提供服务 <span> </span></h3>
+       		<div class="luru_nr">
+              <form novalidate action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm7">
+                <p class="bi"><span> <em>维修机型：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>维修数量：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>维修等级：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>备注：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>航汽100LL：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>航汽95：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>航煤：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>气象观测方式：</em></span>
+                  <input type="radio" id="rad11-1" name="rad[11]" checked>人工观测
+                  <input type="radio" id="rad11-2" name="rad[11]">自动观测             
+                </p>
+                <p class="bi"><span> <em>气象资料类型：</em></span>
+                  <input type="radio" id="rad12-1" name="rad[12]" checked>例行天气报告
+                  <input type="radio" id="rad12-2" name="rad[12]">特殊天气报告                            
+                </p>
+                <p class="bi"><span> <em>充放电规格：</em></span><input type="text" size="33"></p>
+                <p class="bi"><span> <em>消防救援服务：</em></span>
+                  <input type="radio" id="rad13-1" name="rad[13]" checked>无
+                  <input type="radio" id="rad13-2" name="rad[13]">有                            
+                </p>
+                <p class="bi"><span> <em>起降服务：</em></span>
+                  <input type="radio" id="rad14-1" name="rad[14]" checked>无
+                  <input type="radio" id="rad14-2" name="rad[14]">有       <input type="text" size="5"> 元／次              
+                </p>
+                <p class="bi"><span> <em>飞机清洗：</em></span>
+                  <input type="radio" id="rad15-1" name="rad[15]" checked>无
+                  <input type="radio" id="rad15-2" name="rad[15]">有       <input type="text" size="5"> 元／次              
+                </p>
+                <p class="bi"><span> <em>过夜停靠：</em></span>
+                  <input type="radio" id="rad16-1" name="rad[16]" checked>无
+                  <input type="radio" id="rad16-2" name="rad[16]">有       <input type="text" size="5"> 元／次              
+                </p>
+                <p class="bi"><span> <em>人员住宿：</em></span>
+                  <input type="radio" id="rad17-1" name="rad[17]" checked>无
+                  <input type="radio" id="rad17-2" name="rad[17]">有       <input type="text" size="5"> 元／次              
+                </p>
+                <p class="bi"><span> <em>联系人：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>联系电话：</em></span><input type="text" size="33" maxlength="30"></p>
+				<p id="sub"><input class="sub" type="submit" value="保存 填写下一项"></p>
+            </form>
+            </div>
+	   </div>
+       <div class="luru" id="luru8">
+       		<h3>驻场通航公司 <span> </span></h3>
+       		<div class="luru_nr">
+              <form novalidate action="./yulan.html" method="get" class="bl-form bl-formhor" id="jsForm8">
+                <p class="bi"><span> <em>公司名称：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>资质类型：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>联系人：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>联系电话：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>业务类型：</em></span>
+                    <div class="danxuan">
+                        <input type="checkbox" id="chk11" name="chk1" checked>飞行体验
+                        <input type="checkbox" id="chk12" name="chk1">飞行培训
+                        <input type="checkbox" id="chk13" name="chk1">空中游览<br>
+                        <input type="checkbox" id="chk14" name="chk1" checked>空中拍摄
+                        <input type="checkbox" id="chk15" name="chk1">飞机租赁
+                        <input type="checkbox" id="chk16" name="chk1">农林作业<br>
+                        <input type="checkbox" id="chk17" name="chk1">巡线作业
+                        <input type="checkbox" id="chk18" name="chk1" checked>吊挂作业
+                        <input type="checkbox" id="chk19" name="chk1">空中运输                
+                    </div>                     
+                </p>
+                <div class="paodao">
+                    <p class="bi jiajian"><span> <em>飞机型号<font>1</font>：</em></span><input type="text" size="10">&nbsp;&nbsp;数量：<input type="text" size="10">&nbsp;&nbsp;年飞行小时：<input type="text" size="10">&nbsp;&nbsp;<a class="jian" href="javascript:;">删除</a></p>
+                 </div>
+                <p class="bi jiajian"><span>&nbsp;</span> <a class="jia" href="javascript:;">增加</a></p>
+                <p class="bi"><span> <em>常用临时起降点：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>经度：</em></span><input type="text" size="33" maxlength="30"></p>
+                <p class="bi"><span> <em>纬度：</em></span><input type="text" size="33" maxlength="30"></p>
+				<p id="sub"><input class="sub" type="submit" value="完成资料填写"></p>
+            </form>
+            </div>
+       </div>
+	</div>
+</div>
+
+<script src="../demo_data/jquery.js"></script>
+<script>
+$(function(){
+    //jquery.validate
+	$("#jsForm").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+$(function(){
+    //jquery.validate
+	$("#jsForm1").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+$(function(){
+    //jquery.validate
+	$("#jsForm2").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+$(function(){
+    //jquery.validate
+	$("#jsForm3").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+$(function(){
+    //jquery.validate
+	$("#jsForm4").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+
+
+//下面是一些常用的验证规则扩展
+
+/*-------------验证插件配置 懒人建站http://www.51xuediannao.com/-------------*/
+
+//配置错误提示的节点，默认为label，这里配置成 span （errorElement:'span'）
+$.validator.setDefaults({
+	errorElement:'span'
+});
+
+//配置通用的默认提示语
+$.extend($.validator.messages, {
+	required: '必填',
+    equalTo: "请再次输入相同的值"
+});
+
+/*-------------扩展验证规则 懒人建站http://www.51xuediannao.com/-------------*/
+//邮箱 
+jQuery.validator.addMethod("mail", function (value, element) {
+	var mail = /^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$/;
+	return this.optional(element) || (mail.test(value));
+}, "邮箱格式不对");
+
+//电话验证规则
+jQuery.validator.addMethod("phone", function (value, element) {
+    var phone = /^0\d{2,3}-\d{7,8}$/;
+    return this.optional(element) || (phone.test(value));
+}, "电话格式如：0371-68787027");
+
+//区号验证规则  
+jQuery.validator.addMethod("ac", function (value, element) {
+    var ac = /^0\d{2,3}$/;
+    return this.optional(element) || (ac.test(value));
+}, "区号如：010或0371");
+
+//无区号电话验证规则  
+jQuery.validator.addMethod("noactel", function (value, element) {
+    var noactel = /^\d{7,8}$/;
+    return this.optional(element) || (noactel.test(value));
+}, "电话格式如：68787027");
+
+//手机验证规则  
+jQuery.validator.addMethod("mobile", function (value, element) {
+    var mobile = /^1[3|4|5|7|8]\d{9}$/;
+	return this.optional(element) || (mobile.test(value));
+}, "手机格式不对");
+
+//邮箱或手机验证规则  
+jQuery.validator.addMethod("mm", function (value, element) {
+    var mm = /^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$|^1[3|4|5|7|8]\d{9}$/;
+	return this.optional(element) || (mm.test(value));
+}, "格式不对");
+
+//电话或手机验证规则  
+jQuery.validator.addMethod("tm", function (value, element) {
+    var tm=/(^1[3|4|5|7|8]\d{9}$)|(^\d{3,4}-\d{7,8}$)|(^\d{7,8}$)|(^\d{3,4}-\d{7,8}-\d{1,4}$)|(^\d{7,8}-\d{1,4}$)/;
+    return this.optional(element) || (tm.test(value));
+}, "格式不对");
+
+//年龄
+jQuery.validator.addMethod("age", function(value, element) {   
+	var age = /^(?:[1-9][0-9]?|1[01][0-9]|120)$/;
+	return this.optional(element) || (age.test(value));
+}, "不能超过120岁"); 
+///// 20-60   /^([2-5]\d)|60$/
+
+//传真
+jQuery.validator.addMethod("fax",function(value,element){
+    var fax = /^(\d{3,4})?[-]?\d{7,8}$/;
+    return this.optional(element) || (fax.test(value));
+},"传真格式如：0371-68787027");
+
+//验证当前值和目标val的值相等 相等返回为 false
+jQuery.validator.addMethod("equalTo2",function(value, element){
+    var returnVal = true;
+    var id = $(element).attr("data-rule-equalto2");
+    var targetVal = $(id).val();
+    if(value === targetVal){
+        returnVal = false;
+    }
+    return returnVal;
+},"不能和原始密码相同");
+
+//大于指定数
+jQuery.validator.addMethod("gt",function(value, element){
+    var returnVal = false;
+    var gt = $(element).data("gt");
+    if(value > gt && value != ""){
+        returnVal = true;
+    }
+    return returnVal;
+},"不能小于0 或空");
+
+//汉字
+jQuery.validator.addMethod("chinese", function (value, element) {
+    var chinese = /^[\u4E00-\u9FFF]+$/;
+    return this.optional(element) || (chinese.test(value));
+}, "格式不对");
+
+//指定数字的整数倍
+jQuery.validator.addMethod("times", function (value, element) {
+    var returnVal = true;
+    var base=$(element).attr('data-rule-times');
+    if(value%base!=0){
+        returnVal=false;
+    }
+    return returnVal;
+}, "必须是发布赏金的整数倍");
+
+//身份证
+jQuery.validator.addMethod("idCard", function (value, element) {
+    var isIDCard1=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;//(15位)
+    var isIDCard2=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;//(18位)
+
+    return this.optional(element) || (isIDCard1.test(value)) || (isIDCard2.test(value));
+}, "格式不对");
+
+
+</script>
+<div id="foot">
+	<div class="foot">
+    	<ul>
+        	<li><h3><a href="#">产品</a></h3></li>
+            <li><a href="#">随e飞</a></li>
+            <li><a href="#">维修客</a></li>
+            <li><a href="#">航服务</a></li>
+            <li><a href="#">大数据可视化</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">支持中心</a></h3></li>
+          <li><a href="#">产品文档</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">学习资料</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    	<ul>
+        	<li><h3><a href="#">关于通航云</a></h3></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">信息举报</a></li>
+            <li><a href="#">了解通航云</a></li>
+        </ul>
+    	<ul class="hezuo">
+        	<li style="width:330px;"><h3><a href="#">合作伙伴</a></h3></li>
+            <li><a href="#">AOPA航空协会</a></li>
+            <li><a href="#">首都通航研究院</a></li>
+            <li><a href="#">华彬天星</a></li>
+            <li><a href="#">海慧通航</a></li>
+            <li><a href="#">中瑞通航</a></li>
+          	<li><a href="#">临云行</a></li>
+            <li><a href="#">极飞网</a></li>
+            <li><a href="#">中航协通航委</a></li>
+            <li><a href="#">民航安全管理网</a></li>
+            <li><a href="#">飞行者联盟</a></li>
+        </ul>
+    </div>
+    <div class="foot_nav">
+        <a href="#">机场检索</a><a href="#">随e飞</a><a href="#">维修客</a><a href="#">通航供需平台</a><a href="#">气象情报</a>
+        <p>Copyright©2013-2015通航云 tonghangyn.com 版板所有 京ICP备13040109号-2</p>
+    </div>
+
+</div>
+<script type="text/javascript" src="../js/input.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="mycity" ng-show="isshow">
+	<div class="mycity_title">
+		<span >城市列表</span>
+		<span class='closecity' ng-click="closeCity()"></span>
+	</div>
+	<div class="mycity_top">
+		<div class="localcity">
+			<span>当前城市：{{localcity}}</span>
+		</div>
+		<div class="hotcitys">
+		    <a ng-click="select('全国')">全国</a>
+			<a ng-click="select('北京')">北京</a>
+			<a ng-click="select('上海')">上海</a>
+			<a ng-click="select('广州')">广州</a>
+			<a ng-click="select('深圳')">深圳</a>
+			<a ng-click="select('成都')">成都</a>
+			<a ng-click="select('天津')">天津</a>
+			<a ng-click="select('重庆')">重庆</a>
+		</div>
+		<div class="selectcity">
+			<span><input type="text" class="cityinput" placeholder="输入城市名" ng-model="cityName" ng-keypress="enterSearch($event)"><button ng-click="select(cityName)">搜索</button></span>
+		</div>
+	</div>
+	<div class="mycity_content">
+		<table>
+			<tr ng-repeat="province in provinces">
+				<td><a ng-bind="province.name" ng-click="select(province.name)">{{province.name}}</a></td>
+				<td><a ng-repeat="city in province.city" ng-bind="city.name" ng-click="select(city.name)"></a></td>
+			</tr>
+			<tr>
+				<td><a>其他</a></td>
+				<td><a ng-click="select('台湾')">台湾</a><a ng-click="select('香港')">香港</a><a ng-click="select('澳门')">澳门</a></td>
+			</tr>
+		</table>
+	</div>
+</div>

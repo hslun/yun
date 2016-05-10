@@ -1,0 +1,31 @@
+{
+    "AircraftInfos": [
+        {
+            "Altitude": 110000000000, 
+            "Device": 1, 
+            "Direction": 90, 
+            "ID": "B-test1", 
+            "Latitude": 40.0, 
+            "LatitudeC": 40.0, 
+            "Longitude": 116.0, 
+            "LongitudeC": 116.0, 
+            "Owner": 0, 
+            "Speed": 101010100, 
+            "Timestamp": 1417092708
+        }, 
+        {
+            "Altitude": 110, 
+            "Device": 1, 
+            "Direction": 0, 
+            "ID": "B-test2", 
+            "Latitude": 40.55299999999848, 
+            "LatitudeC": 40.560869928592, 
+            "Longitude": 116.1, 
+            "LongitudeC": 116.1, 
+            "Owner": 1, 
+            "Speed": 0, 
+            "Timestamp": 1417092708
+        }
+    ], 
+    "TotalNum": 2
+}
